@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Map Explorer - CinemaMapped</title>
+  <title>WWII Film Locations Map - CinemaMapped</title>
   <meta name="description" content="Explore 76 WWII film and series locations on an interactive map. Filter by theatre of war, search by title, location, or country.">
 
   <!-- Favicon -->
@@ -14,6 +14,7 @@
   <meta property="og:description" content="76 WWII film and series locations pinned to where the story actually happened.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cinemamapped.com/map.html">
+  <link rel="canonical" href="https://cinemamapped.com/map.html">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,6 +40,7 @@
       autocomplete="off"
       spellcheck="false"
     >
+    <span class="pin-count" id="pin-count" aria-live="polite"></span>
     <div class="filter-chips" role="group" aria-label="Filter by theatre of war">
       <button class="chip active" data-theatre="all">All</button>
       <button class="chip" data-theatre="Western Front">Western Front</button>
@@ -52,7 +54,9 @@
 
 
   <!-- MAP -->
-  <div id="map" role="application" aria-label="Interactive WWII locations map"></div>
+  <div id="map" role="application" aria-label="Interactive WWII locations map">
+    <div class="no-results" id="no-results" aria-live="polite">No locations match this filter.</div>
+  </div>
 
 
   <!-- PIN DETAIL PANEL -->

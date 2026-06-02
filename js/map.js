@@ -2,22 +2,22 @@
   'use strict';
 
   // ── State ──────────────────────────────────────────────────
-  var allPins      = [];
+  var allPins       = [];
   var activeTheatre = 'all';
-  var searchTerm   = '';
+  var searchTerm    = '';
   var clusterGroup;
   var searchTimer;
 
   // ── Map init ───────────────────────────────────────────────
   var map = L.map('map', {
-    center:              [48, 12],
-    zoom:                5,
-    minZoom:             2,
-    maxZoom:             16,
-    maxBounds:           [[-85, -200], [85, 200]],
-    maxBoundsViscosity:  0.85,
-    zoomControl:         true,
-    attributionControl:  true,
+    center:             [48, 12],
+    zoom:               5,
+    minZoom:            2,
+    maxZoom:            16,
+    maxBounds:          [[-85, -200], [85, 200]],
+    maxBoundsViscosity: 0.85,
+    zoomControl:        true,
+    attributionControl: true,
   });
 
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -28,9 +28,9 @@
 
   // ── Cluster group ──────────────────────────────────────────
   clusterGroup = L.markerClusterGroup({
-    showCoverageOnHover:  false,
-    maxClusterRadius:     52,
-    chunkedLoading:       true,
+    showCoverageOnHover: false,
+    maxClusterRadius:    52,
+    chunkedLoading:      true,
     iconCreateFunction: function (cluster) {
       return L.divIcon({
         className:  'gold-cluster',
@@ -40,7 +40,6 @@
       });
     },
   });
-
   map.addLayer(clusterGroup);
 
   // ── Pin icon ───────────────────────────────────────────────
@@ -54,7 +53,7 @@
   }
 
   // ── Panel ──────────────────────────────────────────────────
-  var panel     = document.getElementById('pin-panel');
+  var panel      = document.getElementById('pin-panel');
   var panelClose = document.getElementById('pin-close');
 
   function openPanel(pin) {
@@ -90,6 +89,31 @@
   panelClose.addEventListener('click', closePanel);
   map.on('click', closePanel);
 
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closePanel();
+  });
+
+  // ── Empty state ────────────────────────────────────────────
+  var noResultsEl = document.getElementById('no-results');
+
+  function updateEmptyState(count) {
+    if (!noResultsEl) return;
+    noResultsEl.style.display = count === 0 ? 'flex' : 'none';
+  }
+
+  // ── Pin count ──────────────────────────────────────────────
+  var pinCountEl = document.getElementById('pin-count');
+
+  function updatePinCount(visible) {
+    if (!pinCountEl) return;
+    if (visible < allPins.length) {
+      pinCountEl.textContent = visible + ' of ' + allPins.length;
+      pinCountEl.style.display = '';
+    } else {
+      pinCountEl.style.display = 'none';
+    }
+  }
+
   // ── Render markers ─────────────────────────────────────────
   function renderMarkers() {
     clusterGroup.clearLayers();
@@ -116,6 +140,10 @@
 
       clusterGroup.addLayer(marker);
     });
+
+    var count = clusterGroup.getLayers().length;
+    updateEmptyState(count);
+    updatePinCount(count);
   }
 
   // ── Theatre filter chips ───────────────────────────────────
@@ -138,6 +166,10 @@
     clearTimeout(searchTimer);
     searchTimer = setTimeout(function () {
       searchTerm = searchInput.value;
+      if (!searchTerm && window.history.replaceState) {
+        window.history.replaceState({}, '', window.location.pathname);
+        document.title = 'WWII Film Locations Map - CinemaMapped';
+      }
       closePanel();
       renderMarkers();
     }, 220);
@@ -148,30 +180,41 @@
     var params    = new URLSearchParams(window.location.search);
     var filmParam = params.get('film');
 
-    if (!filmParam) return;
+    if (filmParam) {
+      searchInput.value = filmParam;
+      searchTerm        = filmParam;
+      document.title    = filmParam + ' - CinemaMapped';
+    }
 
-    searchInput.value = filmParam;
-    searchTerm        = filmParam;
     renderMarkers();
 
-    var filmPins = allPins.filter(function (p) {
-      return p.title === filmParam;
-    });
-
-    if (filmPins.length > 0) {
-      var bounds = L.latLngBounds(filmPins.map(function (p) {
-        return [p.lat, p.lng];
-      }));
-      map.fitBounds(bounds, { padding: [80, 80], maxZoom: 8 });
+    if (filmParam) {
+      var filmPins = allPins.filter(function (p) {
+        return p.title.toLowerCase() === filmParam.toLowerCase();
+      });
+      if (filmPins.length > 0) {
+        var bounds = L.latLngBounds(filmPins.map(function (p) {
+          return [p.lat, p.lng];
+        }));
+        map.fitBounds(bounds, { padding: [80, 80], maxZoom: 8 });
+      }
     }
   }
+
+  // ── Mobile nav height sync ─────────────────────────────────
+  function syncMapTop() {
+    var nav = document.querySelector('.map-nav');
+    if (!nav) return;
+    document.documentElement.style.setProperty('--map-top', nav.offsetHeight + 'px');
+  }
+  syncMapTop();
+  window.addEventListener('resize', syncMapTop);
 
   // ── Load data ──────────────────────────────────────────────
   fetch('data.json')
     .then(function (r) { return r.json(); })
     .then(function (data) {
       allPins = data;
-      renderMarkers();
       applyUrlParams();
     })
     .catch(function (err) {

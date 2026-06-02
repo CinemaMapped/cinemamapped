@@ -352,6 +352,12 @@ a {
   transform: translateY(-2px);
 }
 
+.film-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-color: rgba(201, 168, 76, 0.5);
+}
+
 .film-card-badges {
   display: flex;
   gap: 6px;
@@ -552,6 +558,40 @@ a {
   border-color: var(--accent);
   color: var(--accent);
   background: var(--accent-faint);
+}
+
+
+/* ── NO RESULTS OVERLAY ── */
+
+.no-results {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-d);
+  font-size: 26px;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  text-align: center;
+  pointer-events: none;
+  padding: 0 24px;
+}
+
+
+/* ── PIN COUNT ── */
+
+.pin-count {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-dim);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+  display: none;
+  flex-shrink: 0;
 }
 
 
@@ -792,6 +832,7 @@ a {
 @media (max-width: 768px) {
   .nav { padding: 0 20px; }
   .section { padding: 72px 20px; }
+  .diff-col { padding: 40px 20px; }
   .footer {
     flex-direction: column;
     gap: 12px;
@@ -813,15 +854,17 @@ a {
   .filter-chips { padding-bottom: 4px; }
 
   #map {
-    top: 116px;
+    top: var(--map-top, 110px);
   }
 
   .pin-panel {
     width: 100%;
     right: 0;
     bottom: -65vh;
+    bottom: -65dvh;
     top: auto;
     height: 65vh;
+    height: 65dvh;
     border-left: none;
     border-top: 1px solid var(--border);
     transition: bottom 0.28s cubic-bezier(0.4, 0, 0.2, 1);

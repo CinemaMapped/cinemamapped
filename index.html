@@ -14,6 +14,7 @@
   <meta property="og:description" content="Explore WWII through the films and series that portrayed it. 76 pins across 35 titles, mapped to the real historical locations.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cinemamapped.com">
+  <link rel="canonical" href="https://cinemamapped.com/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,15 +37,15 @@
     <p class="hero-sub">Every story happened somewhere. Explore WWII through the films and series that portrayed it.</p>
     <div class="hero-stats" aria-label="Dataset summary">
       <div class="hero-stat">
-        <div class="hero-stat-n">76</div>
+        <div class="hero-stat-n" id="hero-stat-pins">74</div>
         <div class="hero-stat-l">Locations</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-n">35</div>
+        <div class="hero-stat-n" id="hero-stat-titles">33</div>
         <div class="hero-stat-l">Titles</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-n">6</div>
+        <div class="hero-stat-n" id="hero-stat-theatres">6</div>
         <div class="hero-stat-l">Theatres</div>
       </div>
     </div>
@@ -108,19 +109,19 @@
   <section class="stats" aria-label="Dataset statistics">
     <div class="stats-grid">
       <div>
-        <div class="stat-n">76</div>
+        <div class="stat-n" id="stat-pins">74</div>
         <div class="stat-l">Pinned locations</div>
       </div>
       <div>
-        <div class="stat-n">35</div>
+        <div class="stat-n" id="stat-titles">33</div>
         <div class="stat-l">Films and series</div>
       </div>
       <div>
-        <div class="stat-n">6</div>
+        <div class="stat-n" id="stat-theatres">6</div>
         <div class="stat-l">Theatres of war</div>
       </div>
       <div>
-        <div class="stat-n">12+</div>
+        <div class="stat-n" id="stat-countries">12+</div>
         <div class="stat-l">Countries covered</div>
       </div>
     </div>
@@ -131,7 +132,7 @@
   <section class="final-cta">
     <h2 class="section-h">Open the map</h2>
     <p class="section-p">Every film. Every location. All pinned to where the history actually happened.</p>
-    <a href="map.html" class="btn btn-filled">View all 76 locations</a>
+    <a href="map.html" class="btn btn-filled">View all <span id="cta-count">74</span> locations</a>
   </section>
 
 

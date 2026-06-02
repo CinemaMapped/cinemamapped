@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cinemamapped.com/sitemap.xml

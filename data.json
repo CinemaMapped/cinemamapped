@@ -936,19 +936,6 @@
     "streaming": ""
   },
   {
-    "id": 73,
-    "title": "The Man in the High Castle",
-    "type": "Series",
-    "location": "Alternate New York City",
-    "country": "United States",
-    "theatre": "Western Front",
-    "lat": 40.7128,
-    "lng": -74.0060,
-    "description": "Alternate history — Nazi Germany won WWII and now occupies the eastern US. Set in a fictional version of 1960s New York.",
-    "year_portrayed": 1962,
-    "streaming": ""
-  },
-  {
     "id": 74,
     "title": "Churchill",
     "type": "Film",
@@ -959,19 +946,6 @@
     "lng": -1.1167,
     "description": "Churchill's personal struggle with the D-Day decision — his fears, his doubts, and Eisenhower's ultimate call at Southwick House.",
     "year_portrayed": 1944,
-    "streaming": ""
-  },
-  {
-    "id": 75,
-    "title": "1917",
-    "type": "Film",
-    "location": "Western Front — Pas-de-Calais region",
-    "country": "France",
-    "theatre": "Western Front",
-    "lat": 50.4167,
-    "lng": 2.8333,
-    "description": "Two British soldiers must cross No Man's Land and enemy-held territory to deliver a message that could save 1,600 men. WWI, but the trench system is here shown in extraordinary detail.",
-    "year_portrayed": 1917,
     "streaming": ""
   },
   {
