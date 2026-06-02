@@ -3,18 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CinemaMapped - Every story happened somewhere</title>
-  <meta name="description" content="Explore WWII through the films and series that portrayed it. 76 pins across 35 titles, mapped to the real historical locations where the story happened.">
+  <title>CinemaMapped - WWII Film and Series Locations Map</title>
+  <meta name="description" content="Explore where WWII films and series actually took place. Band of Brothers, Saving Private Ryan, Schindler's List and 30+ more titles pinned to their real historical locations across Europe, the Pacific and beyond.">
+  <meta name="keywords" content="WW2 film locations, WWII movie locations, Band of Brothers locations, Saving Private Ryan locations, WW2 history map, WWII series locations, war movie locations Europe">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230d0d0d'/><text x='16' y='24' font-family='sans-serif' font-size='22' font-weight='900' text-anchor='middle' fill='%23c9a84c'>C</text></svg>">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="CinemaMapped - Every story happened somewhere">
-  <meta property="og:description" content="Explore WWII through the films and series that portrayed it. 76 pins across 35 titles, mapped to the real historical locations.">
+  <meta property="og:title" content="CinemaMapped - WWII Film and Series Locations Map">
+  <meta property="og:description" content="Explore where WWII films and series actually took place. 74 locations across 33 titles pinned to the real historical places where the story happened.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cinemamapped.com">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CinemaMapped - WWII Film and Series Locations Map">
+  <meta name="twitter:description" content="Explore where WWII films and series actually took place. 74 locations across 33 titles pinned to the real historical places.">
+
   <link rel="canonical" href="https://cinemamapped.com/">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "CinemaMapped",
+    "url": "https://cinemamapped.com",
+    "description": "An interactive map showing where WWII films and series are set. Every pin marks the real historical location where the story happened, not where the film was shot.",
+    "applicationCategory": "EntertainmentApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mike Meewezen"
+    },
+    "keywords": "WW2 film locations, WWII movie locations, Band of Brothers locations, Saving Private Ryan locations, WW2 history map"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Where was Band of Brothers filmed and set?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Band of Brothers was set at the real WWII locations where Easy Company fought, including Brécourt Manor in Normandy, Carentan, Eindhoven, Nijmegen, Bastogne in the Ardennes, and the Eagle's Nest in Berchtesgaden. CinemaMapped pins all 9 of these locations on an interactive map."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Saving Private Ryan set?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Saving Private Ryan is set at Omaha Beach in Normandy, France, where the D-Day landings took place on June 6, 1944. The film was shot in Ireland but the story is set on the real beaches and villages of Normandy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between where a WW2 film was filmed and where it is set?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most WWII films are shot at convenient filming locations, not the actual historical sites. For example, Saving Private Ryan was filmed on Curracloe Beach in Ireland, but the story takes place at Omaha Beach in Normandy. CinemaMapped shows where the story actually happened, not where the camera was pointed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which WWII films are included on CinemaMapped?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CinemaMapped includes Band of Brothers, Saving Private Ryan, Schindler's List, The Pacific, Dunkirk, Downfall, The Pianist, Enemy at the Gates, A Bridge Too Far, Das Boot, Patton, Fury, Valkyrie, The Great Escape, Inglourious Basterds, and more — 33 titles with 74 pinned locations across Europe, the Pacific, and North Africa."
+        }
+      }
+    ]
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -133,6 +204,30 @@
     <h2 class="section-h">Open the map</h2>
     <p class="section-p">Every film. Every location. All pinned to where the history actually happened.</p>
     <a href="map.html" class="btn btn-filled">View all <span id="cta-count">74</span> locations</a>
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="section faq" aria-label="Frequently asked questions">
+    <h2 class="section-h">Common questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-q">Where was Band of Brothers filmed and set?</h3>
+        <p class="faq-a">Band of Brothers was set at the real locations where Easy Company fought: Brécourt Manor in Normandy, Carentan, Eindhoven, Nijmegen, Bastogne in the Ardennes, and the Eagle's Nest at Berchtesgaden. All 9 locations are pinned on CinemaMapped.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">Where is Saving Private Ryan set?</h3>
+        <p class="faq-a">Saving Private Ryan is set at Omaha Beach in Normandy, France, where the D-Day landings took place on June 6, 1944. The film was shot in Ireland, but the story takes place on the real beaches of Normandy.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">What is the difference between filming locations and story locations?</h3>
+        <p class="faq-a">Most WWII films shoot at convenient stand-in locations rather than the actual historical sites. CinemaMapped only shows where the story happened, not where the camera was placed. Every pin is a real historical location tied to what the film portrays there.</p>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-q">Which WWII films are included?</h3>
+        <p class="faq-a">Band of Brothers, Saving Private Ryan, Schindler's List, The Pacific, Dunkirk, Downfall, The Pianist, Enemy at the Gates, A Bridge Too Far, Das Boot, Patton, Fury, Valkyrie, The Great Escape, Inglourious Basterds, and more. 33 titles, 74 locations across Europe, the Pacific, and North Africa.</p>
+      </div>
+    </div>
   </section>
 
 
