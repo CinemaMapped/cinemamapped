@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map Explorer - CinemaMapped</title>
+  <meta name="description" content="Explore 76 WWII film and series locations on an interactive map. Filter by theatre of war, search by title, location, or country.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230d0d0d'/><text x='16' y='24' font-family='sans-serif' font-size='22' font-weight='900' text-anchor='middle' fill='%23c9a84c'>C</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CinemaMapped - WWII Map Explorer">
+  <meta property="og:description" content="76 WWII film and series locations pinned to where the story actually happened.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cinemamapped.com/map.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html, body { height: 100%; overflow: hidden; }
+  </style>
+</head>
+<body>
+
+  <!-- MAP NAV -->
+  <nav class="map-nav" role="navigation" aria-label="Map controls">
+    <a href="index.html" class="nav-logo">Cinema<em>Mapped</em></a>
+    <input
+      type="search"
+      class="map-search"
+      id="map-search"
+      placeholder="Search films, locations, countries..."
+      aria-label="Search films, locations, or countries"
+      autocomplete="off"
+      spellcheck="false"
+    >
+    <div class="filter-chips" role="group" aria-label="Filter by theatre of war">
+      <button class="chip active" data-theatre="all">All</button>
+      <button class="chip" data-theatre="Western Front">Western Front</button>
+      <button class="chip" data-theatre="Eastern Front">Eastern Front</button>
+      <button class="chip" data-theatre="Pacific">Pacific</button>
+      <button class="chip" data-theatre="North Africa">North Africa</button>
+      <button class="chip" data-theatre="Atlantic">Atlantic</button>
+      <button class="chip" data-theatre="Mediterranean">Mediterranean</button>
+    </div>
+  </nav>
+
+
+  <!-- MAP -->
+  <div id="map" role="application" aria-label="Interactive WWII locations map"></div>
+
+
+  <!-- PIN DETAIL PANEL -->
+  <aside class="pin-panel" id="pin-panel" aria-label="Location detail" aria-hidden="true">
+    <div class="pin-panel-header">
+      <div class="pin-badges" id="pin-badges"></div>
+      <button class="pin-panel-close" id="pin-close" aria-label="Close panel">&#x2715;</button>
+    </div>
+    <div class="pin-panel-body">
+      <div class="pin-title" id="pin-title"></div>
+      <div class="pin-location" id="pin-location"></div>
+      <div class="pin-divider"></div>
+      <div>
+        <div class="pin-desc-label">Scene</div>
+        <p class="pin-desc" id="pin-desc"></p>
+      </div>
+      <div class="pin-year" id="pin-year"></div>
+      <div class="pin-streaming" id="pin-streaming"></div>
+    </div>
+  </aside>
+
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>

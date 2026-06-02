@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CinemaMapped - Every story happened somewhere</title>
+  <meta name="description" content="Explore WWII through the films and series that portrayed it. 76 pins across 35 titles, mapped to the real historical locations where the story happened.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230d0d0d'/><text x='16' y='24' font-family='sans-serif' font-size='22' font-weight='900' text-anchor='middle' fill='%23c9a84c'>C</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="CinemaMapped - Every story happened somewhere">
+  <meta property="og:description" content="Explore WWII through the films and series that portrayed it. 76 pins across 35 titles, mapped to the real historical locations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cinemamapped.com">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Cinema<em>Mapped</em></a>
+    <a href="map.html" class="btn">Explore the Map</a>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero-line" aria-hidden="true"></div>
+    <h1 class="hero-title">CINEMA<br>MAPPED</h1>
+    <p class="hero-sub">Every story happened somewhere. Explore WWII through the films and series that portrayed it.</p>
+    <div class="hero-stats" aria-label="Dataset summary">
+      <div class="hero-stat">
+        <div class="hero-stat-n">76</div>
+        <div class="hero-stat-l">Locations</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-n">35</div>
+        <div class="hero-stat-l">Titles</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-n">6</div>
+        <div class="hero-stat-l">Theatres</div>
+      </div>
+    </div>
+    <a href="map.html" class="btn btn-filled">Explore the Map</a>
+  </section>
+
+
+  <!-- DIFFERENTIATOR -->
+  <section class="diff" aria-label="What makes CinemaMapped different">
+    <div class="diff-grid">
+      <div class="diff-col is-wrong">
+        <div class="diff-col-tag">Other approaches</div>
+        <h2 class="diff-col-h">WHERE IT WAS FILMED</h2>
+        <p class="diff-col-p">Saving Private Ryan was filmed on Curracloe Beach in Ireland. That is just a set, chosen for logistics.</p>
+        <div class="diff-col-loc">Curracloe Beach, Ireland</div>
+      </div>
+      <div class="diff-col is-right">
+        <div class="diff-col-tag">CinemaMapped</div>
+        <h2 class="diff-col-h">WHERE THE STORY HAPPENED</h2>
+        <p class="diff-col-p">Saving Private Ryan is pinned to Omaha Beach, Normandy. Because that is where D-Day happened on June 6, 1944.</p>
+        <div class="diff-col-loc">Omaha Beach, Normandy, France</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+  <section class="section hiw" aria-label="How CinemaMapped works">
+    <h2 class="section-h">How it works</h2>
+    <div class="hiw-grid">
+      <div class="hiw-step">
+        <div class="hiw-num">01</div>
+        <div class="hiw-title">BROWSE THE MAP</div>
+        <p class="hiw-desc">Gold pins cluster nearby locations. Click a cluster to zoom in and separate the pins.</p>
+      </div>
+      <div class="hiw-step">
+        <div class="hiw-num">02</div>
+        <div class="hiw-title">CLICK A PIN</div>
+        <p class="hiw-desc">See the film or series title, the exact location, what happened there in the story, and the year.</p>
+      </div>
+      <div class="hiw-step">
+        <div class="hiw-num">03</div>
+        <div class="hiw-title">FILTER AND SEARCH</div>
+        <p class="hiw-desc">Narrow by theatre of war or search for a specific title, location, or country.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FEATURED TITLES -->
+  <section class="section featured" aria-label="Featured titles">
+    <div class="section-eyebrow">Featured Titles</div>
+    <h2 class="section-h">Start exploring</h2>
+    <div class="film-scroll" id="film-scroll" role="list" aria-label="Featured films and series">
+      <!-- populated by js/homepage.js -->
+    </div>
+  </section>
+
+
+  <!-- STATS -->
+  <section class="stats" aria-label="Dataset statistics">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-n">76</div>
+        <div class="stat-l">Pinned locations</div>
+      </div>
+      <div>
+        <div class="stat-n">35</div>
+        <div class="stat-l">Films and series</div>
+      </div>
+      <div>
+        <div class="stat-n">6</div>
+        <div class="stat-l">Theatres of war</div>
+      </div>
+      <div>
+        <div class="stat-n">12+</div>
+        <div class="stat-l">Countries covered</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <h2 class="section-h">Open the map</h2>
+    <p class="section-p">Every film. Every location. All pinned to where the history actually happened.</p>
+    <a href="map.html" class="btn btn-filled">View all 76 locations</a>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span class="footer-brand">Cinema<em style="color:var(--accent)">Mapped</em></span>
+    <span class="footer-copy">cinemamapped.com</span>
+  </footer>
+
+  <script src="js/homepage.js"></script>
+</body>
+</html>
