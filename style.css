@@ -773,6 +773,142 @@ a {
 }
 
 
+/* ── COOKIE BANNER ── */
+
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background: #1a1a1a;
+  border-top: 1px solid var(--border);
+  padding: 16px min(48px, 6vw);
+  animation: cookieSlideUp 0.3s ease;
+}
+
+#cookie-banner.cookie-banner--out {
+  animation: cookieSlideDown 0.3s ease forwards;
+}
+
+@keyframes cookieSlideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+
+@keyframes cookieSlideDown {
+  from { transform: translateY(0); }
+  to   { transform: translateY(100%); }
+}
+
+.cookie-banner-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cookie-banner-text {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.cookie-banner-link {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.cookie-btn {
+  font-family: var(--font-b);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: opacity 0.15s;
+}
+
+.cookie-btn:hover { opacity: 0.8; }
+
+.cookie-btn--accept {
+  background: var(--accent);
+  color: #0d0d0d;
+  border-color: var(--accent);
+}
+
+.cookie-btn--decline {
+  background: transparent;
+  color: var(--text-muted);
+  border-color: var(--border);
+}
+
+
+/* ── PRIVACY PAGE ── */
+
+.privacy-hero {
+  padding: calc(var(--nav-h) + 64px) min(48px, 6vw) 48px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.privacy-hero h1 {
+  font-family: var(--font-d);
+  font-size: clamp(36px, 6vw, 56px);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.privacy-hero p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.privacy-body {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 min(48px, 6vw) 96px;
+}
+
+.privacy-body h2 {
+  font-family: var(--font-d);
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  margin: 48px 0 12px;
+  color: var(--accent);
+}
+
+.privacy-body p,
+.privacy-body li {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.privacy-body ul {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+.privacy-body a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+
 /* ── LEAFLET CUSTOM PINS ── */
 
 .gold-pin {
