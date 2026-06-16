@@ -79,6 +79,15 @@
 
     panel.classList.add('open');
     panel.setAttribute('aria-hidden', 'false');
+
+    if (window.gtag) {
+      gtag('event', 'pin_click', {
+        film_title:  pin.title,
+        location:    pin.location,
+        theatre:     pin.theatre,
+        pin_type:    pin.type
+      });
+    }
   }
 
   function closePanel() {
@@ -154,6 +163,9 @@
       });
       chip.classList.add('active');
       activeTheatre = chip.dataset.theatre;
+      if (window.gtag) {
+        gtag('event', 'theatre_filter', { theatre: activeTheatre });
+      }
       closePanel();
       renderMarkers();
     });
@@ -169,6 +181,9 @@
       if (!searchTerm && window.history.replaceState) {
         window.history.replaceState({}, '', window.location.pathname);
         document.title = 'WWII Film Locations Map - CinemaMapped';
+      }
+      if (searchTerm && window.gtag) {
+        gtag('event', 'map_search', { search_term: searchTerm });
       }
       closePanel();
       renderMarkers();
