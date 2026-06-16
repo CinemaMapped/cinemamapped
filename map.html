@@ -58,25 +58,41 @@
 
   <!-- MAP NAV -->
   <nav class="map-nav" role="navigation" aria-label="Map controls">
-    <a href="index.html" class="nav-logo">Cinema<em>Mapped</em></a>
-    <input
-      type="search"
-      class="map-search"
-      id="map-search"
-      placeholder="Search films, locations, countries..."
-      aria-label="Search films, locations, or countries"
-      autocomplete="off"
-      spellcheck="false"
-    >
-    <span class="pin-count" id="pin-count" aria-live="polite"></span>
-    <div class="filter-chips" role="group" aria-label="Filter by theatre of war">
-      <button class="chip active" data-theatre="all">All</button>
-      <button class="chip" data-theatre="Western Front">Western Front</button>
-      <button class="chip" data-theatre="Eastern Front">Eastern Front</button>
-      <button class="chip" data-theatre="Pacific">Pacific</button>
-      <button class="chip" data-theatre="North Africa">North Africa</button>
-      <button class="chip" data-theatre="Atlantic">Atlantic</button>
-      <button class="chip" data-theatre="Mediterranean">Mediterranean</button>
+    <div class="map-nav-top">
+      <a href="index.html" class="nav-logo">Cinema<em>Mapped</em></a>
+      <input
+        type="search"
+        class="map-search"
+        id="map-search"
+        placeholder="Search films, locations, countries..."
+        aria-label="Search films, locations, or countries"
+        autocomplete="off"
+        spellcheck="false"
+      >
+      <span class="pin-count" id="pin-count" aria-live="polite"></span>
+    </div>
+    <div class="map-nav-bottom">
+      <div class="filter-chips filter-chips--titles" role="group" aria-label="Filter by title">
+        <button class="chip chip-title active" data-title="all">All</button>
+        <button class="chip chip-title" data-title="Band of Brothers">Band of Brothers</button>
+        <button class="chip chip-title" data-title="Saving Private Ryan">Saving Private Ryan</button>
+        <button class="chip chip-title" data-title="The Pacific">The Pacific</button>
+        <button class="chip chip-title" data-title="Schindler's List">Schindler's List</button>
+        <button class="chip chip-title" data-title="Masters of the Air">Masters of the Air</button>
+        <button class="chip chip-title" data-title="Das Boot">Das Boot</button>
+        <button class="chip chip-title" data-title="The Pianist">The Pianist</button>
+        <button class="chip chip-title" data-title="Downfall">Downfall</button>
+      </div>
+      <div class="filter-sep" aria-hidden="true"></div>
+      <div class="filter-chips filter-chips--theatres" role="group" aria-label="Filter by theatre of war">
+        <button class="chip active" data-theatre="all">All</button>
+        <button class="chip" data-theatre="Western Front">Western Front</button>
+        <button class="chip" data-theatre="Eastern Front">Eastern Front</button>
+        <button class="chip" data-theatre="Pacific">Pacific</button>
+        <button class="chip" data-theatre="North Africa">N. Africa</button>
+        <button class="chip" data-theatre="Atlantic">Atlantic</button>
+        <button class="chip" data-theatre="Mediterranean">Mediterranean</button>
+      </div>
     </div>
   </nav>
 

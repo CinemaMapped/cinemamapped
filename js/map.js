@@ -4,6 +4,7 @@
   // ── State ──────────────────────────────────────────────────
   var allPins       = [];
   var activeTheatre = 'all';
+  var activeTitle   = '';
   var searchTerm    = '';
   var clusterGroup;
   var routeLayer    = null;
@@ -53,6 +54,36 @@
     });
   }
 
+  // ── Route lines ────────────────────────────────────────────
+  function clearRoute() {
+    if (routeLayer) {
+      map.removeLayer(routeLayer);
+      routeLayer = null;
+    }
+  }
+
+  function drawRoute(pins) {
+    clearRoute();
+    if (pins.length < 2) return;
+    var sorted = pins.slice().sort(function (a, b) {
+      return (a.sequence || 0) - (b.sequence || 0);
+    });
+    var latlngs = sorted.map(function (p) { return [p.lat, p.lng]; });
+    routeLayer = L.polyline(latlngs, {
+      color:     '#c9a84c',
+      weight:    2,
+      opacity:   0.55,
+      dashArray: '6 8',
+    }).addTo(map);
+  }
+
+  function drawRouteForTitle(title) {
+    var pins = allPins.filter(function (p) { return p.title === title; });
+    if (pins.length > 1 && pins.some(function (p) { return p.sequence != null; })) {
+      drawRoute(pins);
+    }
+  }
+
   // ── Panel ──────────────────────────────────────────────────
   var panel      = document.getElementById('pin-panel');
   var panelClose = document.getElementById('pin-close');
@@ -79,7 +110,7 @@
 
     var watchEl = document.getElementById('pin-watch');
     if (pin.streaming && isHttpUrl(pin.streaming)) {
-      watchEl.href        = escapeHtml(pin.streaming);
+      watchEl.href          = escapeHtml(pin.streaming);
       watchEl.style.display = '';
     } else {
       watchEl.style.display = 'none';
@@ -87,6 +118,9 @@
 
     panel.classList.add('open');
     panel.setAttribute('aria-hidden', 'false');
+
+    // Always draw route for the clicked pin's film
+    drawRouteForTitle(pin.title);
 
     if (window.gtag) {
       gtag('event', 'pin_click', {
@@ -101,6 +135,10 @@
   function closePanel() {
     panel.classList.remove('open');
     panel.setAttribute('aria-hidden', 'true');
+    // Only clear route if no title chip is locked
+    if (!activeTitle) {
+      clearRoute();
+    }
   }
 
   panelClose.addEventListener('click', closePanel);
@@ -131,28 +169,6 @@
     }
   }
 
-  // ── Route lines ────────────────────────────────────────────
-  function clearRoute() {
-    if (routeLayer) {
-      map.removeLayer(routeLayer);
-      routeLayer = null;
-    }
-  }
-
-  function drawRoute(pins) {
-    clearRoute();
-    var sorted = pins.slice().sort(function (a, b) {
-      return (a.sequence || 0) - (b.sequence || 0);
-    });
-    var latlngs = sorted.map(function (p) { return [p.lat, p.lng]; });
-    routeLayer = L.polyline(latlngs, {
-      color:     '#c9a84c',
-      weight:    2,
-      opacity:   0.6,
-      dashArray: '6 8',
-    }).addTo(map);
-  }
-
   // ── Render markers ─────────────────────────────────────────
   function renderMarkers() {
     clusterGroup.clearLayers();
@@ -163,12 +179,13 @@
 
     allPins.forEach(function (pin) {
       var matchTheatre = activeTheatre === 'all' || pin.theatre === activeTheatre;
+      var matchTitle   = !activeTitle   || pin.title   === activeTitle;
       var matchSearch  = !term ||
         pin.title.toLowerCase().includes(term) ||
         pin.location.toLowerCase().includes(term) ||
         pin.country.toLowerCase().includes(term);
 
-      if (!matchTheatre || !matchSearch) return;
+      if (!matchTheatre || !matchTitle || !matchSearch) return;
 
       visiblePins.push(pin);
 
@@ -184,9 +201,9 @@
       clusterGroup.addLayer(marker);
     });
 
-    // Draw route when a single film is filtered and all pins share the same title
+    // Auto-draw route when all visible pins share one title
     if (visiblePins.length > 1) {
-      var firstTitle = visiblePins[0].title;
+      var firstTitle  = visiblePins[0].title;
       var singleTitle = visiblePins.every(function (p) { return p.title === firstTitle; });
       var hasSequence = visiblePins.some(function (p) { return p.sequence != null; });
       if (singleTitle && hasSequence) {
@@ -199,10 +216,38 @@
     updatePinCount(count);
   }
 
-  // ── Theatre filter chips ───────────────────────────────────
-  document.querySelectorAll('.chip').forEach(function (chip) {
+  // ── Title filter chips ─────────────────────────────────────
+  document.querySelectorAll('.chip-title').forEach(function (chip) {
     chip.addEventListener('click', function () {
-      document.querySelectorAll('.chip').forEach(function (c) {
+      document.querySelectorAll('.chip-title').forEach(function (c) {
+        c.classList.remove('active');
+      });
+      chip.classList.add('active');
+
+      var titleValue = chip.dataset.title;
+      activeTitle = titleValue === 'all' ? '' : titleValue;
+
+      if (window.gtag) {
+        gtag('event', 'title_filter', { film_title: titleValue });
+      }
+
+      closePanel();
+      renderMarkers();
+
+      if (activeTitle) {
+        var filmPins = allPins.filter(function (p) { return p.title === activeTitle; });
+        if (filmPins.length > 0) {
+          var bounds = L.latLngBounds(filmPins.map(function (p) { return [p.lat, p.lng]; }));
+          map.fitBounds(bounds, { padding: [80, 80], maxZoom: 8 });
+        }
+      }
+    });
+  });
+
+  // ── Theatre filter chips ───────────────────────────────────
+  document.querySelectorAll('.chip:not(.chip-title)').forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      document.querySelectorAll('.chip:not(.chip-title)').forEach(function (c) {
         c.classList.remove('active');
       });
       chip.classList.add('active');

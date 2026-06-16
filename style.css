@@ -529,15 +529,29 @@ a {
 .map-nav {
   position: fixed;
   inset: 0 0 auto;
-  height: var(--nav-h);
+  height: auto;
   display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 0 min(32px, 4vw);
+  flex-direction: column;
+  align-items: stretch;
   z-index: 200;
   background: rgba(13, 13, 13, 0.97);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(8px);
+}
+
+.map-nav-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 10px min(32px, 4vw);
+}
+
+.map-nav-bottom {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 min(32px, 4vw) 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .map-nav .nav-logo {
@@ -575,9 +589,35 @@ a {
   overflow-x: auto;
   scrollbar-width: none;
   flex: 1;
+  min-width: 0;
 }
 
 .filter-chips::-webkit-scrollbar { display: none; }
+
+.filter-chips--titles {
+  flex: 1;
+  min-width: 0;
+  padding-right: 8px;
+}
+
+.filter-chips--theatres {
+  flex-shrink: 0;
+  max-width: 42%;
+}
+
+.filter-sep {
+  width: 1px;
+  height: 18px;
+  background: var(--border);
+  flex-shrink: 0;
+  margin: 0 10px;
+  align-self: center;
+}
+
+.chip-title {
+  font-size: 12px;
+  font-weight: 600;
+}
 
 .chip {
   flex-shrink: 0;
@@ -645,7 +685,7 @@ a {
 
 #map {
   position: fixed;
-  inset: var(--nav-h) 0 0 0;
+  inset: var(--map-top, 100px) 0 0 0;
   z-index: 1;
 }
 
@@ -654,10 +694,10 @@ a {
 
 .pin-panel {
   position: fixed;
-  top: var(--nav-h);
+  top: var(--map-top, 100px);
   right: -400px;
   width: 360px;
-  height: calc(100vh - var(--nav-h));
+  height: calc(100vh - var(--map-top, 100px));
   background: var(--bg-2);
   border-left: 1px solid var(--border);
   z-index: 100;
@@ -1050,20 +1090,20 @@ a {
   .hero { padding: 0 20px 64px; }
   .hero-stats { gap: 32px; }
 
-  .map-nav {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 12px 16px;
+  .map-nav-top {
+    padding: 10px 16px;
     gap: 10px;
-    row-gap: 8px;
   }
-  .map-nav .nav-logo { flex-basis: 100%; }
+  .map-nav-top .nav-logo { flex-basis: 100%; }
   .map-search { max-width: 100%; }
-  .filter-chips { padding-bottom: 4px; }
-
-  #map {
-    top: var(--map-top, 110px);
+  .map-nav-bottom {
+    padding: 0 16px 8px;
+    flex-wrap: wrap;
+    gap: 6px;
   }
+  .filter-chips--titles { max-width: 100%; }
+  .filter-chips--theatres { max-width: 100%; }
+  .filter-sep { display: none; }
 
   .pin-panel {
     width: 100%;
