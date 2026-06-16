@@ -6,6 +6,7 @@
   var activeTheatre = 'all';
   var searchTerm    = '';
   var clusterGroup;
+  var routeLayer    = null;
   var searchTimer;
 
   // ── Map init ───────────────────────────────────────────────
@@ -65,16 +66,23 @@
     document.getElementById('pin-location').textContent = pin.location;
     document.getElementById('pin-desc').textContent     = pin.description;
 
-    var yearEl = document.getElementById('pin-year');
-    yearEl.textContent = pin.year_portrayed ? 'Year portrayed: ' + pin.year_portrayed : '';
-
-    var streamEl = document.getElementById('pin-streaming');
-    if (pin.streaming && isHttpUrl(pin.streaming)) {
-      streamEl.innerHTML =
-        '<a href="' + escapeHtml(pin.streaming) + '" target="_blank" rel="noopener noreferrer">' +
-        'Watch online &#x2197;</a>';
+    var historyWrap = document.getElementById('pin-history-wrap');
+    if (pin.historical_context) {
+      document.getElementById('pin-history-text').textContent = pin.historical_context;
+      historyWrap.style.display = '';
     } else {
-      streamEl.innerHTML = '';
+      historyWrap.style.display = 'none';
+    }
+
+    var yearEl = document.getElementById('pin-year');
+    yearEl.textContent = pin.year_portrayed ? pin.year_portrayed : '';
+
+    var watchEl = document.getElementById('pin-watch');
+    if (pin.streaming && isHttpUrl(pin.streaming)) {
+      watchEl.href        = escapeHtml(pin.streaming);
+      watchEl.style.display = '';
+    } else {
+      watchEl.style.display = 'none';
     }
 
     panel.classList.add('open');
@@ -123,11 +131,35 @@
     }
   }
 
+  // ── Route lines ────────────────────────────────────────────
+  function clearRoute() {
+    if (routeLayer) {
+      map.removeLayer(routeLayer);
+      routeLayer = null;
+    }
+  }
+
+  function drawRoute(pins) {
+    clearRoute();
+    var sorted = pins.slice().sort(function (a, b) {
+      return (a.sequence || 0) - (b.sequence || 0);
+    });
+    var latlngs = sorted.map(function (p) { return [p.lat, p.lng]; });
+    routeLayer = L.polyline(latlngs, {
+      color:     '#c9a84c',
+      weight:    2,
+      opacity:   0.6,
+      dashArray: '6 8',
+    }).addTo(map);
+  }
+
   // ── Render markers ─────────────────────────────────────────
   function renderMarkers() {
     clusterGroup.clearLayers();
+    clearRoute();
 
-    var term = searchTerm.toLowerCase().trim();
+    var term        = searchTerm.toLowerCase().trim();
+    var visiblePins = [];
 
     allPins.forEach(function (pin) {
       var matchTheatre = activeTheatre === 'all' || pin.theatre === activeTheatre;
@@ -137,6 +169,8 @@
         pin.country.toLowerCase().includes(term);
 
       if (!matchTheatre || !matchSearch) return;
+
+      visiblePins.push(pin);
 
       var marker = L.marker([pin.lat, pin.lng], { icon: goldIcon() });
 
@@ -149,6 +183,16 @@
 
       clusterGroup.addLayer(marker);
     });
+
+    // Draw route when a single film is filtered and all pins share the same title
+    if (visiblePins.length > 1) {
+      var firstTitle = visiblePins[0].title;
+      var singleTitle = visiblePins.every(function (p) { return p.title === firstTitle; });
+      var hasSequence = visiblePins.some(function (p) { return p.sequence != null; });
+      if (singleTitle && hasSequence) {
+        drawRoute(visiblePins);
+      }
+    }
 
     var count = clusterGroup.getLayers().length;
     updateEmptyState(count);
