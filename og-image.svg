@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0d0d0d"/>
+
+  <!-- Gold vertical bar -->
+  <rect x="80" y="100" width="5" height="340" fill="#c9a84c"/>
+
+  <!-- CINEMA -->
+  <text x="112" y="280" font-family="Arial Black, Impact, sans-serif" font-size="148" font-weight="900" letter-spacing="6" fill="#e8e6de">CINEMA</text>
+
+  <!-- MAPPED in gold -->
+  <text x="112" y="420" font-family="Arial Black, Impact, sans-serif" font-size="148" font-weight="900" letter-spacing="6" fill="#c9a84c">MAPPED</text>
+
+  <!-- Tagline -->
+  <text x="114" y="475" font-family="Arial, sans-serif" font-size="22" fill="#8a8880" letter-spacing="4">EVERY STORY HAPPENED SOMEWHERE</text>
+
+  <!-- URL -->
+  <text x="114" y="540" font-family="Arial, sans-serif" font-size="19" fill="#484844" letter-spacing="1">cinemamapped.com</text>
+
+  <!-- Decorative gold dots — suggesting map pins -->
+  <circle cx="1040" cy="160" r="7" fill="#c9a84c" opacity="0.9"/>
+  <line x1="1040" y1="167" x2="1040" y2="195" stroke="#c9a84c" stroke-width="2" opacity="0.6"/>
+
+  <circle cx="1100" cy="260" r="5" fill="#c9a84c" opacity="0.6"/>
+  <line x1="1100" y1="265" x2="1100" y2="285" stroke="#c9a84c" stroke-width="2" opacity="0.4"/>
+
+  <circle cx="960" cy="230" r="6" fill="#c9a84c" opacity="0.7"/>
+  <line x1="960" y1="236" x2="960" y2="258" stroke="#c9a84c" stroke-width="2" opacity="0.5"/>
+
+  <circle cx="1070" cy="340" r="8" fill="#c9a84c" opacity="1"/>
+  <line x1="1070" y1="348" x2="1070" y2="378" stroke="#c9a84c" stroke-width="2" opacity="0.7"/>
+
+  <circle cx="930" cy="380" r="4" fill="#c9a84c" opacity="0.4"/>
+  <circle cx="1120" cy="180" r="4" fill="#c9a84c" opacity="0.5"/>
+  <circle cx="990" cy="300" r="5" fill="#c9a84c" opacity="0.6"/>
+  <circle cx="1090" cy="430" r="4" fill="#c9a84c" opacity="0.3"/>
+  <circle cx="950" cy="460" r="3" fill="#c9a84c" opacity="0.3"/>
+
+  <!-- Subtle connecting lines between dots -->
+  <line x1="1040" y1="160" x2="960" y2="230" stroke="#c9a84c" stroke-width="1" opacity="0.15"/>
+  <line x1="960" y1="230" x2="1070" y2="340" stroke="#c9a84c" stroke-width="1" opacity="0.15"/>
+  <line x1="1100" y1="260" x2="1070" y2="340" stroke="#c9a84c" stroke-width="1" opacity="0.15"/>
+  <line x1="1070" y1="340" x2="990" y2="300" stroke="#c9a84c" stroke-width="1" opacity="0.15"/>
+
+  <!-- Bottom stat line -->
+  <text x="600" y="598" font-family="Arial, sans-serif" font-size="16" fill="#2a2a2a" text-anchor="middle" letter-spacing="2">74 LOCATIONS · 46 TITLES · 6 THEATRES OF WAR</text>
+</svg>

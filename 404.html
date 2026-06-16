@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - CinemaMapped</title>
+  <meta name="robots" content="noindex">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%230d0d0d'/><text x='16' y='24' font-family='sans-serif' font-size='22' font-weight='900' text-anchor='middle' fill='%23c9a84c'>C</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .notfound {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 0 min(48px, 6vw);
+    }
+    .notfound-num {
+      font-family: var(--font-d);
+      font-size: clamp(120px, 20vw, 200px);
+      line-height: 1;
+      color: var(--accent);
+      opacity: 0.2;
+      letter-spacing: 0.04em;
+    }
+    .notfound-title {
+      font-family: var(--font-d);
+      font-size: clamp(32px, 6vw, 56px);
+      letter-spacing: 0.04em;
+      margin-top: -24px;
+      margin-bottom: 16px;
+    }
+    .notfound-sub {
+      color: var(--text-muted);
+      font-size: 16px;
+      max-width: 420px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="/index.html" class="nav-logo">Cinema<em>Mapped</em></a>
+    <a href="/map.html" class="btn">Explore the Map</a>
+  </nav>
+
+  <div class="notfound">
+    <div class="notfound-num">404</div>
+    <h1 class="notfound-title">THIS LOCATION IS OFF THE MAP</h1>
+    <p class="notfound-sub">The page you're looking for doesn't exist. But there are 74 real WWII locations waiting for you on the map.</p>
+    <a href="/map.html" class="btn btn-filled">Back to the Map</a>
+  </div>
+
+  <script src="/js/consent.js"></script>
+</body>
+</html>
