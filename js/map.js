@@ -227,6 +227,14 @@
       var titleValue = chip.dataset.title;
       activeTitle = titleValue === 'all' ? '' : titleValue;
 
+      // Selecting a title clears the theatre filter
+      if (activeTitle) {
+        activeTheatre = 'all';
+        document.querySelectorAll('.chip:not(.chip-title)').forEach(function (c) {
+          c.classList.toggle('active', c.dataset.theatre === 'all');
+        });
+      }
+
       if (window.gtag) {
         gtag('event', 'title_filter', { film_title: titleValue });
       }
@@ -252,6 +260,15 @@
       });
       chip.classList.add('active');
       activeTheatre = chip.dataset.theatre;
+
+      // Selecting a theatre clears the title filter
+      if (activeTheatre !== 'all') {
+        activeTitle = '';
+        document.querySelectorAll('.chip-title').forEach(function (c) {
+          c.classList.toggle('active', c.dataset.title === 'all');
+        });
+      }
+
       if (window.gtag) {
         gtag('event', 'theatre_filter', { theatre: activeTheatre });
       }
