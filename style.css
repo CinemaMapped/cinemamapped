@@ -802,11 +802,10 @@ a {
 
 .pin-meta-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 12px;
   margin-top: auto;
-  padding-top: 4px;
+  padding-top: 16px;
 }
 
 .pin-year {
@@ -816,26 +815,28 @@ a {
 }
 
 .pin-watch-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 8px 16px;
-  background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--accent);
+  border: none;
+  color: #0d0d0d;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   text-decoration: none;
-  transition: background 0.15s, color 0.15s;
+  transition: background 0.15s, transform 0.1s;
   white-space: nowrap;
-  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .pin-watch-btn:hover {
-  background: var(--accent);
-  color: #0d0d0d;
+  background: #e0bc6a;
+  transform: translateY(-1px);
 }
 
 
