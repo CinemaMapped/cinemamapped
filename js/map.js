@@ -332,7 +332,7 @@
   window.addEventListener('resize', syncMapTop);
 
   // ── Load data ──────────────────────────────────────────────
-  fetch('data.json')
+  fetch('data.json?v=2')
     .then(function (r) { return r.json(); })
     .then(function (data) {
       allPins = data;
