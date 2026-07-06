@@ -49,11 +49,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="/style.css?v=4">
   <style>
     .guide-hero {
       padding: calc(var(--nav-h) + 64px) min(80px, 8vw) 80px;
-      max-width: 860px;
+      position: relative;
+      overflow: hidden;
+      min-height: 60vh;
+    }
+    #guide-hero-map {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .guide-hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        linear-gradient(to right, rgba(13,13,13,0.94) 0%, rgba(13,13,13,0.78) 50%, rgba(13,13,13,0.45) 100%),
+        linear-gradient(to top, rgba(13,13,13,0.90) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .guide-eyebrow,
+    .guide-h1,
+    .guide-intro,
+    .guide-hero .btn {
+      position: relative;
+      z-index: 2;
     }
     .guide-eyebrow {
       font-size: 10px;
@@ -255,6 +279,8 @@
 
   <!-- HERO -->
   <div class="guide-hero">
+    <div id="guide-hero-map" aria-hidden="true"></div>
+    <div class="guide-hero-overlay" aria-hidden="true"></div>
     <div class="guide-eyebrow">Complete Guide</div>
     <h1 class="guide-h1">WWII FILM<br>LOCATIONS MAP</h1>
     <p class="guide-intro">Every story happened somewhere. This is the complete guide to the real historical locations where WWII films and series are set — not where they were filmed, but where the events actually took place. 282 locations across 194 titles, pinned to the map.</p>
@@ -482,5 +508,41 @@
     })(window, document, "clarity", "script", "x821akrh0r");
   </script>
   <script src="/js/consent.js?v=3"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    (function () {
+      var heroMap = L.map('guide-hero-map', {
+        center:             [50, 18],
+        zoom:               5,
+        dragging:           false,
+        touchZoom:          false,
+        scrollWheelZoom:    false,
+        doubleClickZoom:    false,
+        boxZoom:            false,
+        keyboard:           false,
+        zoomControl:        false,
+        attributionControl: false,
+        tap:                false,
+      });
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        subdomains: 'abcd',
+        maxZoom: 19,
+      }).addTo(heroMap);
+      fetch('/data.json')
+        .then(function (r) { return r.json(); })
+        .then(function (pins) {
+          pins.forEach(function (pin) {
+            L.circleMarker([pin.lat, pin.lng], {
+              radius:      4,
+              color:       '#c9a84c',
+              fillColor:   '#c9a84c',
+              fillOpacity: 0.85,
+              weight:      0,
+              interactive: false,
+            }).addTo(heroMap);
+          });
+        });
+    })();
+  </script>
 </body>
 </html>
