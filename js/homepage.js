@@ -1,6 +1,44 @@
 (function () {
   'use strict';
 
+  // ── Hero background map ───────────────────────────────────
+  var heroMapEl = document.getElementById('hero-map');
+  if (heroMapEl && typeof L !== 'undefined') {
+    var heroMap = L.map('hero-map', {
+      center:              [50, 18],
+      zoom:                5,
+      dragging:            false,
+      touchZoom:           false,
+      scrollWheelZoom:     false,
+      doubleClickZoom:     false,
+      boxZoom:             false,
+      keyboard:            false,
+      zoomControl:         false,
+      attributionControl:  false,
+      tap:                 false,
+    });
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      subdomains: 'abcd',
+      maxZoom:    19,
+    }).addTo(heroMap);
+
+    fetch('data.json')
+      .then(function (r) { return r.json(); })
+      .then(function (pins) {
+        pins.forEach(function (pin) {
+          L.circleMarker([pin.lat, pin.lng], {
+            radius:      4,
+            color:       '#c9a84c',
+            fillColor:   '#c9a84c',
+            fillOpacity: 0.85,
+            weight:      0,
+            interactive: false,
+          }).addTo(heroMap);
+        });
+      });
+  }
+
   fetch('data.json')
     .then(function (r) { return r.json(); })
     .then(function (data) {

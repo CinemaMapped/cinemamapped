@@ -95,6 +95,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -111,6 +112,8 @@
 
   <!-- HERO -->
   <section class="hero" aria-label="Hero">
+    <div id="hero-map" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
     <div class="hero-line" aria-hidden="true"></div>
     <h1 class="hero-title">CINEMA<br>MAPPED</h1>
     <p class="hero-sub">Every story happened somewhere. Explore WWII through the films and series that portrayed it.</p>
@@ -257,6 +260,7 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "x821akrh0r");
   </script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/homepage.js"></script>
   <script src="js/consent.js"></script>
 </body>
