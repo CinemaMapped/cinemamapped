@@ -13,12 +13,20 @@ function HtmlEncode($str) {
 function ToSlug($str) {
     if (-not $str) { return '' }
     $s = $str.ToLower()
-    # Strip non-ASCII (diacritics, special chars) — keeps slug clean and URL-safe
-    $s = [System.Text.RegularExpressions.Regex]::Replace($s, '[^\x00-\x7F]', '')
-    $s = $s -replace "[^a-z0-9\s]", ''
-    $s = $s -replace '\s+', '-'
-    $s = $s -replace '-+', '-'
-    return $s.Trim('-')
+    # Handle chars that don't decompose via Unicode NFD
+    $s = $s -replace [char]0x0142, 'l'   # l-stroke (l with stroke)
+    $s = $s -replace [char]0x0141, 'l'   # L-stroke
+    $s = $s -replace [char]0x00DF, 'ss'  # eszett
+    $s = $s -replace [char]0x00E6, 'ae'  # ae ligature
+    $s = $s -replace [char]0x00F8, 'o'   # o-stroke
+    $s = $s -replace [char]0x0111, 'd'   # d-stroke
+    # NFD decomposition splits e.g. e-acute into e + combining accent, then strip combining chars
+    $norm = $s.Normalize([System.Text.NormalizationForm]::FormD)
+    $ascii = [System.Text.RegularExpressions.Regex]::Replace($norm, '[^\x00-\x7F]', '')
+    $ascii = $ascii -replace "[^a-z0-9\s]", ''
+    $ascii = $ascii -replace '\s+', '-'
+    $ascii = $ascii -replace '-+', '-'
+    return $ascii.Trim('-')
 }
 
 # Group pins by title for related links
