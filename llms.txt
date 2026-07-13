@@ -1,0 +1,343 @@
+﻿# CinemaMapped
+
+> An interactive map showing where WWII films and series are SET — not where they were filmed, but where the historical events portrayed actually took place.
+
+## What is CinemaMapped?
+
+CinemaMapped (https://cinemamapped.com) is a free web tool that maps the real historical locations of World War II films and series. Every pin marks the actual place where the story happened — the real battlefield, city, or building — not the film set or studio location.
+
+The distinction matters: Saving Private Ryan was FILMED in Ireland but is SET at Omaha Beach, Normandy, France. CinemaMapped shows Omaha Beach.
+
+## Dataset
+
+- 282 pinned locations
+- 194 films and series
+- 45 countries
+- 6 theatres of war: Western Front, Eastern Front, Pacific, North Africa, Atlantic, Mediterranean
+- Each pin includes: exact location, scene description, historical context, year portrayed
+
+## Titles with the most locations
+
+- Band of Brothers: 9 locations
+- The Pacific: 5 locations
+- The Longest Day: 5 locations
+- Patton: 4 locations
+- Masters of the Air: 4 locations
+- Das Boot: 4 locations
+- Generation War: 4 locations
+- Nacht und Nebel (Night and Fog): 3 locations
+- Schindler's List: 3 locations
+- Thirty Seconds Over Tokyo: 3 locations
+- Europa Europa: 3 locations
+- A Bridge Too Far: 3 locations
+- Unbroken: 3 locations
+- Valkyrie: 3 locations
+- The Monuments Men: 3 locations
+- My Way: 2 locations
+- Black Book: 2 locations
+- Oppenheimer: 2 locations
+- Red Tails: 2 locations
+- Life is Beautiful: 2 locations
+
+## All titles included
+
+- 13 Minutes
+- 1939 - Battle of Westerplatte
+- 1941
+- 1944
+- A Bridge Too Far
+- A French Village
+- A Hidden Life
+- A Midnight Clear
+- A Small Light
+- A Woman in Berlin
+- Adventures of a Mathematician
+- All the Light We Cannot See
+- Allied
+- Alone in Berlin
+- Anne Frank: The Whole Story
+- Anthropoid
+- April 9th
+- Atonement
+- Australia
+- Band of Brothers
+- Battle for Sevastopol
+- Before the Fall
+- Betrayed
+- Black Book
+- Black Rain
+- Canopy
+- Captain Corelli's Mandolin
+- Catch-22
+- Churchill
+- City of Life and Death
+- Colditz
+- Come and See
+- Conspiracy
+- Countdown to War
+- Cross of Iron
+- Darkest Hour
+- Das Boot
+- Death and Glory in Changde
+- Defiance
+- Die Wannseekonferenz
+- Dieppe
+- Diplomacy
+- Downfall
+- Dunkirk
+- El Alamein: The Line of Fire
+- Emperor
+- Empire of the Sun
+- En mai, fais ce qu'il te plaît
+- Enemy at the Gates
+- Enola Gay: The Men, The Mission, The Atomic Bomb
+- Escape from Sobibor
+- Europa Europa
+- Fat Man and Little Boy
+- Flags of Our Fathers
+- Flame & Citron
+- Fury
+- Generation War
+- Grave of the Fireflies
+- Greyhound
+- Hacksaw Ridge
+- Hamsun
+- Hart's War
+- Hell in the Aegean
+- Hiroshima
+- Hiroshima: Out of the Ashes
+- Hitler: The Rise of Evil
+- Holocaust
+- Hope and Glory
+- Indigènes
+- Inglourious Basterds
+- Into the Storm
+- Into The White
+- Jakob the Liar
+- Jean Moulin
+- John Rabe
+- Katyn
+- Kelly's Heroes
+- Land of Mine
+- Le Grand Charles
+- Leningrad
+- Letters from Iwo Jima
+- Life is Beautiful
+- Lore
+- Masters of the Air
+- Max Manus
+- Memphis Belle
+- Merry Christmas Mr. Lawrence
+- Midway
+- Midway (2019)
+- Miracle at St. Anna
+- Mission of the Shark
+- Munich: The Edge of War
+- Mussolini and I
+- My Way
+- Nacht und Nebel (Night and Fog)
+- Narvik: Hitler's First Defeat
+- Nuremberg
+- Operation Finale
+- Operation Mincemeat
+- Oppenheimer
+- Overlord
+- Panfilov's 28 Men
+- Paradise Road
+- Patton
+- Pearl Harbor
+- Race
+- Red Tails
+- Resistance (2020)
+- Saints and Soldiers
+- Sands of Iwo Jima
+- SAS: Rogue Heroes
+- Saving Private Ryan
+- Schindler's List
+- Snow Falling on Cedars
+- Soldier of Orange
+- Son of Saul
+- Sophie Scholl: The Final Days
+- Stalingrad
+- Stalingrad (1993)
+- Suite Française
+- Sunshine
+- Talvisota
+- The 12th Man
+- The Auschwitz Report
+- The Battle of Britain
+- The Battle of Neretva
+- The Big Red One
+- The Book Thief
+- The Boy in the Striped Pyjamas
+- The Brest Fortress
+- The Bridge at Remagen
+- The Bridge on the River Kwai
+- The Captain
+- The Champion of Auschwitz
+- The Children of Huang Shi
+- The Conference
+- The Counterfeiters
+- The Desert Fox
+- The Dirty Dozen
+- The Eight Hundred
+- The English Patient
+- The Exception
+- The Flowers of War
+- The Forgotten Battle
+- The Gathering Storm
+- The Good German
+- The Great Escape
+- The Great Raid
+- The Grey Zone
+- The Guns of Navarone
+- The Heroes of Telemark
+- The Imitation Game
+- The King's Choice
+- The King's Speech
+- The Last Frontier
+- The Longest Day
+- The Man Who Will Come
+- The Man with the Iron Heart
+- The Ministry of Ungentlemanly Warfare
+- The Monuments Men
+- The Narrow Road to the Deep North
+- The Pacific
+- The People vs Fritz Bauer
+- The Pianist
+- The Plot Against America
+- The Railway Man
+- The Reader
+- The Resistance Banker
+- The Scarlet and the Black
+- The Shadow in My Eye
+- The Tattooist of Auschwitz
+- The Thin Red Line
+- The Tuskegee Airmen
+- The Warrior's Heart
+- The Way Back
+- The Windermere Children
+- The Zookeeper's Wife
+- They Fought for Their Motherland
+- Thirty Seconds Over Tokyo
+- To End All Wars
+- Tobruk
+- Tora! Tora! Tora!
+- Unbroken
+- Uprising
+- USS Indianapolis: Men of Courage
+- Valkyrie
+- Walking with the Enemy
+- War Sailor
+- We Were the Lucky Ones
+- When Trumpets Fade
+- Where Eagles Dare
+- Windtalkers
+- Winter in Wartime
+- World on Fire
+
+## Theatres of war covered
+
+- Atlantic
+- Eastern Front
+- Mediterranean
+- North Africa
+- Pacific
+- Western Front
+
+## Countries covered
+
+- Argentina
+- Atlantic Ocean
+- Australia
+- Austria
+- Belarus
+- Belgium
+- Bosnia and Herzegovina
+- China
+- Czech Republic
+- Denmark
+- Egypt
+- Equatorial Guinea
+- Estonia
+- Finland
+- France
+- Germany
+- Greece
+- Hungary
+- Indonesia
+- International waters
+- Italy
+- Japan
+- Kiribati
+- Libya
+- Marshall Islands
+- Mongolia
+- Morocco
+- Netherlands
+- Norway
+- Pacific Ocean
+- Palau
+- Papua New Guinea
+- Philippines
+- Poland
+- Romania
+- Russia
+- Singapore
+- Slovakia
+- Solomon Islands
+- Spain
+- Thailand
+- Tunisia
+- Ukraine
+- United Kingdom
+- United States
+
+## Sample data points
+
+- Saving Private Ryan | Omaha Beach, Normandy, France | Western Front | 1944
+- Saving Private Ryan | Ramelle (fictional, based on Ramelle-sur-Merderet area), Normandy, France | Western Front | 1944
+- Band of Brothers | Brécourt Manor, Normandy, France | Western Front | 1944
+- Band of Brothers | Carentan, Normandy, France | Western Front | 1944
+- Band of Brothers | Eindhoven, Netherlands | Western Front | 1944
+- Band of Brothers | Arnhem Bridge, Netherlands | Western Front | 1944
+- Band of Brothers | Bastogne, Belgium | Western Front | 1944
+- Band of Brothers | Foy, Ardennes, Belgium | Western Front | 1945
+- Band of Brothers | Haguenau, Alsace, France | Western Front | 1945
+- Band of Brothers | Berchtesgaden & Eagle's Nest, Germany | Western Front | 1945
+- Band of Brothers | Landsberg concentration camp, Bavaria, Germany | Western Front | 1945
+- Schindler's List | Kraków Ghetto, Poland | Eastern Front | 1941
+- Schindler's List | Płaszów concentration camp, Kraków, Poland | Eastern Front | 1943
+- Schindler's List | Brünnlitz (now Brněnec), Sudetenland, Czech Republic | Eastern Front | 1944
+- The Pacific | Guadalcanal, Solomon Islands | Pacific | 1942
+
+## Key questions this site answers
+
+- Where is Band of Brothers set? (Brécourt Manor, Carentan, Eindhoven, Nijmegen, Bastogne, Foy, Haguenau, Landsberg, Berchtesgaden)
+- Where is Saving Private Ryan set? (Omaha Beach, Normandy, France — not Ireland where it was filmed)
+- Where is Schindler's List set? (Kraków Ghetto, Płaszów concentration camp, Brünnlitz factory)
+- Where is The Pianist set? (Warsaw Ghetto, Warsaw, Poland)
+- Where is Downfall set? (Berlin, Germany — the Führerbunker, April 1945)
+- Where is Das Boot set? (La Rochelle, France — Atlantic submarine base)
+- Where is Dunkirk (2017) set? (Dunkirk beaches, northern France)
+- Where is The Pacific set? (Guadalcanal, Peleliu, Iwo Jima, Okinawa)
+
+## Individual location pages
+
+Every pin has its own page at: https://cinemamapped.com/locations/{slug}
+
+Examples:
+- https://cinemamapped.com/locations/saving-private-ryan-omaha-beach-normandy
+- https://cinemamapped.com/locations/band-of-brothers-bastogne
+- https://cinemamapped.com/locations/schindlers-list-plaszow-concentration-camp-krakow
+- https://cinemamapped.com/locations/downfall-fuhrerbunker-berlin
+
+## Contact
+
+cinemamapped@gmail.com
+
+## Legal
+
+- Privacy Policy: https://cinemamapped.com/privacy
+- Terms of Use: https://cinemamapped.com/terms
+- Amazon Associates disclosure: CinemaMapped participates in the Amazon Associates Program. Watch links are affiliate links.
