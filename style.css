@@ -191,6 +191,12 @@ a {
   margin-top: 6px;
 }
 
+a.hero-stat-link {
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+a.hero-stat-link:hover { opacity: 0.75; }
+
 
 /* â”€â”€ SHARED SECTION â”€â”€ */
 
