@@ -13,14 +13,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css?v=8">
+  <link rel="stylesheet" href="/style.css?v=9">
 </head>
 <body>
 
   <nav class="nav">
     <a href="/" class="nav-logo">Cinema<em>Mapped</em></a>
     <div style="display:flex;gap:12px;align-items:center;">
-      <a href="/countries" class="btn" style="font-size:11px;padding:8px 16px;">By Country</a>
+      <a href="/countries" class="btn" style="font-size:11px;padding:8px 16px;">Countries</a>
       <a href="/map" class="btn btn-filled">Explore the Map</a>
     </div>
   </nav>
@@ -30,789 +30,1224 @@
     <p>194 titles &middot; 302 real historical locations</p>
   </div>
 
+  <div class="index-filter-bar">
+    <button class="chip active" data-filter-type="all">All</button>
+    <button class="chip" data-filter-type="Film">Films</button>
+    <button class="chip" data-filter-type="Series">Series</button>
+    <div class="index-filter-sep"></div>
+    <button class="chip" data-filter-theatre="Western Front">Western Front</button>
+    <button class="chip" data-filter-theatre="Eastern Front">Eastern Front</button>
+    <button class="chip" data-filter-theatre="Pacific">Pacific</button>
+    <button class="chip" data-filter-theatre="North Africa">N. Africa</button>
+    <button class="chip" data-filter-theatre="Atlantic">Atlantic</button>
+    <button class="chip" data-filter-theatre="Mediterranean">Mediterranean</button>
+    <span class="filter-count-label" id="filter-count">194 titles</span>
+  </div>
   <div class="index-grid">
-    <a href="/films/13-minutes" class="index-card">
-      <div class="index-card-title">13 Minutes</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/1939-battle-of-westerplatte" class="index-card">
-      <div class="index-card-title">1939 - Battle of Westerplatte</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/1941" class="index-card">
-      <div class="index-card-title">1941</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/1944" class="index-card">
-      <div class="index-card-title">1944</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/a-bridge-too-far" class="index-card">
-      <div class="index-card-title">A Bridge Too Far</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>3 locations</span></div>
-    </a>
-    <a href="/films/a-french-village" class="index-card">
-      <div class="index-card-title">A French Village</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/a-hidden-life" class="index-card">
-      <div class="index-card-title">A Hidden Life</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/a-midnight-clear" class="index-card">
-      <div class="index-card-title">A Midnight Clear</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/a-small-light" class="index-card">
-      <div class="index-card-title">A Small Light</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/a-woman-in-berlin" class="index-card">
-      <div class="index-card-title">A Woman in Berlin</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/adventures-of-a-mathematician" class="index-card">
-      <div class="index-card-title">Adventures of a Mathematician</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/all-the-light-we-cannot-see" class="index-card">
-      <div class="index-card-title">All the Light We Cannot See</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/allied" class="index-card">
-      <div class="index-card-title">Allied</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">North Africa</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/alone-in-berlin" class="index-card">
-      <div class="index-card-title">Alone in Berlin</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/anne-frank-the-whole-story" class="index-card">
-      <div class="index-card-title">Anne Frank: The Whole Story</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/anthropoid" class="index-card">
-      <div class="index-card-title">Anthropoid</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/april-9th" class="index-card">
-      <div class="index-card-title">April 9th</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/atonement" class="index-card">
-      <div class="index-card-title">Atonement</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/australia" class="index-card">
-      <div class="index-card-title">Australia</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/band-of-brothers" class="index-card">
-      <div class="index-card-title">Band of Brothers</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>9 locations</span></div>
-    </a>
-    <a href="/films/battle-for-sevastopol" class="index-card">
-      <div class="index-card-title">Battle for Sevastopol</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/before-the-fall" class="index-card">
-      <div class="index-card-title">Before the Fall</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/betrayed" class="index-card">
-      <div class="index-card-title">Betrayed</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/black-book" class="index-card">
-      <div class="index-card-title">Black Book</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/black-rain" class="index-card">
-      <div class="index-card-title">Black Rain</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/canopy" class="index-card">
-      <div class="index-card-title">Canopy</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/captain-corellis-mandolin" class="index-card">
-      <div class="index-card-title">Captain Corelli's Mandolin</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
-    </a>
-    <a href="/films/catch22" class="index-card">
-      <div class="index-card-title">Catch-22</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
-    </a>
-    <a href="/films/churchill" class="index-card">
-      <div class="index-card-title">Churchill</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/city-of-life-and-death" class="index-card">
-      <div class="index-card-title">City of Life and Death</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/colditz" class="index-card">
-      <div class="index-card-title">Colditz</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/come-and-see" class="index-card">
-      <div class="index-card-title">Come and See</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/conspiracy" class="index-card">
-      <div class="index-card-title">Conspiracy</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/countdown-to-war" class="index-card">
-      <div class="index-card-title">Countdown to War</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/cross-of-iron" class="index-card">
-      <div class="index-card-title">Cross of Iron</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/darkest-hour" class="index-card">
-      <div class="index-card-title">Darkest Hour</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/das-boot" class="index-card">
-      <div class="index-card-title">Das Boot</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Atlantic</span><span>4 locations</span></div>
-    </a>
-    <a href="/films/death-and-glory-in-changde" class="index-card">
-      <div class="index-card-title">Death and Glory in Changde</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/defiance" class="index-card">
-      <div class="index-card-title">Defiance</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/die-wannseekonferenz" class="index-card">
-      <div class="index-card-title">Die Wannseekonferenz</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/dieppe" class="index-card">
-      <div class="index-card-title">Dieppe</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/diplomacy" class="index-card">
-      <div class="index-card-title">Diplomacy</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/downfall" class="index-card">
-      <div class="index-card-title">Downfall</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>4 locations</span></div>
-    </a>
-    <a href="/films/dunkirk" class="index-card">
-      <div class="index-card-title">Dunkirk</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>5 locations</span></div>
-    </a>
-    <a href="/films/el-alamein-the-line-of-fire" class="index-card">
-      <div class="index-card-title">El Alamein: The Line of Fire</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">North Africa</span><span>1 location</span></div>
-    </a>
-    <a href="/films/emperor" class="index-card">
-      <div class="index-card-title">Emperor</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/empire-of-the-sun" class="index-card">
-      <div class="index-card-title">Empire of the Sun</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/en-mai-fais-ce-quil-te-plait" class="index-card">
-      <div class="index-card-title">En mai, fais ce qu'il te plaît</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/enemy-at-the-gates" class="index-card">
-      <div class="index-card-title">Enemy at the Gates</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/enola-gay-the-men-the-mission-the-atomic-bomb" class="index-card">
-      <div class="index-card-title">Enola Gay: The Men, The Mission, The Atomic Bomb</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/escape-from-sobibor" class="index-card">
-      <div class="index-card-title">Escape from Sobibor</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/europa-europa" class="index-card">
-      <div class="index-card-title">Europa Europa</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>3 locations</span></div>
-    </a>
-    <a href="/films/fat-man-and-little-boy" class="index-card">
-      <div class="index-card-title">Fat Man and Little Boy</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/flags-of-our-fathers" class="index-card">
-      <div class="index-card-title">Flags of Our Fathers</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/flame-citron" class="index-card">
-      <div class="index-card-title">Flame &amp; Citron</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/fury" class="index-card">
-      <div class="index-card-title">Fury</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>3 locations</span></div>
-    </a>
-    <a href="/films/generation-war" class="index-card">
-      <div class="index-card-title">Generation War</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>4 locations</span></div>
-    </a>
-    <a href="/films/grave-of-the-fireflies" class="index-card">
-      <div class="index-card-title">Grave of the Fireflies</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/greyhound" class="index-card">
-      <div class="index-card-title">Greyhound</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Atlantic</span><span>1 location</span></div>
-    </a>
-    <a href="/films/hacksaw-ridge" class="index-card">
-      <div class="index-card-title">Hacksaw Ridge</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/hamsun" class="index-card">
-      <div class="index-card-title">Hamsun</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/harts-war" class="index-card">
-      <div class="index-card-title">Hart's War</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/hell-in-the-aegean" class="index-card">
-      <div class="index-card-title">Hell in the Aegean</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
-    </a>
-    <a href="/films/hiroshima" class="index-card">
-      <div class="index-card-title">Hiroshima</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/hiroshima-out-of-the-ashes" class="index-card">
-      <div class="index-card-title">Hiroshima: Out of the Ashes</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/hitler-the-rise-of-evil" class="index-card">
-      <div class="index-card-title">Hitler: The Rise of Evil</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/holocaust" class="index-card">
-      <div class="index-card-title">Holocaust</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/hope-and-glory" class="index-card">
-      <div class="index-card-title">Hope and Glory</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/indigenes" class="index-card">
-      <div class="index-card-title">Indigènes</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/inglourious-basterds" class="index-card">
-      <div class="index-card-title">Inglourious Basterds</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/into-the-storm" class="index-card">
-      <div class="index-card-title">Into the Storm</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/into-the-white" class="index-card">
-      <div class="index-card-title">Into The White</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/jakob-the-liar" class="index-card">
-      <div class="index-card-title">Jakob the Liar</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/jean-moulin" class="index-card">
-      <div class="index-card-title">Jean Moulin</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/john-rabe" class="index-card">
-      <div class="index-card-title">John Rabe</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/katyn" class="index-card">
-      <div class="index-card-title">Katyn</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/kellys-heroes" class="index-card">
-      <div class="index-card-title">Kelly's Heroes</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/land-of-mine" class="index-card">
-      <div class="index-card-title">Land of Mine</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/le-grand-charles" class="index-card">
-      <div class="index-card-title">Le Grand Charles</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/leningrad" class="index-card">
-      <div class="index-card-title">Leningrad</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/letters-from-iwo-jima" class="index-card">
-      <div class="index-card-title">Letters from Iwo Jima</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/life-is-beautiful" class="index-card">
-      <div class="index-card-title">Life is Beautiful</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/lore" class="index-card">
-      <div class="index-card-title">Lore</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/masters-of-the-air" class="index-card">
-      <div class="index-card-title">Masters of the Air</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>6 locations</span></div>
-    </a>
-    <a href="/films/max-manus" class="index-card">
-      <div class="index-card-title">Max Manus</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/memphis-belle" class="index-card">
-      <div class="index-card-title">Memphis Belle</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/merry-christmas-mr-lawrence" class="index-card">
-      <div class="index-card-title">Merry Christmas Mr. Lawrence</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/midway" class="index-card">
-      <div class="index-card-title">Midway</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/midway-2019" class="index-card">
-      <div class="index-card-title">Midway (2019)</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/miracle-at-st-anna" class="index-card">
-      <div class="index-card-title">Miracle at St. Anna</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
-    </a>
-    <a href="/films/mission-of-the-shark" class="index-card">
-      <div class="index-card-title">Mission of the Shark</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/munich-the-edge-of-war" class="index-card">
-      <div class="index-card-title">Munich: The Edge of War</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/mussolini-and-i" class="index-card">
-      <div class="index-card-title">Mussolini and I</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
-    </a>
-    <a href="/films/my-way" class="index-card">
-      <div class="index-card-title">My Way</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/nacht-und-nebel-night-and-fog" class="index-card">
-      <div class="index-card-title">Nacht und Nebel (Night and Fog)</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>3 locations</span></div>
-    </a>
-    <a href="/films/narvik-hitlers-first-defeat" class="index-card">
-      <div class="index-card-title">Narvik: Hitler's First Defeat</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/nuremberg" class="index-card">
-      <div class="index-card-title">Nuremberg</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/operation-finale" class="index-card">
-      <div class="index-card-title">Operation Finale</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/operation-mincemeat" class="index-card">
-      <div class="index-card-title">Operation Mincemeat</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/oppenheimer" class="index-card">
-      <div class="index-card-title">Oppenheimer</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/overlord" class="index-card">
-      <div class="index-card-title">Overlord</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/panfilovs-28-men" class="index-card">
-      <div class="index-card-title">Panfilov's 28 Men</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/paradise-road" class="index-card">
-      <div class="index-card-title">Paradise Road</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/patton" class="index-card">
-      <div class="index-card-title">Patton</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">North Africa</span><span>4 locations</span></div>
-    </a>
-    <a href="/films/pearl-harbor" class="index-card">
-      <div class="index-card-title">Pearl Harbor</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/race" class="index-card">
-      <div class="index-card-title">Race</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/red-tails" class="index-card">
-      <div class="index-card-title">Red Tails</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/resistance-2020" class="index-card">
-      <div class="index-card-title">Resistance (2020)</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/saints-and-soldiers" class="index-card">
-      <div class="index-card-title">Saints and Soldiers</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/sands-of-iwo-jima" class="index-card">
-      <div class="index-card-title">Sands of Iwo Jima</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/sas-rogue-heroes" class="index-card">
-      <div class="index-card-title">SAS: Rogue Heroes</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">North Africa</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/saving-private-ryan" class="index-card">
-      <div class="index-card-title">Saving Private Ryan</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>5 locations</span></div>
-    </a>
-    <a href="/films/schindlers-list" class="index-card">
-      <div class="index-card-title">Schindler's List</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>6 locations</span></div>
-    </a>
-    <a href="/films/snow-falling-on-cedars" class="index-card">
-      <div class="index-card-title">Snow Falling on Cedars</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/soldier-of-orange" class="index-card">
-      <div class="index-card-title">Soldier of Orange</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/son-of-saul" class="index-card">
-      <div class="index-card-title">Son of Saul</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/sophie-scholl-the-final-days" class="index-card">
-      <div class="index-card-title">Sophie Scholl: The Final Days</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/stalingrad" class="index-card">
-      <div class="index-card-title">Stalingrad</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/stalingrad-1993" class="index-card">
-      <div class="index-card-title">Stalingrad (1993)</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/suite-francaise" class="index-card">
-      <div class="index-card-title">Suite Française</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/sunshine" class="index-card">
-      <div class="index-card-title">Sunshine</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/talvisota" class="index-card">
-      <div class="index-card-title">Talvisota</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-12th-man" class="index-card">
-      <div class="index-card-title">The 12th Man</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/the-auschwitz-report" class="index-card">
-      <div class="index-card-title">The Auschwitz Report</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/the-battle-of-britain" class="index-card">
-      <div class="index-card-title">The Battle of Britain</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-battle-of-neretva" class="index-card">
-      <div class="index-card-title">The Battle of Neretva</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-big-red-one" class="index-card">
-      <div class="index-card-title">The Big Red One</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/the-book-thief" class="index-card">
-      <div class="index-card-title">The Book Thief</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-boy-in-the-striped-pyjamas" class="index-card">
-      <div class="index-card-title">The Boy in the Striped Pyjamas</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-brest-fortress" class="index-card">
-      <div class="index-card-title">The Brest Fortress</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-bridge-at-remagen" class="index-card">
-      <div class="index-card-title">The Bridge at Remagen</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-bridge-on-the-river-kwai" class="index-card">
-      <div class="index-card-title">The Bridge on the River Kwai</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/the-captain" class="index-card">
-      <div class="index-card-title">The Captain</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-champion-of-auschwitz" class="index-card">
-      <div class="index-card-title">The Champion of Auschwitz</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-children-of-huang-shi" class="index-card">
-      <div class="index-card-title">The Children of Huang Shi</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-conference" class="index-card">
-      <div class="index-card-title">The Conference</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-counterfeiters" class="index-card">
-      <div class="index-card-title">The Counterfeiters</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/the-desert-fox" class="index-card">
-      <div class="index-card-title">The Desert Fox</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">North Africa</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-dirty-dozen" class="index-card">
-      <div class="index-card-title">The Dirty Dozen</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-eight-hundred" class="index-card">
-      <div class="index-card-title">The Eight Hundred</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-english-patient" class="index-card">
-      <div class="index-card-title">The English Patient</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">North Africa</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/the-exception" class="index-card">
-      <div class="index-card-title">The Exception</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-flowers-of-war" class="index-card">
-      <div class="index-card-title">The Flowers of War</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-forgotten-battle" class="index-card">
-      <div class="index-card-title">The Forgotten Battle</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/the-gathering-storm" class="index-card">
-      <div class="index-card-title">The Gathering Storm</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-good-german" class="index-card">
-      <div class="index-card-title">The Good German</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-great-escape" class="index-card">
-      <div class="index-card-title">The Great Escape</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-great-raid" class="index-card">
-      <div class="index-card-title">The Great Raid</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-grey-zone" class="index-card">
-      <div class="index-card-title">The Grey Zone</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-guns-of-navarone" class="index-card">
-      <div class="index-card-title">The Guns of Navarone</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-heroes-of-telemark" class="index-card">
-      <div class="index-card-title">The Heroes of Telemark</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/the-imitation-game" class="index-card">
-      <div class="index-card-title">The Imitation Game</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-kings-choice" class="index-card">
-      <div class="index-card-title">The King's Choice</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/the-kings-speech" class="index-card">
-      <div class="index-card-title">The King's Speech</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-last-frontier" class="index-card">
-      <div class="index-card-title">The Last Frontier</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-longest-day" class="index-card">
-      <div class="index-card-title">The Longest Day</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>5 locations</span></div>
-    </a>
-    <a href="/films/the-man-who-will-come" class="index-card">
-      <div class="index-card-title">The Man Who Will Come</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-man-with-the-iron-heart" class="index-card">
-      <div class="index-card-title">The Man with the Iron Heart</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-ministry-of-ungentlemanly-warfare" class="index-card">
-      <div class="index-card-title">The Ministry of Ungentlemanly Warfare</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/the-monuments-men" class="index-card">
-      <div class="index-card-title">The Monuments Men</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>3 locations</span></div>
-    </a>
-    <a href="/films/the-narrow-road-to-the-deep-north" class="index-card">
-      <div class="index-card-title">The Narrow Road to the Deep North</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-pacific" class="index-card">
-      <div class="index-card-title">The Pacific</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Pacific</span><span>5 locations</span></div>
-    </a>
-    <a href="/films/the-people-vs-fritz-bauer" class="index-card">
-      <div class="index-card-title">The People vs Fritz Bauer</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-pianist" class="index-card">
-      <div class="index-card-title">The Pianist</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>5 locations</span></div>
-    </a>
-    <a href="/films/the-plot-against-america" class="index-card">
-      <div class="index-card-title">The Plot Against America</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-railway-man" class="index-card">
-      <div class="index-card-title">The Railway Man</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-reader" class="index-card">
-      <div class="index-card-title">The Reader</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-resistance-banker" class="index-card">
-      <div class="index-card-title">The Resistance Banker</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-scarlet-and-the-black" class="index-card">
-      <div class="index-card-title">The Scarlet and the Black</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-shadow-in-my-eye" class="index-card">
-      <div class="index-card-title">The Shadow in My Eye</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-tattooist-of-auschwitz" class="index-card">
-      <div class="index-card-title">The Tattooist of Auschwitz</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-thin-red-line" class="index-card">
-      <div class="index-card-title">The Thin Red Line</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-tuskegee-airmen" class="index-card">
-      <div class="index-card-title">The Tuskegee Airmen</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/the-warriors-heart" class="index-card">
-      <div class="index-card-title">The Warrior's Heart</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-way-back" class="index-card">
-      <div class="index-card-title">The Way Back</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-windermere-children" class="index-card">
-      <div class="index-card-title">The Windermere Children</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/the-zookeepers-wife" class="index-card">
-      <div class="index-card-title">The Zookeeper's Wife</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/they-fought-for-their-motherland" class="index-card">
-      <div class="index-card-title">They Fought for Their Motherland</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/thirty-seconds-over-tokyo" class="index-card">
-      <div class="index-card-title">Thirty Seconds Over Tokyo</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>3 locations</span></div>
-    </a>
-    <a href="/films/to-end-all-wars" class="index-card">
-      <div class="index-card-title">To End All Wars</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/tobruk" class="index-card">
-      <div class="index-card-title">Tobruk</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">North Africa</span><span>1 location</span></div>
-    </a>
-    <a href="/films/tora-tora-tora" class="index-card">
-      <div class="index-card-title">Tora! Tora! Tora!</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/unbroken" class="index-card">
-      <div class="index-card-title">Unbroken</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>3 locations</span></div>
-    </a>
-    <a href="/films/uprising" class="index-card">
-      <div class="index-card-title">Uprising</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/uss-indianapolis-men-of-courage" class="index-card">
-      <div class="index-card-title">USS Indianapolis: Men of Courage</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/valkyrie" class="index-card">
-      <div class="index-card-title">Valkyrie</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>4 locations</span></div>
-    </a>
-    <a href="/films/walking-with-the-enemy" class="index-card">
-      <div class="index-card-title">Walking with the Enemy</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/war-sailor" class="index-card">
-      <div class="index-card-title">War Sailor</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Atlantic</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/we-were-the-lucky-ones" class="index-card">
-      <div class="index-card-title">We Were the Lucky Ones</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
-    </a>
-    <a href="/films/when-trumpets-fade" class="index-card">
-      <div class="index-card-title">When Trumpets Fade</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/where-eagles-dare" class="index-card">
-      <div class="index-card-title">Where Eagles Dare</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/windtalkers" class="index-card">
-      <div class="index-card-title">Windtalkers</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
-    </a>
-    <a href="/films/winter-in-wartime" class="index-card">
-      <div class="index-card-title">Winter in Wartime</div>
-      <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
-    </a>
-    <a href="/films/world-on-fire" class="index-card">
-      <div class="index-card-title">World on Fire</div>
-      <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
-    </a>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/13-minutes" class="index-card-link">
+        <div class="index-card-title">13 Minutes</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/1939-battle-of-westerplatte" class="index-card-link">
+        <div class="index-card-title">1939 - Battle of Westerplatte</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/1941" class="index-card-link">
+        <div class="index-card-title">1941</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/1944" class="index-card-link">
+        <div class="index-card-title">1944</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/a-bridge-too-far" class="index-card-link">
+        <div class="index-card-title">A Bridge Too Far</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>3 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Western Front">
+      <a href="/films/a-french-village" class="index-card-link">
+        <div class="index-card-title">A French Village</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/a-hidden-life" class="index-card-link">
+        <div class="index-card-title">A Hidden Life</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/a-midnight-clear" class="index-card-link">
+        <div class="index-card-title">A Midnight Clear</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Western Front">
+      <a href="/films/a-small-light" class="index-card-link">
+        <div class="index-card-title">A Small Light</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/a-woman-in-berlin" class="index-card-link">
+        <div class="index-card-title">A Woman in Berlin</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/adventures-of-a-mathematician" class="index-card-link">
+        <div class="index-card-title">Adventures of a Mathematician</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Western Front">
+      <a href="/films/all-the-light-we-cannot-see" class="index-card-link">
+        <div class="index-card-title">All the Light We Cannot See</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="North Africa">
+      <a href="/films/allied" class="index-card-link">
+        <div class="index-card-title">Allied</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">North Africa</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/alone-in-berlin" class="index-card-link">
+        <div class="index-card-title">Alone in Berlin</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/anne-frank-the-whole-story" class="index-card-link">
+        <div class="index-card-title">Anne Frank: The Whole Story</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/anthropoid" class="index-card-link">
+        <div class="index-card-title">Anthropoid</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/april-9th" class="index-card-link">
+        <div class="index-card-title">April 9th</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/atonement" class="index-card-link">
+        <div class="index-card-title">Atonement</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/australia" class="index-card-link">
+        <div class="index-card-title">Australia</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Western Front">
+      <a href="/films/band-of-brothers" class="index-card-link">
+        <div class="index-card-title">Band of Brothers</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>9 locations</span></div>
+      </a>
+      <a href="https://www.amazon.com/dp/B0GFG4DR8M?tag=cinemamapped-20" class="index-card-watch" target="_blank" rel="noopener noreferrer sponsored" onclick="event.stopPropagation();if(window.gtag)gtag('event','watch_click',{film_title:'Band of Brothers',source:'films_index'})">Watch on Amazon &#x2197;</a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/battle-for-sevastopol" class="index-card-link">
+        <div class="index-card-title">Battle for Sevastopol</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/before-the-fall" class="index-card-link">
+        <div class="index-card-title">Before the Fall</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/betrayed" class="index-card-link">
+        <div class="index-card-title">Betrayed</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/black-book" class="index-card-link">
+        <div class="index-card-title">Black Book</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/black-rain" class="index-card-link">
+        <div class="index-card-title">Black Rain</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/canopy" class="index-card-link">
+        <div class="index-card-title">Canopy</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Mediterranean">
+      <a href="/films/captain-corellis-mandolin" class="index-card-link">
+        <div class="index-card-title">Captain Corelli's Mandolin</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Mediterranean">
+      <a href="/films/catch22" class="index-card-link">
+        <div class="index-card-title">Catch-22</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/churchill" class="index-card-link">
+        <div class="index-card-title">Churchill</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/city-of-life-and-death" class="index-card-link">
+        <div class="index-card-title">City of Life and Death</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Western Front">
+      <a href="/films/colditz" class="index-card-link">
+        <div class="index-card-title">Colditz</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/come-and-see" class="index-card-link">
+        <div class="index-card-title">Come and See</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/conspiracy" class="index-card-link">
+        <div class="index-card-title">Conspiracy</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/countdown-to-war" class="index-card-link">
+        <div class="index-card-title">Countdown to War</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/cross-of-iron" class="index-card-link">
+        <div class="index-card-title">Cross of Iron</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/darkest-hour" class="index-card-link">
+        <div class="index-card-title">Darkest Hour</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Atlantic">
+      <a href="/films/das-boot" class="index-card-link">
+        <div class="index-card-title">Das Boot</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Atlantic</span><span>4 locations</span></div>
+      </a>
+      <a href="https://www.amazon.com/dp/B008Y73XTQ?tag=cinemamapped-20" class="index-card-watch" target="_blank" rel="noopener noreferrer sponsored" onclick="event.stopPropagation();if(window.gtag)gtag('event','watch_click',{film_title:'Das Boot',source:'films_index'})">Watch on Amazon &#x2197;</a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/death-and-glory-in-changde" class="index-card-link">
+        <div class="index-card-title">Death and Glory in Changde</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/defiance" class="index-card-link">
+        <div class="index-card-title">Defiance</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/die-wannseekonferenz" class="index-card-link">
+        <div class="index-card-title">Die Wannseekonferenz</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/dieppe" class="index-card-link">
+        <div class="index-card-title">Dieppe</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/diplomacy" class="index-card-link">
+        <div class="index-card-title">Diplomacy</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/downfall" class="index-card-link">
+        <div class="index-card-title">Downfall</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>4 locations</span></div>
+      </a>
+      <a href="https://www.amazon.com/dp/B0D4MNFVBJ?tag=cinemamapped-20" class="index-card-watch" target="_blank" rel="noopener noreferrer sponsored" onclick="event.stopPropagation();if(window.gtag)gtag('event','watch_click',{film_title:'Downfall',source:'films_index'})">Watch on Amazon &#x2197;</a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/dunkirk" class="index-card-link">
+        <div class="index-card-title">Dunkirk</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>5 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="North Africa">
+      <a href="/films/el-alamein-the-line-of-fire" class="index-card-link">
+        <div class="index-card-title">El Alamein: The Line of Fire</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">North Africa</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/emperor" class="index-card-link">
+        <div class="index-card-title">Emperor</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/empire-of-the-sun" class="index-card-link">
+        <div class="index-card-title">Empire of the Sun</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/en-mai-fais-ce-quil-te-plait" class="index-card-link">
+        <div class="index-card-title">En mai, fais ce qu'il te plaît</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/enemy-at-the-gates" class="index-card-link">
+        <div class="index-card-title">Enemy at the Gates</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/enola-gay-the-men-the-mission-the-atomic-bomb" class="index-card-link">
+        <div class="index-card-title">Enola Gay: The Men, The Mission, The Atomic Bomb</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/escape-from-sobibor" class="index-card-link">
+        <div class="index-card-title">Escape from Sobibor</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/europa-europa" class="index-card-link">
+        <div class="index-card-title">Europa Europa</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>3 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/fat-man-and-little-boy" class="index-card-link">
+        <div class="index-card-title">Fat Man and Little Boy</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/flags-of-our-fathers" class="index-card-link">
+        <div class="index-card-title">Flags of Our Fathers</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/flame-citron" class="index-card-link">
+        <div class="index-card-title">Flame &amp; Citron</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/fury" class="index-card-link">
+        <div class="index-card-title">Fury</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>3 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Western Front">
+      <a href="/films/generation-war" class="index-card-link">
+        <div class="index-card-title">Generation War</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>4 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/grave-of-the-fireflies" class="index-card-link">
+        <div class="index-card-title">Grave of the Fireflies</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Atlantic">
+      <a href="/films/greyhound" class="index-card-link">
+        <div class="index-card-title">Greyhound</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Atlantic</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/hacksaw-ridge" class="index-card-link">
+        <div class="index-card-title">Hacksaw Ridge</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/hamsun" class="index-card-link">
+        <div class="index-card-title">Hamsun</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/harts-war" class="index-card-link">
+        <div class="index-card-title">Hart's War</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Mediterranean">
+      <a href="/films/hell-in-the-aegean" class="index-card-link">
+        <div class="index-card-title">Hell in the Aegean</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/hiroshima" class="index-card-link">
+        <div class="index-card-title">Hiroshima</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/hiroshima-out-of-the-ashes" class="index-card-link">
+        <div class="index-card-title">Hiroshima: Out of the Ashes</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/hitler-the-rise-of-evil" class="index-card-link">
+        <div class="index-card-title">Hitler: The Rise of Evil</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Eastern Front">
+      <a href="/films/holocaust" class="index-card-link">
+        <div class="index-card-title">Holocaust</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/hope-and-glory" class="index-card-link">
+        <div class="index-card-title">Hope and Glory</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Mediterranean">
+      <a href="/films/indigenes" class="index-card-link">
+        <div class="index-card-title">Indigènes</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/inglourious-basterds" class="index-card-link">
+        <div class="index-card-title">Inglourious Basterds</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/into-the-storm" class="index-card-link">
+        <div class="index-card-title">Into the Storm</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/into-the-white" class="index-card-link">
+        <div class="index-card-title">Into The White</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/jakob-the-liar" class="index-card-link">
+        <div class="index-card-title">Jakob the Liar</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/jean-moulin" class="index-card-link">
+        <div class="index-card-title">Jean Moulin</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/john-rabe" class="index-card-link">
+        <div class="index-card-title">John Rabe</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/katyn" class="index-card-link">
+        <div class="index-card-title">Katyn</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/kellys-heroes" class="index-card-link">
+        <div class="index-card-title">Kelly's Heroes</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/land-of-mine" class="index-card-link">
+        <div class="index-card-title">Land of Mine</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/le-grand-charles" class="index-card-link">
+        <div class="index-card-title">Le Grand Charles</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/leningrad" class="index-card-link">
+        <div class="index-card-title">Leningrad</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/letters-from-iwo-jima" class="index-card-link">
+        <div class="index-card-title">Letters from Iwo Jima</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Mediterranean">
+      <a href="/films/life-is-beautiful" class="index-card-link">
+        <div class="index-card-title">Life is Beautiful</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/lore" class="index-card-link">
+        <div class="index-card-title">Lore</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Western Front">
+      <a href="/films/masters-of-the-air" class="index-card-link">
+        <div class="index-card-title">Masters of the Air</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>6 locations</span></div>
+      </a>
+      <a href="https://www.amazon.com/dp/B0D8XJYBLV?tag=cinemamapped-20" class="index-card-watch" target="_blank" rel="noopener noreferrer sponsored" onclick="event.stopPropagation();if(window.gtag)gtag('event','watch_click',{film_title:'Masters of the Air',source:'films_index'})">Watch on Amazon &#x2197;</a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/max-manus" class="index-card-link">
+        <div class="index-card-title">Max Manus</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/memphis-belle" class="index-card-link">
+        <div class="index-card-title">Memphis Belle</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/merry-christmas-mr-lawrence" class="index-card-link">
+        <div class="index-card-title">Merry Christmas Mr. Lawrence</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/midway" class="index-card-link">
+        <div class="index-card-title">Midway</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/midway-2019" class="index-card-link">
+        <div class="index-card-title">Midway (2019)</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Mediterranean">
+      <a href="/films/miracle-at-st-anna" class="index-card-link">
+        <div class="index-card-title">Miracle at St. Anna</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/mission-of-the-shark" class="index-card-link">
+        <div class="index-card-title">Mission of the Shark</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/munich-the-edge-of-war" class="index-card-link">
+        <div class="index-card-title">Munich: The Edge of War</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Mediterranean">
+      <a href="/films/mussolini-and-i" class="index-card-link">
+        <div class="index-card-title">Mussolini and I</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/my-way" class="index-card-link">
+        <div class="index-card-title">My Way</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/nacht-und-nebel-night-and-fog" class="index-card-link">
+        <div class="index-card-title">Nacht und Nebel (Night and Fog)</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>3 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/narvik-hitlers-first-defeat" class="index-card-link">
+        <div class="index-card-title">Narvik: Hitler's First Defeat</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/nuremberg" class="index-card-link">
+        <div class="index-card-title">Nuremberg</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/operation-finale" class="index-card-link">
+        <div class="index-card-title">Operation Finale</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/operation-mincemeat" class="index-card-link">
+        <div class="index-card-title">Operation Mincemeat</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/oppenheimer" class="index-card-link">
+        <div class="index-card-title">Oppenheimer</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/overlord" class="index-card-link">
+        <div class="index-card-title">Overlord</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/panfilovs-28-men" class="index-card-link">
+        <div class="index-card-title">Panfilov's 28 Men</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/paradise-road" class="index-card-link">
+        <div class="index-card-title">Paradise Road</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="North Africa">
+      <a href="/films/patton" class="index-card-link">
+        <div class="index-card-title">Patton</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">North Africa</span><span>4 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/pearl-harbor" class="index-card-link">
+        <div class="index-card-title">Pearl Harbor</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/race" class="index-card-link">
+        <div class="index-card-title">Race</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Mediterranean">
+      <a href="/films/red-tails" class="index-card-link">
+        <div class="index-card-title">Red Tails</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/resistance-2020" class="index-card-link">
+        <div class="index-card-title">Resistance (2020)</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/saints-and-soldiers" class="index-card-link">
+        <div class="index-card-title">Saints and Soldiers</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/sands-of-iwo-jima" class="index-card-link">
+        <div class="index-card-title">Sands of Iwo Jima</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="North Africa">
+      <a href="/films/sas-rogue-heroes" class="index-card-link">
+        <div class="index-card-title">SAS: Rogue Heroes</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">North Africa</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/saving-private-ryan" class="index-card-link">
+        <div class="index-card-title">Saving Private Ryan</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>5 locations</span></div>
+      </a>
+      <a href="https://www.amazon.com/dp/B0H4JHTBPH?tag=cinemamapped-20" class="index-card-watch" target="_blank" rel="noopener noreferrer sponsored" onclick="event.stopPropagation();if(window.gtag)gtag('event','watch_click',{film_title:'Saving Private Ryan',source:'films_index'})">Watch on Amazon &#x2197;</a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/schindlers-list" class="index-card-link">
+        <div class="index-card-title">Schindler's List</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>6 locations</span></div>
+      </a>
+      <a href="https://www.amazon.com/dp/B00BEN0V8S?tag=cinemamapped-20" class="index-card-watch" target="_blank" rel="noopener noreferrer sponsored" onclick="event.stopPropagation();if(window.gtag)gtag('event','watch_click',{film_title:'Schindler\'s List',source:'films_index'})">Watch on Amazon &#x2197;</a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/snow-falling-on-cedars" class="index-card-link">
+        <div class="index-card-title">Snow Falling on Cedars</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/soldier-of-orange" class="index-card-link">
+        <div class="index-card-title">Soldier of Orange</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/son-of-saul" class="index-card-link">
+        <div class="index-card-title">Son of Saul</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/sophie-scholl-the-final-days" class="index-card-link">
+        <div class="index-card-title">Sophie Scholl: The Final Days</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/stalingrad" class="index-card-link">
+        <div class="index-card-title">Stalingrad</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/stalingrad-1993" class="index-card-link">
+        <div class="index-card-title">Stalingrad (1993)</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/suite-francaise" class="index-card-link">
+        <div class="index-card-title">Suite Française</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/sunshine" class="index-card-link">
+        <div class="index-card-title">Sunshine</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/talvisota" class="index-card-link">
+        <div class="index-card-title">Talvisota</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-12th-man" class="index-card-link">
+        <div class="index-card-title">The 12th Man</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/the-auschwitz-report" class="index-card-link">
+        <div class="index-card-title">The Auschwitz Report</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-battle-of-britain" class="index-card-link">
+        <div class="index-card-title">The Battle of Britain</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Mediterranean">
+      <a href="/films/the-battle-of-neretva" class="index-card-link">
+        <div class="index-card-title">The Battle of Neretva</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-big-red-one" class="index-card-link">
+        <div class="index-card-title">The Big Red One</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-book-thief" class="index-card-link">
+        <div class="index-card-title">The Book Thief</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/the-boy-in-the-striped-pyjamas" class="index-card-link">
+        <div class="index-card-title">The Boy in the Striped Pyjamas</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/the-brest-fortress" class="index-card-link">
+        <div class="index-card-title">The Brest Fortress</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-bridge-at-remagen" class="index-card-link">
+        <div class="index-card-title">The Bridge at Remagen</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/the-bridge-on-the-river-kwai" class="index-card-link">
+        <div class="index-card-title">The Bridge on the River Kwai</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-captain" class="index-card-link">
+        <div class="index-card-title">The Captain</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/the-champion-of-auschwitz" class="index-card-link">
+        <div class="index-card-title">The Champion of Auschwitz</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/the-children-of-huang-shi" class="index-card-link">
+        <div class="index-card-title">The Children of Huang Shi</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-conference" class="index-card-link">
+        <div class="index-card-title">The Conference</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-counterfeiters" class="index-card-link">
+        <div class="index-card-title">The Counterfeiters</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="North Africa">
+      <a href="/films/the-desert-fox" class="index-card-link">
+        <div class="index-card-title">The Desert Fox</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">North Africa</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-dirty-dozen" class="index-card-link">
+        <div class="index-card-title">The Dirty Dozen</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/the-eight-hundred" class="index-card-link">
+        <div class="index-card-title">The Eight Hundred</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="North Africa">
+      <a href="/films/the-english-patient" class="index-card-link">
+        <div class="index-card-title">The English Patient</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">North Africa</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-exception" class="index-card-link">
+        <div class="index-card-title">The Exception</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/the-flowers-of-war" class="index-card-link">
+        <div class="index-card-title">The Flowers of War</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-forgotten-battle" class="index-card-link">
+        <div class="index-card-title">The Forgotten Battle</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-gathering-storm" class="index-card-link">
+        <div class="index-card-title">The Gathering Storm</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-good-german" class="index-card-link">
+        <div class="index-card-title">The Good German</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/the-great-escape" class="index-card-link">
+        <div class="index-card-title">The Great Escape</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/the-great-raid" class="index-card-link">
+        <div class="index-card-title">The Great Raid</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/the-grey-zone" class="index-card-link">
+        <div class="index-card-title">The Grey Zone</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Mediterranean">
+      <a href="/films/the-guns-of-navarone" class="index-card-link">
+        <div class="index-card-title">The Guns of Navarone</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-heroes-of-telemark" class="index-card-link">
+        <div class="index-card-title">The Heroes of Telemark</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-imitation-game" class="index-card-link">
+        <div class="index-card-title">The Imitation Game</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-kings-choice" class="index-card-link">
+        <div class="index-card-title">The King's Choice</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-kings-speech" class="index-card-link">
+        <div class="index-card-title">The King's Speech</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/the-last-frontier" class="index-card-link">
+        <div class="index-card-title">The Last Frontier</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-longest-day" class="index-card-link">
+        <div class="index-card-title">The Longest Day</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>5 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Mediterranean">
+      <a href="/films/the-man-who-will-come" class="index-card-link">
+        <div class="index-card-title">The Man Who Will Come</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-man-with-the-iron-heart" class="index-card-link">
+        <div class="index-card-title">The Man with the Iron Heart</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-ministry-of-ungentlemanly-warfare" class="index-card-link">
+        <div class="index-card-title">The Ministry of Ungentlemanly Warfare</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-monuments-men" class="index-card-link">
+        <div class="index-card-title">The Monuments Men</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>3 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Pacific">
+      <a href="/films/the-narrow-road-to-the-deep-north" class="index-card-link">
+        <div class="index-card-title">The Narrow Road to the Deep North</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Pacific">
+      <a href="/films/the-pacific" class="index-card-link">
+        <div class="index-card-title">The Pacific</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Pacific</span><span>5 locations</span></div>
+      </a>
+      <a href="https://www.amazon.com/dp/B0G2J1KZJJ?tag=cinemamapped-20" class="index-card-watch" target="_blank" rel="noopener noreferrer sponsored" onclick="event.stopPropagation();if(window.gtag)gtag('event','watch_click',{film_title:'The Pacific',source:'films_index'})">Watch on Amazon &#x2197;</a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-people-vs-fritz-bauer" class="index-card-link">
+        <div class="index-card-title">The People vs Fritz Bauer</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/the-pianist" class="index-card-link">
+        <div class="index-card-title">The Pianist</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>5 locations</span></div>
+      </a>
+      <a href="https://www.amazon.com/dp/B084TNF6CZ?tag=cinemamapped-20" class="index-card-watch" target="_blank" rel="noopener noreferrer sponsored" onclick="event.stopPropagation();if(window.gtag)gtag('event','watch_click',{film_title:'The Pianist',source:'films_index'})">Watch on Amazon &#x2197;</a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Western Front">
+      <a href="/films/the-plot-against-america" class="index-card-link">
+        <div class="index-card-title">The Plot Against America</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/the-railway-man" class="index-card-link">
+        <div class="index-card-title">The Railway Man</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-reader" class="index-card-link">
+        <div class="index-card-title">The Reader</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-resistance-banker" class="index-card-link">
+        <div class="index-card-title">The Resistance Banker</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Mediterranean">
+      <a href="/films/the-scarlet-and-the-black" class="index-card-link">
+        <div class="index-card-title">The Scarlet and the Black</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Mediterranean</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-shadow-in-my-eye" class="index-card-link">
+        <div class="index-card-title">The Shadow in My Eye</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Eastern Front">
+      <a href="/films/the-tattooist-of-auschwitz" class="index-card-link">
+        <div class="index-card-title">The Tattooist of Auschwitz</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/the-thin-red-line" class="index-card-link">
+        <div class="index-card-title">The Thin Red Line</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-tuskegee-airmen" class="index-card-link">
+        <div class="index-card-title">The Tuskegee Airmen</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/the-warriors-heart" class="index-card-link">
+        <div class="index-card-title">The Warrior's Heart</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/the-way-back" class="index-card-link">
+        <div class="index-card-title">The Way Back</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/the-windermere-children" class="index-card-link">
+        <div class="index-card-title">The Windermere Children</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/the-zookeepers-wife" class="index-card-link">
+        <div class="index-card-title">The Zookeeper's Wife</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/they-fought-for-their-motherland" class="index-card-link">
+        <div class="index-card-title">They Fought for Their Motherland</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/thirty-seconds-over-tokyo" class="index-card-link">
+        <div class="index-card-title">Thirty Seconds Over Tokyo</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>3 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/to-end-all-wars" class="index-card-link">
+        <div class="index-card-title">To End All Wars</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="North Africa">
+      <a href="/films/tobruk" class="index-card-link">
+        <div class="index-card-title">Tobruk</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">North Africa</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/tora-tora-tora" class="index-card-link">
+        <div class="index-card-title">Tora! Tora! Tora!</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/unbroken" class="index-card-link">
+        <div class="index-card-title">Unbroken</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>3 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/uprising" class="index-card-link">
+        <div class="index-card-title">Uprising</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/uss-indianapolis-men-of-courage" class="index-card-link">
+        <div class="index-card-title">USS Indianapolis: Men of Courage</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/valkyrie" class="index-card-link">
+        <div class="index-card-title">Valkyrie</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>4 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Eastern Front">
+      <a href="/films/walking-with-the-enemy" class="index-card-link">
+        <div class="index-card-title">Walking with the Enemy</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Atlantic">
+      <a href="/films/war-sailor" class="index-card-link">
+        <div class="index-card-title">War Sailor</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Atlantic</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Eastern Front">
+      <a href="/films/we-were-the-lucky-ones" class="index-card-link">
+        <div class="index-card-title">We Were the Lucky Ones</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/when-trumpets-fade" class="index-card-link">
+        <div class="index-card-title">When Trumpets Fade</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/where-eagles-dare" class="index-card-link">
+        <div class="index-card-title">Where Eagles Dare</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Pacific">
+      <a href="/films/windtalkers" class="index-card-link">
+        <div class="index-card-title">Windtalkers</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Film" data-theatre="Western Front">
+      <a href="/films/winter-in-wartime" class="index-card-link">
+        <div class="index-card-title">Winter in Wartime</div>
+        <div class="index-card-meta"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span>1 location</span></div>
+      </a>
+    </div>
+    <div class="index-card" data-type="Series" data-theatre="Eastern Front">
+      <a href="/films/world-on-fire" class="index-card-link">
+        <div class="index-card-title">World on Fire</div>
+        <div class="index-card-meta"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Eastern Front</span><span>2 locations</span></div>
+      </a>
+    </div>
   </div>
 
   <footer class="footer">
     <span class="footer-brand">Cinema<em style="color:var(--accent)">Mapped</em></span>
     <span class="footer-copy">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href="/privacy" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href="/terms" style="color:var(--text-muted);text-decoration:none;">Terms of Use</a></span>
   </footer>
+  <script>
+(function(){
+  var at='all',ath='all';
+  function run(){
+    var cards=document.querySelectorAll('.index-card[data-type]'),n=0;
+    cards.forEach(function(c){
+      var ok=(at==='all'||c.dataset.type===at)&&(ath==='all'||c.dataset.theatre===ath);
+      c.style.display=ok?'':'none';if(ok)n++;
+    });
+    var el=document.getElementById('filter-count');
+    if(el)el.textContent=n+' title'+(n===1?'':'s');
+  }
+  document.querySelectorAll('[data-filter-type]').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('[data-filter-type]').forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');at=b.dataset.filterType;run();
+    });
+  });
+  document.querySelectorAll('[data-filter-theatre]').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('[data-filter-theatre]').forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');ath=b.dataset.filterTheatre;run();
+    });
+  });
+})();
+  </script>
   <script src="/js/consent.js?v=3"></script>
 </body>
 </html>

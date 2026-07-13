@@ -1338,18 +1338,54 @@ a.hero-stat-link:hover { opacity: 0.75; }
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 10px;
 }
+.index-filter-bar {
+  max-width: 1100px;
+  padding: 0 min(80px, 8vw) 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.index-filter-sep {
+  width: 1px;
+  height: 20px;
+  background: var(--border);
+  margin: 0 4px;
+}
+.filter-count-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-left: 4px;
+}
 .index-card {
-  display: block;
-  padding: 14px 16px;
   border: 1px solid var(--border);
   border-radius: 6px;
-  text-decoration: none;
   transition: border-color 0.15s, background 0.15s;
+  display: flex;
+  flex-direction: column;
 }
 .index-card:hover {
   border-color: var(--accent);
   background: rgba(201, 168, 76, 0.04);
 }
+.index-card-link {
+  display: block;
+  padding: 14px 16px;
+  text-decoration: none;
+  flex: 1;
+}
+.index-card-watch {
+  display: block;
+  padding: 7px 16px 10px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  border-top: 1px solid var(--border);
+  letter-spacing: 0.02em;
+}
+.index-card-watch:hover { text-decoration: underline; }
 .index-card-title {
   font-size: 14px;
   font-weight: 600;

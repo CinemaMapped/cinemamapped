@@ -195,18 +195,19 @@ foreach ($title in $allTitles) {
     $html += "  <link rel=`"preconnect`" href=`"https://fonts.gstatic.com`" crossorigin>`n"
     $html += "  <link href=`"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap`" rel=`"stylesheet`">`n"
     $html += "  <link rel=`"stylesheet`" href=`"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css`">`n"
-    $html += "  <link rel=`"stylesheet`" href=`"/style.css?v=8`">`n"
+    $html += "  <link rel=`"stylesheet`" href=`"/style.css?v=9`">`n"
     $html += "</head>`n<body>`n`n"
 
     $html += "  <nav class=`"nav`">`n"
     $html += "    <a href=`"/`" class=`"nav-logo`">Cinema<em>Mapped</em></a>`n"
     $html += "    <div style=`"display:flex;gap:12px;align-items:center;`">`n"
-    $html += "      <a href=`"/films`" class=`"btn`" style=`"font-size:11px;padding:8px 16px;`">All Films</a>`n"
+    $html += "      <a href=`"/films`" class=`"btn`" style=`"font-size:11px;padding:8px 16px;`">Films &amp; Series</a>`n"
+    $html += "      <a href=`"/countries`" class=`"btn`" style=`"font-size:11px;padding:8px 16px;`">Countries</a>`n"
     $html += "      <a href=`"/map`" class=`"btn btn-filled`">Explore the Map</a>`n"
     $html += "    </div>`n  </nav>`n`n"
 
     $html += "  <div class=`"pin-page-hero`">`n"
-    $html += "    <div class=`"pin-page-breadcrumb`"><a href=`"/`">CinemaMapped</a> &rsaquo; <a href=`"/films`">All Films</a> &rsaquo; $titleHtml</div>`n"
+    $html += "    <div class=`"pin-page-breadcrumb`"><a href=`"/`">CinemaMapped</a> &rsaquo; <a href=`"/films`">Films &amp; Series</a> &rsaquo; $titleHtml</div>`n"
     $html += "    <div class=`"pin-page-badges`"><span class=`"badge badge-type`">$typeHtml</span><span class=`"badge badge-theatre`">$theatreHtml</span><span class=`"pin-page-year`">$yearRange</span></div>`n"
     $html += "    <h1 class=`"pin-page-h1`">$titleHtml Filming Locations</h1>`n"
     $html += "    <p class=`"pin-page-title-line`">$pinCount $locWord &middot; $filmCountriesHtml</p>`n"
@@ -260,7 +261,7 @@ foreach ($country in $allCountries) {
 
     $filmTitles    = @($pins | Select-Object -ExpandProperty title -Unique | Sort-Object)
     $filmCount     = $filmTitles.Count
-    $filmWord      = if ($filmCount -eq 1) { 'film' } else { 'films' }
+    $filmWord      = if ($filmCount -eq 1) { 'title' } else { 'titles' }
 
     $dominantTheatre = ($pins | Group-Object theatre | Sort-Object Count -Descending | Select-Object -First 1).Name
     $theatreHtml     = HtmlEncode $dominantTheatre
@@ -316,7 +317,7 @@ foreach ($country in $allCountries) {
         $rcCnt  = $_.Count
         $rcLoc  = if ($rcCnt -eq 1) { 'location' } else { 'locations' }
         $rcFilms = ($byCountry[$rc] | Select-Object -ExpandProperty title -Unique | Measure-Object).Count
-        $rcFilmWord = if ($rcFilms -eq 1) { 'film' } else { 'films' }
+        $rcFilmWord = if ($rcFilms -eq 1) { 'title' } else { 'titles' }
         "      <a href=`"/countries/$rcSlug`" class=`"related-card`">`n        <div class=`"related-card-title`">$rcHtml</div>`n        <div class=`"related-card-meta`"><span>$rcCnt $rcLoc</span><span>&middot; $rcFilms $rcFilmWord</span></div>`n      </a>"
     }) -join "`n"
 
@@ -347,18 +348,19 @@ foreach ($country in $allCountries) {
     $html += "  <link rel=`"preconnect`" href=`"https://fonts.gstatic.com`" crossorigin>`n"
     $html += "  <link href=`"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap`" rel=`"stylesheet`">`n"
     $html += "  <link rel=`"stylesheet`" href=`"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css`">`n"
-    $html += "  <link rel=`"stylesheet`" href=`"/style.css?v=8`">`n"
+    $html += "  <link rel=`"stylesheet`" href=`"/style.css?v=9`">`n"
     $html += "</head>`n<body>`n`n"
 
     $html += "  <nav class=`"nav`">`n"
     $html += "    <a href=`"/`" class=`"nav-logo`">Cinema<em>Mapped</em></a>`n"
     $html += "    <div style=`"display:flex;gap:12px;align-items:center;`">`n"
-    $html += "      <a href=`"/countries`" class=`"btn`" style=`"font-size:11px;padding:8px 16px;`">All Countries</a>`n"
+    $html += "      <a href=`"/films`" class=`"btn`" style=`"font-size:11px;padding:8px 16px;`">Films &amp; Series</a>`n"
+    $html += "      <a href=`"/countries`" class=`"btn`" style=`"font-size:11px;padding:8px 16px;`">Countries</a>`n"
     $html += "      <a href=`"/map`" class=`"btn btn-filled`">Explore the Map</a>`n"
     $html += "    </div>`n  </nav>`n`n"
 
     $html += "  <div class=`"pin-page-hero`">`n"
-    $html += "    <div class=`"pin-page-breadcrumb`"><a href=`"/`">CinemaMapped</a> &rsaquo; <a href=`"/countries`">All Countries</a> &rsaquo; $countryHtml</div>`n"
+    $html += "    <div class=`"pin-page-breadcrumb`"><a href=`"/`">CinemaMapped</a> &rsaquo; <a href=`"/countries`">Countries</a> &rsaquo; $countryHtml</div>`n"
     $html += "    <div class=`"pin-page-badges`"><span class=`"badge badge-theatre`">$theatreHtml</span></div>`n"
     $html += "    <h1 class=`"pin-page-h1`">WWII Film Locations in $countryHtml</h1>`n"
     $html += "    <p class=`"pin-page-title-line`">$pinCount $locWord &middot; $filmCount $filmWord</p>`n"
@@ -399,16 +401,21 @@ Write-Host "Country pages: $countryCount_total"
 
 # â”€â”€ FILMS INDEX PAGE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 $filmCards = ($allTitles | ForEach-Object {
-    $t        = $_
-    $tHtml    = HtmlEncode $t
-    $tSlug    = ToSlug $t
-    $tPins    = @($byTitle[$t])
-    $tType    = $tPins[0].type
-    $tTheatre = $tPins[0].theatre
-    $tCount   = $tPins.Count
-    $tLocWord = if ($tCount -eq 1) { 'location' } else { 'locations' }
-    $tCountries = ($tPins | Select-Object -ExpandProperty country -Unique | Sort-Object) -join ', '
-    "    <a href=`"/films/$tSlug`" class=`"index-card`">`n      <div class=`"index-card-title`">$tHtml</div>`n      <div class=`"index-card-meta`"><span class=`"badge badge-type`">$tType</span><span class=`"badge badge-theatre`">$tTheatre</span><span>$tCount $tLocWord</span></div>`n    </a>"
+    $t          = $_
+    $tHtml      = HtmlEncode $t
+    $tSlug      = ToSlug $t
+    $tPins      = @($byTitle[$t])
+    $tType      = $tPins[0].type
+    $tTheatre   = $tPins[0].theatre
+    $tCount     = $tPins.Count
+    $tLocWord   = if ($tCount -eq 1) { 'location' } else { 'locations' }
+    $tStream    = ($tPins | Where-Object { $_.streaming } | Select-Object -First 1).streaming
+    $tTitleSafe = $t -replace "'", "\'"
+    $tWatchHtml = if ($tStream) {
+        $tStreamSafe = HtmlEncode $tStream
+        "`n      <a href=`"$tStreamSafe`" class=`"index-card-watch`" target=`"_blank`" rel=`"noopener noreferrer sponsored`" onclick=`"event.stopPropagation();if(window.gtag)gtag('event','watch_click',{film_title:'$tTitleSafe',source:'films_index'})`">Watch on Amazon &#x2197;</a>"
+    } else { '' }
+    "    <div class=`"index-card`" data-type=`"$tType`" data-theatre=`"$tTheatre`">`n      <a href=`"/films/$tSlug`" class=`"index-card-link`">`n        <div class=`"index-card-title`">$tHtml</div>`n        <div class=`"index-card-meta`"><span class=`"badge badge-type`">$tType</span><span class=`"badge badge-theatre`">$tTheatre</span><span>$tCount $tLocWord</span></div>`n      </a>$tWatchHtml`n    </div>"
 }) -join "`n"
 
 $totalPins   = $data.Count
@@ -426,18 +433,31 @@ $filmsIndex += "  <link rel=`"canonical`" href=`"https://cinemamapped.com/films`
 $filmsIndex += "  <link rel=`"preconnect`" href=`"https://fonts.googleapis.com`">`n"
 $filmsIndex += "  <link rel=`"preconnect`" href=`"https://fonts.gstatic.com`" crossorigin>`n"
 $filmsIndex += "  <link href=`"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap`" rel=`"stylesheet`">`n"
-$filmsIndex += "  <link rel=`"stylesheet`" href=`"/style.css?v=8`">`n"
+$filmsIndex += "  <link rel=`"stylesheet`" href=`"/style.css?v=9`">`n"
 $filmsIndex += "</head>`n<body>`n`n"
 $filmsIndex += "  <nav class=`"nav`">`n"
 $filmsIndex += "    <a href=`"/`" class=`"nav-logo`">Cinema<em>Mapped</em></a>`n"
 $filmsIndex += "    <div style=`"display:flex;gap:12px;align-items:center;`">`n"
-$filmsIndex += "      <a href=`"/countries`" class=`"btn`" style=`"font-size:11px;padding:8px 16px;`">By Country</a>`n"
+$filmsIndex += "      <a href=`"/countries`" class=`"btn`" style=`"font-size:11px;padding:8px 16px;`">Countries</a>`n"
 $filmsIndex += "      <a href=`"/map`" class=`"btn btn-filled`">Explore the Map</a>`n"
 $filmsIndex += "    </div>`n  </nav>`n`n"
 $filmsIndex += "  <div class=`"index-hero`">`n"
 $filmsIndex += "    <h1>ALL WWII FILMS &amp; SERIES</h1>`n"
 $filmsIndex += "    <p>$totalTitles titles &middot; $totalPins real historical locations</p>`n"
 $filmsIndex += "  </div>`n`n"
+$filmsIndex += "  <div class=`"index-filter-bar`">`n"
+$filmsIndex += "    <button class=`"chip active`" data-filter-type=`"all`">All</button>`n"
+$filmsIndex += "    <button class=`"chip`" data-filter-type=`"Film`">Films</button>`n"
+$filmsIndex += "    <button class=`"chip`" data-filter-type=`"Series`">Series</button>`n"
+$filmsIndex += "    <div class=`"index-filter-sep`"></div>`n"
+$filmsIndex += "    <button class=`"chip`" data-filter-theatre=`"Western Front`">Western Front</button>`n"
+$filmsIndex += "    <button class=`"chip`" data-filter-theatre=`"Eastern Front`">Eastern Front</button>`n"
+$filmsIndex += "    <button class=`"chip`" data-filter-theatre=`"Pacific`">Pacific</button>`n"
+$filmsIndex += "    <button class=`"chip`" data-filter-theatre=`"North Africa`">N. Africa</button>`n"
+$filmsIndex += "    <button class=`"chip`" data-filter-theatre=`"Atlantic`">Atlantic</button>`n"
+$filmsIndex += "    <button class=`"chip`" data-filter-theatre=`"Mediterranean`">Mediterranean</button>`n"
+$filmsIndex += "    <span class=`"filter-count-label`" id=`"filter-count`">$totalTitles titles</span>`n"
+$filmsIndex += "  </div>`n"
 $filmsIndex += "  <div class=`"index-grid`">`n"
 $filmsIndex += "$filmCards`n"
 $filmsIndex += "  </div>`n`n"
@@ -445,6 +465,32 @@ $filmsIndex += "  <footer class=`"footer`">`n"
 $filmsIndex += "    <span class=`"footer-brand`">Cinema<em style=`"color:var(--accent)`">Mapped</em></span>`n"
 $filmsIndex += "    <span class=`"footer-copy`">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href=`"/privacy`" style=`"color:var(--text-muted);text-decoration:none;`">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href=`"/terms`" style=`"color:var(--text-muted);text-decoration:none;`">Terms of Use</a></span>`n"
 $filmsIndex += "  </footer>`n"
+$filmsIndex += "  <script>`n"
+$filmsIndex += "(function(){`n"
+$filmsIndex += "  var at='all',ath='all';`n"
+$filmsIndex += "  function run(){`n"
+$filmsIndex += "    var cards=document.querySelectorAll('.index-card[data-type]'),n=0;`n"
+$filmsIndex += "    cards.forEach(function(c){`n"
+$filmsIndex += "      var ok=(at==='all'||c.dataset.type===at)&&(ath==='all'||c.dataset.theatre===ath);`n"
+$filmsIndex += "      c.style.display=ok?'':'none';if(ok)n++;`n"
+$filmsIndex += "    });`n"
+$filmsIndex += "    var el=document.getElementById('filter-count');`n"
+$filmsIndex += "    if(el)el.textContent=n+' title'+(n===1?'':'s');`n"
+$filmsIndex += "  }`n"
+$filmsIndex += "  document.querySelectorAll('[data-filter-type]').forEach(function(b){`n"
+$filmsIndex += "    b.addEventListener('click',function(){`n"
+$filmsIndex += "      document.querySelectorAll('[data-filter-type]').forEach(function(x){x.classList.remove('active');});`n"
+$filmsIndex += "      b.classList.add('active');at=b.dataset.filterType;run();`n"
+$filmsIndex += "    });`n"
+$filmsIndex += "  });`n"
+$filmsIndex += "  document.querySelectorAll('[data-filter-theatre]').forEach(function(b){`n"
+$filmsIndex += "    b.addEventListener('click',function(){`n"
+$filmsIndex += "      document.querySelectorAll('[data-filter-theatre]').forEach(function(x){x.classList.remove('active');});`n"
+$filmsIndex += "      b.classList.add('active');ath=b.dataset.filterTheatre;run();`n"
+$filmsIndex += "    });`n"
+$filmsIndex += "  });`n"
+$filmsIndex += "})();`n"
+$filmsIndex += "  </script>`n"
 $filmsIndex += "  <script src=`"/js/consent.js?v=3`"></script>`n"
 $filmsIndex += "</body>`n</html>`n"
 
@@ -462,8 +508,8 @@ $countryCards = ($countriesSorted | ForEach-Object {
     $cCount   = $cPins.Count
     $cLocWord = if ($cCount -eq 1) { 'location' } else { 'locations' }
     $cFilms   = ($cPins | Select-Object -ExpandProperty title -Unique | Measure-Object).Count
-    $cFilmWord = if ($cFilms -eq 1) { 'film' } else { 'films' }
-    "    <a href=`"/countries/$cSlug`" class=`"index-card`">`n      <div class=`"index-card-title`">$cHtml</div>`n      <div class=`"index-card-meta`"><span>$cCount $cLocWord</span><span>&middot; $cFilms $cFilmWord</span></div>`n    </a>"
+    $cFilmWord = if ($cFilms -eq 1) { 'title' } else { 'titles' }
+    "    <div class=`"index-card`">`n      <a href=`"/countries/$cSlug`" class=`"index-card-link`">`n        <div class=`"index-card-title`">$cHtml</div>`n        <div class=`"index-card-meta`"><span>$cCount $cLocWord</span><span>&middot; $cFilms $cFilmWord</span></div>`n      </a>`n    </div>"
 }) -join "`n"
 
 $totalCountries = $allCountries.Count
@@ -480,16 +526,16 @@ $countriesIndex += "  <link rel=`"canonical`" href=`"https://cinemamapped.com/co
 $countriesIndex += "  <link rel=`"preconnect`" href=`"https://fonts.googleapis.com`">`n"
 $countriesIndex += "  <link rel=`"preconnect`" href=`"https://fonts.gstatic.com`" crossorigin>`n"
 $countriesIndex += "  <link href=`"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap`" rel=`"stylesheet`">`n"
-$countriesIndex += "  <link rel=`"stylesheet`" href=`"/style.css?v=8`">`n"
+$countriesIndex += "  <link rel=`"stylesheet`" href=`"/style.css?v=9`">`n"
 $countriesIndex += "</head>`n<body>`n`n"
 $countriesIndex += "  <nav class=`"nav`">`n"
 $countriesIndex += "    <a href=`"/`" class=`"nav-logo`">Cinema<em>Mapped</em></a>`n"
 $countriesIndex += "    <div style=`"display:flex;gap:12px;align-items:center;`">`n"
-$countriesIndex += "      <a href=`"/films`" class=`"btn`" style=`"font-size:11px;padding:8px 16px;`">All Films</a>`n"
+$countriesIndex += "      <a href=`"/films`" class=`"btn`" style=`"font-size:11px;padding:8px 16px;`">Films &amp; Series</a>`n"
 $countriesIndex += "      <a href=`"/map`" class=`"btn btn-filled`">Explore the Map</a>`n"
 $countriesIndex += "    </div>`n  </nav>`n`n"
 $countriesIndex += "  <div class=`"index-hero`">`n"
-$countriesIndex += "    <h1>WWII FILM LOCATIONS BY COUNTRY</h1>`n"
+$countriesIndex += "    <h1>WWII FILMS &amp; SERIES BY COUNTRY</h1>`n"
 $countriesIndex += "    <p>$totalCountries countries &middot; $totalPins real historical locations</p>`n"
 $countriesIndex += "  </div>`n`n"
 $countriesIndex += "  <div class=`"index-grid`">`n"
