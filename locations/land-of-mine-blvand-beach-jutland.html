@@ -1,0 +1,75 @@
+﻿---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blåvand beach, Jutland - Land of Mine | CinemaMapped</title>
+  <meta name="description" content="Blåvand beach, Jutland, Denmark. As seen in Land of Mine (1945). After Germany's surrender, young German POWs — many still teenagers — are forced to clear the 2.2 million mines buried in Denmark's beaches.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' rx='60' fill='%230d0d0d'/%3E%3Ctext x='250' y='360' font-family='Arial Black,Arial,sans-serif' font-size='340' font-weight='900' text-anchor='middle' fill='%23c9a84c'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://cinemamapped.com/locations/land-of-mine-blvand-beach-jutland">
+  <meta property="og:title" content="Blåvand beach, Jutland - Land of Mine">
+  <meta property="og:description" content="After Germany's surrender, young German POWs — many still teenagers — are forced to clear the 2.2 million mines buried in Denmark's beaches.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cinemamapped.com/locations/land-of-mine-blvand-beach-jutland">
+  <meta property="og:image" content="https://cinemamapped.com/og-image.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Blåvand beach, Jutland",
+    "geo": { "@type": "GeoCoordinates", "latitude": 55.5472, "longitude": 8.0836 },
+    "url": "https://cinemamapped.com/locations/land-of-mine-blvand-beach-jutland",
+    "isPartOf": { "@type": "Movie", "name": "Land of Mine" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Cinema<em>Mapped</em></a>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="/film-locations" class="btn" style="font-size:11px;padding:8px 16px;">Guide</a>
+      <a href="/map" class="btn btn-filled">Explore the Map</a>
+    </div>
+  </nav>
+
+  <div class="pin-page-hero">
+    <div class="pin-page-breadcrumb"><a href="/">CinemaMapped</a> &rsaquo; <a href="/map?film=Land%20of%20Mine">Land of Mine</a> &rsaquo; Blåvand beach, Jutland</div>
+    <div class="pin-page-badges"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span class="pin-page-year">1945</span></div>
+    <h1 class="pin-page-h1">Blåvand beach, Jutland</h1>
+    <p class="pin-page-title-line">Land of Mine &mdash; Denmark</p>
+  </div>
+
+  <div id="pin-map" class="pin-page-map"></div>
+
+  <div class="pin-page-body">
+    <div class="pin-page-section"><div class="pin-desc-label">Scene</div><p class="pin-page-text">After Germany's surrender, young German POWs — many still teenagers — are forced to clear the 2.2 million mines buried in Denmark's beaches.</p></div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section"><div class="pin-desc-label">History</div><p class="pin-page-text">Denmark's post-war mine clearance by German POWs is one of the most morally controversial Allied decisions of the war's aftermath. The Geneva Convention prohibited using prisoners to clear mines; Denmark and Britain proceeded anyway. Of the 2,600 Germans who cleared mines, nearly half were killed or wounded. The youngest were 15 years old.</p></div>
+    <div class="pin-page-cta"><a href="/map?film=Land%20of%20Mine" class="btn btn-filled">See all Land of Mine locations &rarr;</a></div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer-brand">Cinema<em style="color:var(--accent)">Mapped</em></span>
+    <span class="footer-copy">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href="/privacy" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href="/terms" style="color:var(--text-muted);text-decoration:none;">Terms of Use</a></span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var m = L.map('pin-map', { zoomControl:true, attributionControl:false, scrollWheelZoom:false });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(m);
+    var icon = L.divIcon({ className:'', html:'<div style="width:14px;height:14px;border-radius:50%;background:#c9a84c;border:2px solid #fff;"></div>', iconSize:[14,14], iconAnchor:[7,7] });
+    L.marker([55.5472, 8.0836], { icon:icon, interactive:false }).addTo(m);
+    m.setView([55.5472, 8.0836], 8);
+  </script>
+  <script src="/js/consent.js?v=3"></script>
+</body>
+</html>

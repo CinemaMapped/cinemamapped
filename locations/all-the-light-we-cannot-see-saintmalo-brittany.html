@@ -1,0 +1,75 @@
+﻿---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saint-Malo, Brittany - All the Light We Cannot See | CinemaMapped</title>
+  <meta name="description" content="Saint-Malo, Brittany, France. As seen in All the Light We Cannot See (1944). The entire series is set in Saint-Malo during the final days of German occupation in 1944 — Werner searches for a hidden diamond while Allied bombs level the walled city.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' rx='60' fill='%230d0d0d'/%3E%3Ctext x='250' y='360' font-family='Arial Black,Arial,sans-serif' font-size='340' font-weight='900' text-anchor='middle' fill='%23c9a84c'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://cinemamapped.com/locations/all-the-light-we-cannot-see-saintmalo-brittany">
+  <meta property="og:title" content="Saint-Malo, Brittany - All the Light We Cannot See">
+  <meta property="og:description" content="The entire series is set in Saint-Malo during the final days of German occupation in 1944 — Werner searches for a hidden diamond while Allied bombs level the walled city.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cinemamapped.com/locations/all-the-light-we-cannot-see-saintmalo-brittany">
+  <meta property="og:image" content="https://cinemamapped.com/og-image.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Saint-Malo, Brittany",
+    "geo": { "@type": "GeoCoordinates", "latitude": 48.6490, "longitude": -2.0218 },
+    "url": "https://cinemamapped.com/locations/all-the-light-we-cannot-see-saintmalo-brittany",
+    "isPartOf": { "@type": "TVSeries", "name": "All the Light We Cannot See" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Cinema<em>Mapped</em></a>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="/film-locations" class="btn" style="font-size:11px;padding:8px 16px;">Guide</a>
+      <a href="/map" class="btn btn-filled">Explore the Map</a>
+    </div>
+  </nav>
+
+  <div class="pin-page-hero">
+    <div class="pin-page-breadcrumb"><a href="/">CinemaMapped</a> &rsaquo; <a href="/map?film=All%20the%20Light%20We%20Cannot%20See">All the Light We Cannot See</a> &rsaquo; Saint-Malo, Brittany</div>
+    <div class="pin-page-badges"><span class="badge badge-type">Series</span><span class="badge badge-theatre">Western Front</span><span class="pin-page-year">1944</span></div>
+    <h1 class="pin-page-h1">Saint-Malo, Brittany</h1>
+    <p class="pin-page-title-line">All the Light We Cannot See &mdash; France</p>
+  </div>
+
+  <div id="pin-map" class="pin-page-map"></div>
+
+  <div class="pin-page-body">
+    <div class="pin-page-section"><div class="pin-desc-label">Scene</div><p class="pin-page-text">The entire series is set in Saint-Malo during the final days of German occupation in 1944 — Werner searches for a hidden diamond while Allied bombs level the walled city.</p></div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section"><div class="pin-desc-label">History</div><p class="pin-page-text">Saint-Malo was bombarded by American forces in August 1944 when its German garrison refused to surrender. About 80% of the medieval walled city was destroyed. The city was liberated on 17 August 1944 after two weeks of fierce fighting.</p></div>
+    <div class="pin-page-cta"><a href="/map?film=All%20the%20Light%20We%20Cannot%20See" class="btn btn-filled">See all All the Light We Cannot See locations &rarr;</a></div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer-brand">Cinema<em style="color:var(--accent)">Mapped</em></span>
+    <span class="footer-copy">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href="/privacy" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href="/terms" style="color:var(--text-muted);text-decoration:none;">Terms of Use</a></span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var m = L.map('pin-map', { zoomControl:true, attributionControl:false, scrollWheelZoom:false });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(m);
+    var icon = L.divIcon({ className:'', html:'<div style="width:14px;height:14px;border-radius:50%;background:#c9a84c;border:2px solid #fff;"></div>', iconSize:[14,14], iconAnchor:[7,7] });
+    L.marker([48.6490, -2.0218], { icon:icon, interactive:false }).addTo(m);
+    m.setView([48.6490, -2.0218], 8);
+  </script>
+  <script src="/js/consent.js?v=3"></script>
+</body>
+</html>

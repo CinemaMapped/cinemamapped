@@ -1,0 +1,75 @@
+﻿---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warsaw Ghetto, Poland - Uprising | CinemaMapped</title>
+  <meta name="description" content="Warsaw Ghetto, Poland, Poland. As seen in Uprising (1943). Young Jewish fighters under Mordecai Anielewicz choose to die fighting in the Warsaw Ghetto rather than be transported to the death camps — the 2001 HBO film dramatises the April 1943 uprising.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' rx='60' fill='%230d0d0d'/%3E%3Ctext x='250' y='360' font-family='Arial Black,Arial,sans-serif' font-size='340' font-weight='900' text-anchor='middle' fill='%23c9a84c'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://cinemamapped.com/locations/uprising-warsaw-ghetto-poland">
+  <meta property="og:title" content="Warsaw Ghetto, Poland - Uprising">
+  <meta property="og:description" content="Young Jewish fighters under Mordecai Anielewicz choose to die fighting in the Warsaw Ghetto rather than be transported to the death camps — the 2001 HBO film dramatises the April 1943 uprising.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cinemamapped.com/locations/uprising-warsaw-ghetto-poland">
+  <meta property="og:image" content="https://cinemamapped.com/og-image.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Warsaw Ghetto, Poland",
+    "geo": { "@type": "GeoCoordinates", "latitude": 52.2432, "longitude": 21.0005 },
+    "url": "https://cinemamapped.com/locations/uprising-warsaw-ghetto-poland",
+    "isPartOf": { "@type": "Movie", "name": "Uprising" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Cinema<em>Mapped</em></a>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="/film-locations" class="btn" style="font-size:11px;padding:8px 16px;">Guide</a>
+      <a href="/map" class="btn btn-filled">Explore the Map</a>
+    </div>
+  </nav>
+
+  <div class="pin-page-hero">
+    <div class="pin-page-breadcrumb"><a href="/">CinemaMapped</a> &rsaquo; <a href="/map?film=Uprising">Uprising</a> &rsaquo; Warsaw Ghetto, Poland</div>
+    <div class="pin-page-badges"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Eastern Front</span><span class="pin-page-year">1943</span></div>
+    <h1 class="pin-page-h1">Warsaw Ghetto, Poland</h1>
+    <p class="pin-page-title-line">Uprising &mdash; Poland</p>
+  </div>
+
+  <div id="pin-map" class="pin-page-map"></div>
+
+  <div class="pin-page-body">
+    <div class="pin-page-section"><div class="pin-desc-label">Scene</div><p class="pin-page-text">Young Jewish fighters under Mordecai Anielewicz choose to die fighting in the Warsaw Ghetto rather than be transported to the death camps — the 2001 HBO film dramatises the April 1943 uprising.</p></div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section"><div class="pin-desc-label">History</div><p class="pin-page-text">The Warsaw Ghetto Uprising began on 19 April 1943 when SS forces entered the ghetto to deport the remaining 56,000 inhabitants. Around 750 Jewish fighters with pistols and a handful of submachine guns held off 2,000 German troops for 27 days — the longest urban uprising against Nazi occupation in Europe. Anielewicz died in the command bunker on 8 May 1943.</p></div>
+    <div class="pin-page-cta"><a href="/map?film=Uprising" class="btn btn-filled">See all Uprising locations &rarr;</a></div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer-brand">Cinema<em style="color:var(--accent)">Mapped</em></span>
+    <span class="footer-copy">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href="/privacy" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href="/terms" style="color:var(--text-muted);text-decoration:none;">Terms of Use</a></span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var m = L.map('pin-map', { zoomControl:true, attributionControl:false, scrollWheelZoom:false });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(m);
+    var icon = L.divIcon({ className:'', html:'<div style="width:14px;height:14px;border-radius:50%;background:#c9a84c;border:2px solid #fff;"></div>', iconSize:[14,14], iconAnchor:[7,7] });
+    L.marker([52.2432, 21.0005], { icon:icon, interactive:false }).addTo(m);
+    m.setView([52.2432, 21.0005], 8);
+  </script>
+  <script src="/js/consent.js?v=3"></script>
+</body>
+</html>

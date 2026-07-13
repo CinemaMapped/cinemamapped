@@ -1,0 +1,75 @@
+﻿---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oslo, Norway - Betrayed | CinemaMapped</title>
+  <meta name="description" content="Oslo, Norway, Norway. As seen in Betrayed (1942). The 2020 Norwegian film depicts the deportation of Norwegian Jews via the SS Donau from Oslo on 26 November 1942 — the day over 500 Norwegian Jews were shipped to Auschwitz, most never to return.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' rx='60' fill='%230d0d0d'/%3E%3Ctext x='250' y='360' font-family='Arial Black,Arial,sans-serif' font-size='340' font-weight='900' text-anchor='middle' fill='%23c9a84c'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://cinemamapped.com/locations/betrayed-oslo-norway">
+  <meta property="og:title" content="Oslo, Norway - Betrayed">
+  <meta property="og:description" content="The 2020 Norwegian film depicts the deportation of Norwegian Jews via the SS Donau from Oslo on 26 November 1942 — the day over 500 Norwegian Jews were shipped to Auschwitz, most never to return.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cinemamapped.com/locations/betrayed-oslo-norway">
+  <meta property="og:image" content="https://cinemamapped.com/og-image.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Oslo, Norway",
+    "geo": { "@type": "GeoCoordinates", "latitude": 59.9139, "longitude": 10.7522 },
+    "url": "https://cinemamapped.com/locations/betrayed-oslo-norway",
+    "isPartOf": { "@type": "Movie", "name": "Betrayed" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Cinema<em>Mapped</em></a>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="/film-locations" class="btn" style="font-size:11px;padding:8px 16px;">Guide</a>
+      <a href="/map" class="btn btn-filled">Explore the Map</a>
+    </div>
+  </nav>
+
+  <div class="pin-page-hero">
+    <div class="pin-page-breadcrumb"><a href="/">CinemaMapped</a> &rsaquo; <a href="/map?film=Betrayed">Betrayed</a> &rsaquo; Oslo, Norway</div>
+    <div class="pin-page-badges"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span class="pin-page-year">1942</span></div>
+    <h1 class="pin-page-h1">Oslo, Norway</h1>
+    <p class="pin-page-title-line">Betrayed &mdash; Norway</p>
+  </div>
+
+  <div id="pin-map" class="pin-page-map"></div>
+
+  <div class="pin-page-body">
+    <div class="pin-page-section"><div class="pin-desc-label">Scene</div><p class="pin-page-text">The 2020 Norwegian film depicts the deportation of Norwegian Jews via the SS Donau from Oslo on 26 November 1942 — the day over 500 Norwegian Jews were shipped to Auschwitz, most never to return.</p></div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section"><div class="pin-desc-label">History</div><p class="pin-page-text">On 26 November 1942, the SS Donau departed Oslo Pier 1 carrying 532 Norwegian Jews — the largest single deportation of Norwegian Jews. Of those deported, only 9 survived the war. The operation was carried out by Norwegian police at German direction. Norway's wartime government later formally apologised for Norwegian complicity in the deportations. The film replaces the incorrect Brussels location previously assigned.</p></div>
+    <div class="pin-page-cta"><a href="/map?film=Betrayed" class="btn btn-filled">See all Betrayed locations &rarr;</a></div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer-brand">Cinema<em style="color:var(--accent)">Mapped</em></span>
+    <span class="footer-copy">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href="/privacy" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href="/terms" style="color:var(--text-muted);text-decoration:none;">Terms of Use</a></span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var m = L.map('pin-map', { zoomControl:true, attributionControl:false, scrollWheelZoom:false });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(m);
+    var icon = L.divIcon({ className:'', html:'<div style="width:14px;height:14px;border-radius:50%;background:#c9a84c;border:2px solid #fff;"></div>', iconSize:[14,14], iconAnchor:[7,7] });
+    L.marker([59.9139, 10.7522], { icon:icon, interactive:false }).addTo(m);
+    m.setView([59.9139, 10.7522], 8);
+  </script>
+  <script src="/js/consent.js?v=3"></script>
+</body>
+</html>

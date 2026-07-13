@@ -1,0 +1,81 @@
+﻿---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lake Tinnsjo, Telemark - The Heroes of Telemark | CinemaMapped</title>
+  <meta name="description" content="Lake Tinnsjo, Telemark, Norway. As seen in The Heroes of Telemark (1944). February 20 1944 — Norwegian resistance sinks the ferry SF Hydro carrying the final German stocks of heavy water across Lake Tinnsjo.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' rx='60' fill='%230d0d0d'/%3E%3Ctext x='250' y='360' font-family='Arial Black,Arial,sans-serif' font-size='340' font-weight='900' text-anchor='middle' fill='%23c9a84c'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://cinemamapped.com/locations/the-heroes-of-telemark-lake-tinnsjo-telemark">
+  <meta property="og:title" content="Lake Tinnsjo, Telemark - The Heroes of Telemark">
+  <meta property="og:description" content="February 20 1944 — Norwegian resistance sinks the ferry SF Hydro carrying the final German stocks of heavy water across Lake Tinnsjo.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cinemamapped.com/locations/the-heroes-of-telemark-lake-tinnsjo-telemark">
+  <meta property="og:image" content="https://cinemamapped.com/og-image.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Place",
+    "name": "Lake Tinnsjo, Telemark",
+    "geo": { "@type": "GeoCoordinates", "latitude": 59.8700, "longitude": 9.0700 },
+    "url": "https://cinemamapped.com/locations/the-heroes-of-telemark-lake-tinnsjo-telemark",
+    "isPartOf": { "@type": "Movie", "name": "The Heroes of Telemark" }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Cinema<em>Mapped</em></a>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="/film-locations" class="btn" style="font-size:11px;padding:8px 16px;">Guide</a>
+      <a href="/map" class="btn btn-filled">Explore the Map</a>
+    </div>
+  </nav>
+
+  <div class="pin-page-hero">
+    <div class="pin-page-breadcrumb"><a href="/">CinemaMapped</a> &rsaquo; <a href="/map?film=The%20Heroes%20of%20Telemark">The Heroes of Telemark</a> &rsaquo; Lake Tinnsjo, Telemark</div>
+    <div class="pin-page-badges"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span class="pin-page-year">1944</span></div>
+    <h1 class="pin-page-h1">Lake Tinnsjo, Telemark</h1>
+    <p class="pin-page-title-line">The Heroes of Telemark &mdash; Norway</p>
+  </div>
+
+  <div id="pin-map" class="pin-page-map"></div>
+
+  <div class="pin-page-body">
+    <div class="pin-page-section"><div class="pin-desc-label">Scene</div><p class="pin-page-text">February 20 1944 — Norwegian resistance sinks the ferry SF Hydro carrying the final German stocks of heavy water across Lake Tinnsjo.</p></div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section"><div class="pin-desc-label">History</div><p class="pin-page-text">Knut Haukelid placed charges in the bilge of the ferry while other operatives created a diversion. The boat sank in four minutes; 14 Norwegian civilians and 4 Germans drowned. The heavy water — in 39 drums bound for Germany — sank to 430 metres. Recovered samples in 1999 confirmed it was genuine heavy water.</p></div>
+    <div class="pin-related">
+      <div class="pin-desc-label">Other The Heroes of Telemark locations</div>
+      <ul class="related-list">
+        <li><a href="/locations/the-heroes-of-telemark-vemork-heavy-water-plant-rjukan">Vemork heavy water plant, Rjukan</a></li>
+      </ul>
+    </div>
+    <div class="pin-page-cta"><a href="/map?film=The%20Heroes%20of%20Telemark" class="btn btn-filled">See all The Heroes of Telemark locations &rarr;</a></div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer-brand">Cinema<em style="color:var(--accent)">Mapped</em></span>
+    <span class="footer-copy">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href="/privacy" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href="/terms" style="color:var(--text-muted);text-decoration:none;">Terms of Use</a></span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var m = L.map('pin-map', { zoomControl:true, attributionControl:false, scrollWheelZoom:false });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(m);
+    var icon = L.divIcon({ className:'', html:'<div style="width:14px;height:14px;border-radius:50%;background:#c9a84c;border:2px solid #fff;"></div>', iconSize:[14,14], iconAnchor:[7,7] });
+    L.marker([59.8700, 9.0700], { icon:icon, interactive:false }).addTo(m);
+    m.setView([59.8700, 9.0700], 8);
+  </script>
+  <script src="/js/consent.js?v=3"></script>
+</body>
+</html>
