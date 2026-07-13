@@ -1,7 +1,7 @@
-(function () {
+﻿(function () {
   'use strict';
 
-  // ── State ──────────────────────────────────────────────────
+  // â”€â”€ State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   var allPins       = [];
   var activeTheatre = 'all';
   var activeTitle   = '';
@@ -10,7 +10,7 @@
   var routeLayer    = null;
   var searchTimer;
 
-  // ── Map init ───────────────────────────────────────────────
+  // â”€â”€ Map init â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   var map = L.map('map', {
     center:             [48, 12],
     zoom:               5,
@@ -28,7 +28,7 @@
     maxZoom:     19,
   }).addTo(map);
 
-  // ── Cluster group ──────────────────────────────────────────
+  // â”€â”€ Cluster group â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   clusterGroup = L.markerClusterGroup({
     showCoverageOnHover: false,
     maxClusterRadius:    52,
@@ -44,7 +44,7 @@
   });
   map.addLayer(clusterGroup);
 
-  // ── Pin icon ───────────────────────────────────────────────
+  // â”€â”€ Pin icon â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function goldIcon() {
     return L.divIcon({
       className:  'gold-pin',
@@ -54,7 +54,7 @@
     });
   }
 
-  // ── Route lines ────────────────────────────────────────────
+  // â”€â”€ Route lines â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function clearRoute() {
     if (routeLayer) {
       map.removeLayer(routeLayer);
@@ -84,7 +84,7 @@
     }
   }
 
-  // ── Panel ──────────────────────────────────────────────────
+  // â”€â”€ Panel â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   var panel      = document.getElementById('pin-panel');
   var panelClose = document.getElementById('pin-close');
 
@@ -149,7 +149,7 @@
     if (e.key === 'Escape') closePanel();
   });
 
-  // ── Empty state ────────────────────────────────────────────
+  // â”€â”€ Empty state â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   var noResultsEl = document.getElementById('no-results');
 
   function updateEmptyState(count) {
@@ -157,7 +157,7 @@
     noResultsEl.style.display = count === 0 ? 'flex' : 'none';
   }
 
-  // ── Pin count ──────────────────────────────────────────────
+  // â”€â”€ Pin count â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   var pinCountEl = document.getElementById('pin-count');
 
   function updatePinCount(visible) {
@@ -170,7 +170,7 @@
     }
   }
 
-  // ── Render markers ─────────────────────────────────────────
+  // â”€â”€ Render markers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function renderMarkers() {
     clusterGroup.clearLayers();
     clearRoute();
@@ -217,7 +217,7 @@
     updatePinCount(count);
   }
 
-  // ── Title filter chips ─────────────────────────────────────
+  // â”€â”€ Title filter chips â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   document.querySelectorAll('.chip-title').forEach(function (chip) {
     chip.addEventListener('click', function () {
       document.querySelectorAll('.chip-title').forEach(function (c) {
@@ -255,7 +255,7 @@
     });
   });
 
-  // ── Theatre filter chips ───────────────────────────────────
+  // â”€â”€ Theatre filter chips â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   document.querySelectorAll('.chip:not(.chip-title)').forEach(function (chip) {
     chip.addEventListener('click', function () {
       document.querySelectorAll('.chip:not(.chip-title)').forEach(function (c) {
@@ -280,7 +280,7 @@
     });
   });
 
-  // ── Search ─────────────────────────────────────────────────
+  // â”€â”€ Search â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   var searchInput = document.getElementById('map-search');
 
   searchInput.addEventListener('input', function () {
@@ -299,7 +299,7 @@
     }, 220);
   });
 
-  // ── URL param: ?film=Title ──────────────────────────────────
+  // â”€â”€ URL param: ?film=Title â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function applyUrlParams() {
     var params    = new URLSearchParams(window.location.search);
     var filmParam = params.get('film');
@@ -325,7 +325,7 @@
     }
   }
 
-  // ── Mobile nav height sync ─────────────────────────────────
+  // â”€â”€ Mobile nav height sync â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function syncMapTop() {
     var nav = document.querySelector('.map-nav');
     if (!nav) return;
@@ -334,8 +334,8 @@
   syncMapTop();
   window.addEventListener('resize', syncMapTop);
 
-  // ── Load data ──────────────────────────────────────────────
-  fetch('data.json?v=3')
+  // â”€â”€ Load data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  fetch('data.json?v=4')
     .then(function (r) { return r.json(); })
     .then(function (data) {
       allPins = data;
@@ -345,7 +345,7 @@
       console.error('CinemaMapped: failed to load data.json', err);
     });
 
-  // ── Helpers ────────────────────────────────────────────────
+  // â”€â”€ Helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function escapeHtml(str) {
     var d = document.createElement('div');
     d.appendChild(document.createTextNode(String(str)));
@@ -362,3 +362,4 @@
   }
 
 })();
+
