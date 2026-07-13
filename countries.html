@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css?v=9">
+  <link rel="stylesheet" href="/style.css?v=10">
 </head>
 <body>
 
@@ -29,277 +29,331 @@
   <div class="index-hero">
     <h1>WWII FILMS &amp; SERIES BY COUNTRY</h1>
     <p>45 countries &middot; 302 real historical locations</p>
+    <p class="index-hero-sub">One global conflict, every front. Explore which countries appear in WWII cinema &mdash; and which films are set there.</p>
   </div>
 
+  <div class="index-filter-bar">
+    <button class="chip active" data-filter-region="all">All</button>
+    <button class="chip" data-filter-region="Europe">Europe</button>
+    <button class="chip" data-filter-region="Pacific">Asia &amp; Pacific</button>
+    <button class="chip" data-filter-region="Africa">N. Africa</button>
+    <button class="chip" data-filter-region="Americas">Americas</button>
+    <span class="filter-count-label" id="country-filter-count">45 countries</span>
+  </div>
   <div class="index-grid">
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/germany" class="index-card-link">
-        <div class="index-card-title">Germany</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1E9;&#x1F1EA;</span>Germany</div>
         <div class="index-card-meta"><span>49 locations</span><span>&middot; 36 titles</span></div>
+        <div class="index-card-top-film">Masters of the Air</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/france" class="index-card-link">
-        <div class="index-card-title">France</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1EB;&#x1F1F7;</span>France</div>
         <div class="index-card-meta"><span>39 locations</span><span>&middot; 24 titles</span></div>
+        <div class="index-card-top-film">The Longest Day</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/poland" class="index-card-link">
-        <div class="index-card-title">Poland</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F5;&#x1F1F1;</span>Poland</div>
         <div class="index-card-meta"><span>34 locations</span><span>&middot; 23 titles</span></div>
+        <div class="index-card-top-film">The Pianist</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/united-kingdom" class="index-card-link">
-        <div class="index-card-title">United Kingdom</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1EC;&#x1F1E7;</span>United Kingdom</div>
         <div class="index-card-meta"><span>21 locations</span><span>&middot; 20 titles</span></div>
+        <div class="index-card-top-film">Dunkirk</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/netherlands" class="index-card-link">
-        <div class="index-card-title">Netherlands</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F3;&#x1F1F1;</span>Netherlands</div>
         <div class="index-card-meta"><span>15 locations</span><span>&middot; 10 titles</span></div>
+        <div class="index-card-top-film">A Bridge Too Far</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Americas">
       <a href="/countries/united-states" class="index-card-link">
-        <div class="index-card-title">United States</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1FA;&#x1F1F8;</span>United States</div>
         <div class="index-card-meta"><span>13 locations</span><span>&middot; 12 titles</span></div>
+        <div class="index-card-top-film">Oppenheimer</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/japan" class="index-card-link">
-        <div class="index-card-title">Japan</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1EF;&#x1F1F5;</span>Japan</div>
         <div class="index-card-meta"><span>13 locations</span><span>&middot; 12 titles</span></div>
+        <div class="index-card-top-film">The Pacific</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/norway" class="index-card-link">
-        <div class="index-card-title">Norway</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F3;&#x1F1F4;</span>Norway</div>
         <div class="index-card-meta"><span>12 locations</span><span>&middot; 9 titles</span></div>
+        <div class="index-card-top-film">The 12th Man</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/russia" class="index-card-link">
-        <div class="index-card-title">Russia</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F7;&#x1F1FA;</span>Russia</div>
         <div class="index-card-meta"><span>12 locations</span><span>&middot; 12 titles</span></div>
+        <div class="index-card-top-film">Stalingrad</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/italy" class="index-card-link">
-        <div class="index-card-title">Italy</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1EE;&#x1F1F9;</span>Italy</div>
         <div class="index-card-meta"><span>11 locations</span><span>&middot; 11 titles</span></div>
+        <div class="index-card-top-film">Mussolini and I</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/china" class="index-card-link">
-        <div class="index-card-title">China</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1E8;&#x1F1F3;</span>China</div>
         <div class="index-card-meta"><span>9 locations</span><span>&middot; 8 titles</span></div>
+        <div class="index-card-top-film">Empire of the Sun</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/belarus" class="index-card-link">
-        <div class="index-card-title">Belarus</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1E7;&#x1F1FE;</span>Belarus</div>
         <div class="index-card-meta"><span>5 locations</span><span>&middot; 4 titles</span></div>
+        <div class="index-card-top-film">Defiance</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/thailand" class="index-card-link">
-        <div class="index-card-title">Thailand</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F9;&#x1F1ED;</span>Thailand</div>
         <div class="index-card-meta"><span>5 locations</span><span>&middot; 4 titles</span></div>
+        <div class="index-card-top-film">The Bridge on the River Kwai</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/denmark" class="index-card-link">
-        <div class="index-card-title">Denmark</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1E9;&#x1F1F0;</span>Denmark</div>
         <div class="index-card-meta"><span>4 locations</span><span>&middot; 4 titles</span></div>
+        <div class="index-card-top-film">Flame &amp; Citron</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Africa">
       <a href="/countries/libya" class="index-card-link">
-        <div class="index-card-title">Libya</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F1;&#x1F1FE;</span>Libya</div>
         <div class="index-card-meta"><span>4 locations</span><span>&middot; 4 titles</span></div>
+        <div class="index-card-top-film">SAS: Rogue Heroes</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/pacific-ocean" class="index-card-link">
-        <div class="index-card-title">Pacific Ocean</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F30A;</span>Pacific Ocean</div>
         <div class="index-card-meta"><span>4 locations</span><span>&middot; 4 titles</span></div>
+        <div class="index-card-top-film">Unbroken</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/czech-republic" class="index-card-link">
-        <div class="index-card-title">Czech Republic</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1E8;&#x1F1FF;</span>Czech Republic</div>
         <div class="index-card-meta"><span>4 locations</span><span>&middot; 3 titles</span></div>
+        <div class="index-card-top-film">Anthropoid</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/belgium" class="index-card-link">
-        <div class="index-card-title">Belgium</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1E7;&#x1F1EA;</span>Belgium</div>
         <div class="index-card-meta"><span>4 locations</span><span>&middot; 3 titles</span></div>
+        <div class="index-card-top-film">Band of Brothers</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/ukraine" class="index-card-link">
-        <div class="index-card-title">Ukraine</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1FA;&#x1F1E6;</span>Ukraine</div>
         <div class="index-card-meta"><span>3 locations</span><span>&middot; 2 titles</span></div>
+        <div class="index-card-top-film">Battle for Sevastopol</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/greece" class="index-card-link">
-        <div class="index-card-title">Greece</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1EC;&#x1F1F7;</span>Greece</div>
         <div class="index-card-meta"><span>3 locations</span><span>&middot; 3 titles</span></div>
+        <div class="index-card-top-film">Hell in the Aegean</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Americas">
       <a href="/countries/atlantic-ocean" class="index-card-link">
-        <div class="index-card-title">Atlantic Ocean</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F30A;</span>Atlantic Ocean</div>
         <div class="index-card-meta"><span>3 locations</span><span>&middot; 2 titles</span></div>
+        <div class="index-card-top-film">Das Boot</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Americas">
       <a href="/countries/international-waters" class="index-card-link">
-        <div class="index-card-title">International waters</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F30A;</span>International waters</div>
         <div class="index-card-meta"><span>3 locations</span><span>&middot; 3 titles</span></div>
+        <div class="index-card-top-film">Mission of the Shark</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/austria" class="index-card-link">
-        <div class="index-card-title">Austria</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1E6;&#x1F1F9;</span>Austria</div>
         <div class="index-card-meta"><span>3 locations</span><span>&middot; 3 titles</span></div>
+        <div class="index-card-top-film">The Monuments Men</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Africa">
       <a href="/countries/tunisia" class="index-card-link">
-        <div class="index-card-title">Tunisia</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F9;&#x1F1F3;</span>Tunisia</div>
         <div class="index-card-meta"><span>3 locations</span><span>&middot; 3 titles</span></div>
+        <div class="index-card-top-film">The Big Red One</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/indonesia" class="index-card-link">
-        <div class="index-card-title">Indonesia</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1EE;&#x1F1E9;</span>Indonesia</div>
         <div class="index-card-meta"><span>2 locations</span><span>&middot; 2 titles</span></div>
+        <div class="index-card-top-film">Paradise Road</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/hungary" class="index-card-link">
-        <div class="index-card-title">Hungary</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1ED;&#x1F1FA;</span>Hungary</div>
         <div class="index-card-meta"><span>2 locations</span><span>&middot; 2 titles</span></div>
+        <div class="index-card-top-film">Sunshine</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/finland" class="index-card-link">
-        <div class="index-card-title">Finland</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1EB;&#x1F1EE;</span>Finland</div>
         <div class="index-card-meta"><span>2 locations</span><span>&middot; 2 titles</span></div>
+        <div class="index-card-top-film">The Warrior's Heart</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Africa">
       <a href="/countries/egypt" class="index-card-link">
-        <div class="index-card-title">Egypt</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1EA;&#x1F1EC;</span>Egypt</div>
         <div class="index-card-meta"><span>2 locations</span><span>&middot; 2 titles</span></div>
+        <div class="index-card-top-film">El Alamein: The Line of Fire</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/solomon-islands" class="index-card-link">
-        <div class="index-card-title">Solomon Islands</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F8;&#x1F1E7;</span>Solomon Islands</div>
         <div class="index-card-meta"><span>2 locations</span><span>&middot; 2 titles</span></div>
+        <div class="index-card-top-film">The Thin Red Line</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Americas">
       <a href="/countries/argentina" class="index-card-link">
-        <div class="index-card-title">Argentina</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1E6;&#x1F1F7;</span>Argentina</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">Operation Finale</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/romania" class="index-card-link">
-        <div class="index-card-title">Romania</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F7;&#x1F1F4;</span>Romania</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">Red Tails</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/slovakia" class="index-card-link">
-        <div class="index-card-title">Slovakia</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F8;&#x1F1F0;</span>Slovakia</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">The Auschwitz Report</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/spain" class="index-card-link">
-        <div class="index-card-title">Spain</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1EA;&#x1F1F8;</span>Spain</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">Operation Mincemeat</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/singapore" class="index-card-link">
-        <div class="index-card-title">Singapore</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F8;&#x1F1EC;</span>Singapore</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">Canopy</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/estonia" class="index-card-link">
-        <div class="index-card-title">Estonia</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1EA;&#x1F1EA;</span>Estonia</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">1944</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/kiribati" class="index-card-link">
-        <div class="index-card-title">Kiribati</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F0;&#x1F1EE;</span>Kiribati</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">Sands of Iwo Jima</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Africa">
       <a href="/countries/equatorial-guinea" class="index-card-link">
-        <div class="index-card-title">Equatorial Guinea</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1EC;&#x1F1F6;</span>Equatorial Guinea</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">The Ministry of Ungentlemanly Warfare</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/australia" class="index-card-link">
-        <div class="index-card-title">Australia</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1E6;&#x1F1FA;</span>Australia</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">Australia</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Europe">
       <a href="/countries/bosnia-and-herzegovina" class="index-card-link">
-        <div class="index-card-title">Bosnia and Herzegovina</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1E7;&#x1F1E6;</span>Bosnia and Herzegovina</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">The Battle of Neretva</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/marshall-islands" class="index-card-link">
-        <div class="index-card-title">Marshall Islands</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F2;&#x1F1ED;</span>Marshall Islands</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">Unbroken</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/papua-new-guinea" class="index-card-link">
-        <div class="index-card-title">Papua New Guinea</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F5;&#x1F1EC;</span>Papua New Guinea</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">The Pacific</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/philippines" class="index-card-link">
-        <div class="index-card-title">Philippines</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F5;&#x1F1ED;</span>Philippines</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">The Great Raid</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/palau" class="index-card-link">
-        <div class="index-card-title">Palau</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F5;&#x1F1FC;</span>Palau</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">The Pacific</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Pacific">
       <a href="/countries/mongolia" class="index-card-link">
-        <div class="index-card-title">Mongolia</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F2;&#x1F1F3;</span>Mongolia</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">My Way</div>
       </a>
     </div>
-    <div class="index-card">
+    <div class="index-card" data-region="Africa">
       <a href="/countries/morocco" class="index-card-link">
-        <div class="index-card-title">Morocco</div>
+        <div class="index-card-title"><span class="index-card-flag">&#x1F1F2;&#x1F1E6;</span>Morocco</div>
         <div class="index-card-meta"><span>1 location</span><span>&middot; 1 title</span></div>
+        <div class="index-card-top-film">Allied</div>
       </a>
     </div>
   </div>
@@ -308,6 +362,26 @@
     <span class="footer-brand">Cinema<em style="color:var(--accent)">Mapped</em></span>
     <span class="footer-copy">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href="/privacy" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href="/terms" style="color:var(--text-muted);text-decoration:none;">Terms of Use</a></span>
   </footer>
+  <script>
+(function(){
+  var ar='all';
+  function run(){
+    var cards=document.querySelectorAll('.index-card[data-region]'),n=0;
+    cards.forEach(function(c){
+      var ok=(ar==='all'||c.dataset.region===ar);
+      c.style.display=ok?'':'none';if(ok)n++;
+    });
+    var el=document.getElementById('country-filter-count');
+    if(el)el.textContent=n+' countr'+(n===1?'y':'ies');
+  }
+  document.querySelectorAll('[data-filter-region]').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('[data-filter-region]').forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');ar=b.dataset.filterRegion;run();
+    });
+  });
+})();
+  </script>
   <script src="/js/consent.js?v=3"></script>
 </body>
 </html>

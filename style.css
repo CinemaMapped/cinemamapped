@@ -1403,6 +1403,19 @@ a.hero-stat-link:hover { opacity: 0.75; }
 }
 .index-card-meta .badge { font-size: 10px; padding: 2px 6px; }
 
+/* Theatre accent — coloured left border on film index cards */
+.index-card[data-theatre="Western Front"] { border-left-color: #c9a84c; border-left-width: 3px; }
+.index-card[data-theatre="Eastern Front"] { border-left-color: #c94c4c; border-left-width: 3px; }
+.index-card[data-theatre="Pacific"]       { border-left-color: #4c9bc9; border-left-width: 3px; }
+.index-card[data-theatre="North Africa"]  { border-left-color: #c98b4c; border-left-width: 3px; }
+.index-card[data-theatre="Atlantic"]      { border-left-color: #4c6ec9; border-left-width: 3px; }
+.index-card[data-theatre="Mediterranean"] { border-left-color: #4cc9b0; border-left-width: 3px; }
+.index-card-year { font-size: 11px; color: var(--text-muted); margin-left: 2px; }
+.index-hero-sub { color: var(--text); font-size: 15px; margin: 14px 0 0; line-height: 1.6; max-width: 600px; opacity: 0.7; }
+.index-card-flag { font-size: 17px; margin-right: 5px; vertical-align: -1px; }
+.index-card-top-film { font-size: 11px; color: var(--text-muted); margin-top: 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.index-card-top-film::before { content: "Top: "; opacity: 0.65; }
+
 /* Location card history block */
 .location-card-history {
   font-size: 12px;

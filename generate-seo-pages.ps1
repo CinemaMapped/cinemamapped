@@ -195,7 +195,7 @@ foreach ($title in $allTitles) {
     $html += "  <link rel=`"preconnect`" href=`"https://fonts.gstatic.com`" crossorigin>`n"
     $html += "  <link href=`"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap`" rel=`"stylesheet`">`n"
     $html += "  <link rel=`"stylesheet`" href=`"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css`">`n"
-    $html += "  <link rel=`"stylesheet`" href=`"/style.css?v=9`">`n"
+    $html += "  <link rel=`"stylesheet`" href=`"/style.css?v=10`">`n"
     $html += "</head>`n<body>`n`n"
 
     $html += "  <nav class=`"nav`">`n"
@@ -349,7 +349,7 @@ foreach ($country in $allCountries) {
     $html += "  <link rel=`"preconnect`" href=`"https://fonts.gstatic.com`" crossorigin>`n"
     $html += "  <link href=`"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap`" rel=`"stylesheet`">`n"
     $html += "  <link rel=`"stylesheet`" href=`"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css`">`n"
-    $html += "  <link rel=`"stylesheet`" href=`"/style.css?v=9`">`n"
+    $html += "  <link rel=`"stylesheet`" href=`"/style.css?v=10`">`n"
     $html += "</head>`n<body>`n`n"
 
     $html += "  <nav class=`"nav`">`n"
@@ -410,13 +410,16 @@ $filmCards = ($allTitles | ForEach-Object {
     $tTheatre   = $tPins[0].theatre
     $tCount     = $tPins.Count
     $tLocWord   = if ($tCount -eq 1) { 'location' } else { 'locations' }
+    $tYearNums  = @($tPins | Where-Object { $_.year_portrayed } | Select-Object -ExpandProperty year_portrayed | Sort-Object)
+    $tYear      = if ($tYearNums.Count -gt 0) { if ($tYearNums[0] -eq $tYearNums[-1]) { [string]$tYearNums[0] } else { "$($tYearNums[0])&ndash;$($tYearNums[-1])" } } else { '' }
+    $tYearSpan  = if ($tYear) { "<span class=`"index-card-year`">$tYear</span>" } else { '' }
     $tStream    = ($tPins | Where-Object { $_.streaming } | Select-Object -First 1).streaming
     $tTitleSafe = $t -replace "'", "\'"
     $tWatchHtml = if ($tStream) {
         $tStreamSafe = HtmlEncode $tStream
         "`n      <a href=`"$tStreamSafe`" class=`"index-card-watch`" target=`"_blank`" rel=`"noopener noreferrer sponsored`" onclick=`"event.stopPropagation();if(window.gtag)gtag('event','watch_click',{film_title:'$tTitleSafe',source:'films_index'})`">Watch on Amazon &#x2197;</a>"
     } else { '' }
-    "    <div class=`"index-card`" data-type=`"$tType`" data-theatre=`"$tTheatre`">`n      <a href=`"/films/$tSlug`" class=`"index-card-link`">`n        <div class=`"index-card-title`">$tHtml</div>`n        <div class=`"index-card-meta`"><span class=`"badge badge-type`">$tType</span><span class=`"badge badge-theatre`">$tTheatre</span><span>$tCount $tLocWord</span></div>`n      </a>$tWatchHtml`n    </div>"
+    "    <div class=`"index-card`" data-type=`"$tType`" data-theatre=`"$tTheatre`">`n      <a href=`"/films/$tSlug`" class=`"index-card-link`">`n        <div class=`"index-card-title`">$tHtml</div>`n        <div class=`"index-card-meta`"><span class=`"badge badge-type`">$tType</span><span class=`"badge badge-theatre`">$tTheatre</span>$tYearSpan<span>$tCount $tLocWord</span></div>`n      </a>$tWatchHtml`n    </div>"
 }) -join "`n"
 
 $totalPins   = $data.Count
@@ -434,7 +437,7 @@ $filmsIndex += "  <link rel=`"canonical`" href=`"https://cinemamapped.com/films`
 $filmsIndex += "  <link rel=`"preconnect`" href=`"https://fonts.googleapis.com`">`n"
 $filmsIndex += "  <link rel=`"preconnect`" href=`"https://fonts.gstatic.com`" crossorigin>`n"
 $filmsIndex += "  <link href=`"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap`" rel=`"stylesheet`">`n"
-$filmsIndex += "  <link rel=`"stylesheet`" href=`"/style.css?v=9`">`n"
+$filmsIndex += "  <link rel=`"stylesheet`" href=`"/style.css?v=10`">`n"
 $filmsIndex += "</head>`n<body>`n`n"
 $filmsIndex += "  <nav class=`"nav`">`n"
 $filmsIndex += "    <a href=`"/`" class=`"nav-logo`">Cinema<em>Mapped</em></a>`n"
@@ -447,6 +450,7 @@ $filmsIndex += "    </div>`n  </nav>`n`n"
 $filmsIndex += "  <div class=`"index-hero`">`n"
 $filmsIndex += "    <h1>ALL WWII FILMS &amp; SERIES</h1>`n"
 $filmsIndex += "    <p>$totalTitles titles &middot; $totalPins real historical locations</p>`n"
+$filmsIndex += "    <p class=`"index-hero-sub`">From Normandy to Stalingrad, Iwo Jima to the Atlantic &mdash; trace the real places behind every WWII story.</p>`n"
 $filmsIndex += "  </div>`n`n"
 $filmsIndex += "  <div class=`"index-filter-bar`">`n"
 $filmsIndex += "    <button class=`"chip active`" data-filter-type=`"all`">All</button>`n"
@@ -501,18 +505,119 @@ $filmsIndex += "</body>`n</html>`n"
 Write-Host "films.html written"
 
 # â”€â”€ COUNTRIES INDEX PAGE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+$flagMap = @{
+    'Germany'                = '&#x1F1E9;&#x1F1EA;'
+    'France'                 = '&#x1F1EB;&#x1F1F7;'
+    'Poland'                 = '&#x1F1F5;&#x1F1F1;'
+    'United Kingdom'         = '&#x1F1EC;&#x1F1E7;'
+    'Netherlands'            = '&#x1F1F3;&#x1F1F1;'
+    'United States'          = '&#x1F1FA;&#x1F1F8;'
+    'Japan'                  = '&#x1F1EF;&#x1F1F5;'
+    'Norway'                 = '&#x1F1F3;&#x1F1F4;'
+    'Russia'                 = '&#x1F1F7;&#x1F1FA;'
+    'Italy'                  = '&#x1F1EE;&#x1F1F9;'
+    'Belgium'                = '&#x1F1E7;&#x1F1EA;'
+    'Czech Republic'         = '&#x1F1E8;&#x1F1FF;'
+    'Denmark'                = '&#x1F1E9;&#x1F1F0;'
+    'Finland'                = '&#x1F1EB;&#x1F1EE;'
+    'Greece'                 = '&#x1F1EC;&#x1F1F7;'
+    'Hungary'                = '&#x1F1ED;&#x1F1FA;'
+    'Austria'                = '&#x1F1E6;&#x1F1F9;'
+    'Spain'                  = '&#x1F1EA;&#x1F1F8;'
+    'Romania'                = '&#x1F1F7;&#x1F1F4;'
+    'Ukraine'                = '&#x1F1FA;&#x1F1E6;'
+    'Belarus'                = '&#x1F1E7;&#x1F1FE;'
+    'Slovakia'               = '&#x1F1F8;&#x1F1F0;'
+    'Estonia'                = '&#x1F1EA;&#x1F1EA;'
+    'Morocco'                = '&#x1F1F2;&#x1F1E6;'
+    'Tunisia'                = '&#x1F1F9;&#x1F1F3;'
+    'Libya'                  = '&#x1F1F1;&#x1F1FE;'
+    'Egypt'                  = '&#x1F1EA;&#x1F1EC;'
+    'Indonesia'              = '&#x1F1EE;&#x1F1E9;'
+    'Philippines'            = '&#x1F1F5;&#x1F1ED;'
+    'Singapore'              = '&#x1F1F8;&#x1F1EC;'
+    'China'                  = '&#x1F1E8;&#x1F1F3;'
+    'Australia'              = '&#x1F1E6;&#x1F1FA;'
+    'Papua New Guinea'       = '&#x1F1F5;&#x1F1EC;'
+    'Solomon Islands'        = '&#x1F1F8;&#x1F1E7;'
+    'Marshall Islands'       = '&#x1F1F2;&#x1F1ED;'
+    'Palau'                  = '&#x1F1F5;&#x1F1FC;'
+    'Kiribati'               = '&#x1F1F0;&#x1F1EE;'
+    'Thailand'               = '&#x1F1F9;&#x1F1ED;'
+    'Mongolia'               = '&#x1F1F2;&#x1F1F3;'
+    'Argentina'              = '&#x1F1E6;&#x1F1F7;'
+    'Bosnia and Herzegovina' = '&#x1F1E7;&#x1F1E6;'
+    'Equatorial Guinea'      = '&#x1F1EC;&#x1F1F6;'
+    'International waters'   = '&#x1F30A;'
+    'Atlantic Ocean'         = '&#x1F30A;'
+    'Pacific Ocean'          = '&#x1F30A;'
+}
+
+$regionMap = @{
+    'Germany'                = 'Europe'
+    'France'                 = 'Europe'
+    'Poland'                 = 'Europe'
+    'United Kingdom'         = 'Europe'
+    'Netherlands'            = 'Europe'
+    'Norway'                 = 'Europe'
+    'Russia'                 = 'Europe'
+    'Italy'                  = 'Europe'
+    'Belgium'                = 'Europe'
+    'Czech Republic'         = 'Europe'
+    'Denmark'                = 'Europe'
+    'Finland'                = 'Europe'
+    'Greece'                 = 'Europe'
+    'Hungary'                = 'Europe'
+    'Austria'                = 'Europe'
+    'Spain'                  = 'Europe'
+    'Romania'                = 'Europe'
+    'Ukraine'                = 'Europe'
+    'Belarus'                = 'Europe'
+    'Slovakia'               = 'Europe'
+    'Estonia'                = 'Europe'
+    'Bosnia and Herzegovina' = 'Europe'
+    'Japan'                  = 'Pacific'
+    'Indonesia'              = 'Pacific'
+    'Philippines'            = 'Pacific'
+    'Singapore'              = 'Pacific'
+    'China'                  = 'Pacific'
+    'Australia'              = 'Pacific'
+    'Papua New Guinea'       = 'Pacific'
+    'Solomon Islands'        = 'Pacific'
+    'Marshall Islands'       = 'Pacific'
+    'Palau'                  = 'Pacific'
+    'Kiribati'               = 'Pacific'
+    'Thailand'               = 'Pacific'
+    'Mongolia'               = 'Pacific'
+    'Pacific Ocean'          = 'Pacific'
+    'Morocco'                = 'Africa'
+    'Tunisia'                = 'Africa'
+    'Libya'                  = 'Africa'
+    'Egypt'                  = 'Africa'
+    'Equatorial Guinea'      = 'Africa'
+    'United States'          = 'Americas'
+    'Argentina'              = 'Americas'
+    'Atlantic Ocean'         = 'Americas'
+    'International waters'   = 'Americas'
+}
+
 $countriesSorted = ($allCountries | Sort-Object { -(@($byCountry[$_]).Count) })
 
 $countryCards = ($countriesSorted | ForEach-Object {
-    $c        = $_
-    $cHtml    = HtmlEncode $c
-    $cSlug    = ToSlug $c
-    $cPins    = @($byCountry[$c])
-    $cCount   = $cPins.Count
-    $cLocWord = if ($cCount -eq 1) { 'location' } else { 'locations' }
-    $cFilms   = ($cPins | Select-Object -ExpandProperty title -Unique | Measure-Object).Count
+    $c         = $_
+    $cHtml     = HtmlEncode $c
+    $cSlug     = ToSlug $c
+    $cPins     = @($byCountry[$c])
+    $cCount    = $cPins.Count
+    $cLocWord  = if ($cCount -eq 1) { 'location' } else { 'locations' }
+    $cFilms    = ($cPins | Select-Object -ExpandProperty title -Unique | Measure-Object).Count
     $cFilmWord = if ($cFilms -eq 1) { 'title' } else { 'titles' }
-    "    <div class=`"index-card`">`n      <a href=`"/countries/$cSlug`" class=`"index-card-link`">`n        <div class=`"index-card-title`">$cHtml</div>`n        <div class=`"index-card-meta`"><span>$cCount $cLocWord</span><span>&middot; $cFilms $cFilmWord</span></div>`n      </a>`n    </div>"
+    $cFlag     = $flagMap[$c]
+    $cFlagHtml = if ($cFlag) { "<span class=`"index-card-flag`">$cFlag</span>" } else { '' }
+    $cRegion   = $regionMap[$c]; if (-not $cRegion) { $cRegion = 'Other' }
+    $cTopFilm  = ($cPins | Group-Object title | Sort-Object Count -Descending | Select-Object -First 1).Name
+    $cTopLine  = if ($cTopFilm) { "`n        <div class=`"index-card-top-film`">$(HtmlEncode $cTopFilm)</div>" } else { '' }
+    "    <div class=`"index-card`" data-region=`"$cRegion`">`n      <a href=`"/countries/$cSlug`" class=`"index-card-link`">`n        <div class=`"index-card-title`">$cFlagHtml$cHtml</div>`n        <div class=`"index-card-meta`"><span>$cCount $cLocWord</span><span>&middot; $cFilms $cFilmWord</span></div>$cTopLine`n      </a>`n    </div>"
 }) -join "`n"
 
 $totalCountries = $allCountries.Count
@@ -529,7 +634,7 @@ $countriesIndex += "  <link rel=`"canonical`" href=`"https://cinemamapped.com/co
 $countriesIndex += "  <link rel=`"preconnect`" href=`"https://fonts.googleapis.com`">`n"
 $countriesIndex += "  <link rel=`"preconnect`" href=`"https://fonts.gstatic.com`" crossorigin>`n"
 $countriesIndex += "  <link href=`"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap`" rel=`"stylesheet`">`n"
-$countriesIndex += "  <link rel=`"stylesheet`" href=`"/style.css?v=9`">`n"
+$countriesIndex += "  <link rel=`"stylesheet`" href=`"/style.css?v=10`">`n"
 $countriesIndex += "</head>`n<body>`n`n"
 $countriesIndex += "  <nav class=`"nav`">`n"
 $countriesIndex += "    <a href=`"/`" class=`"nav-logo`">Cinema<em>Mapped</em></a>`n"
@@ -541,7 +646,16 @@ $countriesIndex += "    </div>`n  </nav>`n`n"
 $countriesIndex += "  <div class=`"index-hero`">`n"
 $countriesIndex += "    <h1>WWII FILMS &amp; SERIES BY COUNTRY</h1>`n"
 $countriesIndex += "    <p>$totalCountries countries &middot; $totalPins real historical locations</p>`n"
+$countriesIndex += "    <p class=`"index-hero-sub`">One global conflict, every front. Explore which countries appear in WWII cinema &mdash; and which films are set there.</p>`n"
 $countriesIndex += "  </div>`n`n"
+$countriesIndex += "  <div class=`"index-filter-bar`">`n"
+$countriesIndex += "    <button class=`"chip active`" data-filter-region=`"all`">All</button>`n"
+$countriesIndex += "    <button class=`"chip`" data-filter-region=`"Europe`">Europe</button>`n"
+$countriesIndex += "    <button class=`"chip`" data-filter-region=`"Pacific`">Asia &amp; Pacific</button>`n"
+$countriesIndex += "    <button class=`"chip`" data-filter-region=`"Africa`">N. Africa</button>`n"
+$countriesIndex += "    <button class=`"chip`" data-filter-region=`"Americas`">Americas</button>`n"
+$countriesIndex += "    <span class=`"filter-count-label`" id=`"country-filter-count`">$totalCountries countries</span>`n"
+$countriesIndex += "  </div>`n"
 $countriesIndex += "  <div class=`"index-grid`">`n"
 $countriesIndex += "$countryCards`n"
 $countriesIndex += "  </div>`n`n"
@@ -549,6 +663,26 @@ $countriesIndex += "  <footer class=`"footer`">`n"
 $countriesIndex += "    <span class=`"footer-brand`">Cinema<em style=`"color:var(--accent)`">Mapped</em></span>`n"
 $countriesIndex += "    <span class=`"footer-copy`">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href=`"/privacy`" style=`"color:var(--text-muted);text-decoration:none;`">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href=`"/terms`" style=`"color:var(--text-muted);text-decoration:none;`">Terms of Use</a></span>`n"
 $countriesIndex += "  </footer>`n"
+$countriesIndex += "  <script>`n"
+$countriesIndex += "(function(){`n"
+$countriesIndex += "  var ar='all';`n"
+$countriesIndex += "  function run(){`n"
+$countriesIndex += "    var cards=document.querySelectorAll('.index-card[data-region]'),n=0;`n"
+$countriesIndex += "    cards.forEach(function(c){`n"
+$countriesIndex += "      var ok=(ar==='all'||c.dataset.region===ar);`n"
+$countriesIndex += "      c.style.display=ok?'':'none';if(ok)n++;`n"
+$countriesIndex += "    });`n"
+$countriesIndex += "    var el=document.getElementById('country-filter-count');`n"
+$countriesIndex += "    if(el)el.textContent=n+' countr'+(n===1?'y':'ies');`n"
+$countriesIndex += "  }`n"
+$countriesIndex += "  document.querySelectorAll('[data-filter-region]').forEach(function(b){`n"
+$countriesIndex += "    b.addEventListener('click',function(){`n"
+$countriesIndex += "      document.querySelectorAll('[data-filter-region]').forEach(function(x){x.classList.remove('active');});`n"
+$countriesIndex += "      b.classList.add('active');ar=b.dataset.filterRegion;run();`n"
+$countriesIndex += "    });`n"
+$countriesIndex += "  });`n"
+$countriesIndex += "})();`n"
+$countriesIndex += "  </script>`n"
 $countriesIndex += "  <script src=`"/js/consent.js?v=3`"></script>`n"
 $countriesIndex += "</body>`n</html>`n"
 
