@@ -6,6 +6,10 @@ foreach ($d in @("$base\films", "$base\countries")) {
 
 $data = [System.IO.File]::ReadAllText("$base\data.json", [System.Text.Encoding]::UTF8) | ConvertFrom-Json
 
+$filmsMetaRaw = [System.IO.File]::ReadAllText("$base\films-meta.json", [System.Text.Encoding]::UTF8) | ConvertFrom-Json
+$filmsMeta = @{}
+$filmsMetaRaw.PSObject.Properties | ForEach-Object { $filmsMeta[$_.Name] = $_.Value }
+
 function HtmlEncode($str) {
     if (-not $str) { return '' }
     return $str.ToString() -replace '&','&amp;' -replace '<','&lt;' -replace '>','&gt;' -replace '"','&quot;'
@@ -122,6 +126,16 @@ foreach ($title in $allTitles) {
     $titleJson = $title -replace '"', '\"'
     $descMeta  = "$titleHtml WWII $typeWord - $pinCount real historical $locWord tracked on CinemaMapped across $filmCountriesHtml."
     $intro     = "$titleHtml is a WWII $typeWord set on the $theatreHtml during $yearRange. CinemaMapped has mapped $pinCount real historical $locWord where the story takes place, spanning $filmCountriesHtml. Each pin marks the actual place depicted - not where the $typeWord was shot, but where the historical events happened."
+
+    $synopsisRaw = $filmsMeta[$title]
+    $aboutContent = if ($synopsisRaw) {
+        $synHtml = HtmlEncode $synopsisRaw
+        $locationLine = "CinemaMapped has mapped $pinCount real historical $locWord where the story takes place, spanning $filmCountriesHtml."
+        "<p class=`"pin-page-text`">$synHtml</p><p class=`"pin-page-text`" style=`"margin-top:8px;color:var(--text-muted);font-size:14px;`">$locationLine</p>"
+    } else {
+        "<p class=`"pin-page-text`">$intro</p>"
+    }
+
     $schemaJson = "  {`n    `"@context`": `"https://schema.org`",`n    `"@type`": `"ItemList`",`n    `"name`": `"$titleJson filming locations`",`n    `"description`": `"Real WWII historical locations where $titleJson is set, tracked on CinemaMapped.`",`n    `"url`": `"$canonUrl`",`n    `"numberOfItems`": $pinCount`n  }"
 
     $html  = "---`n---`n"
@@ -163,7 +177,7 @@ foreach ($title in $allTitles) {
     $html += "  <div id=`"film-map`" class=`"pin-page-map`" style=`"height:360px;`"></div>`n`n"
 
     $html += "  <div class=`"pin-page-body`">`n"
-    $html += "    <div class=`"pin-page-section`"><div class=`"pin-desc-label`">About</div><p class=`"pin-page-text`">$intro</p></div>`n"
+    $html += "    <div class=`"pin-page-section`"><div class=`"pin-desc-label`">About</div>$aboutContent</div>`n"
     $html += "    <div class=`"pin-divider`"></div>`n"
     $html += "    <div class=`"pin-page-section`">`n"
     $html += "      <div class=`"pin-desc-label`">Locations ($pinCount)</div>`n"
