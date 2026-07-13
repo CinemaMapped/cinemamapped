@@ -10,6 +10,10 @@ $filmsMetaRaw = [System.IO.File]::ReadAllText("$base\films-meta.json", [System.T
 $filmsMeta = @{}
 $filmsMetaRaw.PSObject.Properties | ForEach-Object { $filmsMeta[$_.Name] = $_.Value }
 
+$countriesMetaRaw = [System.IO.File]::ReadAllText("$base\countries-meta.json", [System.Text.Encoding]::UTF8) | ConvertFrom-Json
+$countriesMeta = @{}
+$countriesMetaRaw.PSObject.Properties | ForEach-Object { $countriesMeta[$_.Name] = $_.Value }
+
 function HtmlEncode($str) {
     if (-not $str) { return '' }
     return $str.ToString() -replace '&','&amp;' -replace '<','&lt;' -replace '>','&gt;' -replace '"','&quot;'
@@ -111,7 +115,13 @@ foreach ($title in $allTitles) {
             $d = $_.description
             $descShort = if ($d.Length -gt 160) { (HtmlEncode $d.Substring(0, 157)) + '...' } else { HtmlEncode $d }
         }
-        "    <div class=`"location-card`">`n      <div class=`"location-card-name`">$locHtml</div>`n      <p class=`"location-card-desc`">$descShort</p>`n      <a href=`"/locations/$pinSlug`" class=`"location-card-link`">View location &rarr;</a>`n    </div>"
+        $histBlock = ''
+        if ($_.historical_context) {
+            $h = $_.historical_context
+            $histHtml = if ($h.Length -gt 220) { (HtmlEncode $h.Substring(0, 217)) + '...' } else { HtmlEncode $h }
+            $histBlock = "`n      <p class=`"location-card-history`">$histHtml</p>"
+        }
+        "    <div class=`"location-card`">`n      <div class=`"location-card-name`">$locHtml</div>`n      <p class=`"location-card-desc`">$descShort</p>$histBlock`n      <a href=`"/locations/$pinSlug`" class=`"location-card-link`">View location &rarr;</a>`n    </div>"
     }) -join "`n"
 
     # Watch button
@@ -119,6 +129,33 @@ foreach ($title in $allTitles) {
     if ($streaming) {
         $streamSafe = HtmlEncode $streaming
         $watchBlock = "    <a class=`"pin-watch-btn`" href=`"$streamSafe`" target=`"_blank`" rel=`"noopener noreferrer sponsored`">Watch $titleHtml on Amazon &#x2197;</a>`n    <p class=`"pin-affiliate-note`">As an Amazon Associate I earn from qualifying purchases.</p>`n"
+    }
+
+    # Related films: other films sharing at least one country, sorted by pin count desc, max 6
+    $relatedFilms = @{}
+    foreach ($otherTitle in $allTitles) {
+        if ($otherTitle -eq $title) { continue }
+        $otherPins = @($byTitle[$otherTitle])
+        $otherCountries = @($otherPins | Select-Object -ExpandProperty country -Unique)
+        $shared = ($otherCountries | Where-Object { $filmCountriesList -contains $_ })
+        if ($shared) { $relatedFilms[$otherTitle] = $otherPins.Count }
+    }
+    $relatedTop = $relatedFilms.GetEnumerator() | Sort-Object Value -Descending | Select-Object -First 6
+
+    $relatedCards = ($relatedTop | ForEach-Object {
+        $rt     = $_.Key
+        $rtHtml = HtmlEncode $rt
+        $rtSlug = ToSlug $rt
+        $rtPins = @($byTitle[$rt])
+        $rtType = $rtPins[0].type
+        $rtCnt  = $rtPins.Count
+        $rtLoc  = if ($rtCnt -eq 1) { 'location' } else { 'locations' }
+        "      <a href=`"/films/$rtSlug`" class=`"related-card`">`n        <div class=`"related-card-title`">$rtHtml</div>`n        <div class=`"related-card-meta`"><span class=`"badge badge-type`">$rtType</span><span>$rtCnt $rtLoc</span></div>`n      </a>"
+    }) -join "`n"
+
+    $relatedSection = ''
+    if ($relatedTop.Count -gt 0) {
+        $relatedSection = "    <div class=`"pin-page-section related-section`">`n      <div class=`"pin-desc-label related-section-label`">Also explore</div>`n      <div class=`"related-grid`">`n$relatedCards`n      </div>`n    </div>`n"
     }
 
     $canonUrl  = "https://cinemamapped.com/films/$titleSlug"
@@ -185,6 +222,7 @@ foreach ($title in $allTitles) {
     $html += "$locationCards`n"
     $html += "      </div>`n    </div>`n"
     if ($watchBlock) { $html += "$watchBlock" }
+    if ($relatedSection) { $html += "$relatedSection" }
     $html += "    <div class=`"pin-page-cta`"><a href=`"$mapUrl`" class=`"btn btn-filled`">Explore $titleHtml on the map &rarr;</a></div>`n"
     $html += "  </div>`n`n"
 
@@ -258,6 +296,34 @@ foreach ($country in $allCountries) {
         "    <div class=`"pin-page-section`">`n      <div class=`"pin-desc-label`"><a href=`"/films/$ftSlug`" style=`"color:var(--accent);text-decoration:none;`">$ftHtml</a> <span class=`"badge badge-type`" style=`"font-size:10px;vertical-align:middle;`">$ftType</span></div>`n      <ul class=`"related-list`">`n$liItems`n      </ul>`n    </div>`n    <div class=`"pin-divider`"></div>"
     }) -join "`n"
 
+    # Country editorial intro
+    $countryIntroRaw = $countriesMeta[$country]
+    $countryIntroHtml = if ($countryIntroRaw) { HtmlEncode $countryIntroRaw } else { '' }
+
+    # Related countries: same dominant theatre, sorted by pin count desc, max 6, exclude self
+    $relatedCountries = ($allCountries | Where-Object { $_ -ne $country } | ForEach-Object {
+        $oc = $_
+        $ocPins = @($byCountry[$oc])
+        $ocTheatre = ($ocPins | Group-Object theatre | Sort-Object Count -Descending | Select-Object -First 1).Name
+        if ($ocTheatre -eq $dominantTheatre) { [PSCustomObject]@{ Name=$oc; Count=$ocPins.Count } }
+    } | Where-Object { $_ } | Sort-Object Count -Descending | Select-Object -First 6)
+
+    $relatedCountryCards = ($relatedCountries | ForEach-Object {
+        $rc     = $_.Name
+        $rcHtml = HtmlEncode $rc
+        $rcSlug = ToSlug $rc
+        $rcCnt  = $_.Count
+        $rcLoc  = if ($rcCnt -eq 1) { 'location' } else { 'locations' }
+        $rcFilms = ($byCountry[$rc] | Select-Object -ExpandProperty title -Unique | Measure-Object).Count
+        $rcFilmWord = if ($rcFilms -eq 1) { 'film' } else { 'films' }
+        "      <a href=`"/countries/$rcSlug`" class=`"related-card`">`n        <div class=`"related-card-title`">$rcHtml</div>`n        <div class=`"related-card-meta`"><span>$rcCnt $rcLoc</span><span>&middot; $rcFilms $rcFilmWord</span></div>`n      </a>"
+    }) -join "`n"
+
+    $countryRelatedSection = ''
+    if ($relatedCountryCards) {
+        $countryRelatedSection = "    <div class=`"pin-page-section related-section`">`n      <div class=`"pin-desc-label related-section-label`">Also explore</div>`n      <div class=`"related-grid`">`n$relatedCountryCards`n      </div>`n    </div>`n"
+    }
+
     $canonUrl   = "https://cinemamapped.com/countries/$countrySlug"
     $descMeta   = "WWII film locations in $country - $pinCount $locWord across $filmCount $filmWord tracked on CinemaMapped. Where are Band of Brothers, Saving Private Ryan and more actually set?"
     $intro      = "CinemaMapped has mapped $pinCount real WWII film $locWord in $countryHtml, drawn from $filmCount $filmWord. Each pin marks the actual historical place depicted in the film - not a filming location, but where the events happened."
@@ -300,9 +366,11 @@ foreach ($country in $allCountries) {
     $html += "  <div id=`"country-map`" class=`"pin-page-map`" style=`"height:360px;`"></div>`n`n"
 
     $html += "  <div class=`"pin-page-body`">`n"
-    $html += "    <div class=`"pin-page-section`"><div class=`"pin-desc-label`">Overview</div><p class=`"pin-page-text`">$intro</p></div>`n"
+    $overviewIntro = if ($countryIntroHtml) { "<p class=`"pin-page-text`">$countryIntroHtml</p><p class=`"pin-page-text`" style=`"margin-top:8px;color:var(--text-muted);font-size:14px;`">$intro</p>" } else { "<p class=`"pin-page-text`">$intro</p>" }
+    $html += "    <div class=`"pin-page-section`"><div class=`"pin-desc-label`">Overview</div>$overviewIntro</div>`n"
     $html += "    <div class=`"pin-divider`"></div>`n"
     $html += "$filmSectionsHtml`n"
+    if ($countryRelatedSection) { $html += "$countryRelatedSection" }
     $html += "    <div class=`"pin-page-cta`"><a href=`"/map`" class=`"btn btn-filled`">Explore all locations on the map &rarr;</a></div>`n"
     $html += "  </div>`n`n"
 
