@@ -65,10 +65,9 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
     var m = L.map('pin-map', { zoomControl:true, attributionControl:false, scrollWheelZoom:false });
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(m);
-    var icon = L.divIcon({ className:'', html:'<div style="width:14px;height:14px;border-radius:50%;background:#c9a84c;border:2px solid #fff;"></div>', iconSize:[14,14], iconAnchor:[7,7] });
-    L.marker([3.5952, 102.0584], { icon:icon, interactive:false }).addTo(m);
     m.setView([3.5952, 102.0584], 8);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(m);
+    L.circleMarker([3.5952, 102.0584], { radius:9, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
   </script>
   <script src="/js/consent.js?v=3"></script>
 </body>

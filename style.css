@@ -887,8 +887,8 @@ a {
 /* ── PIN PAGES ── */
 
 .pin-page-hero {
-  padding: calc(var(--nav-h) + 48px) min(80px, 8vw) 40px;
-  max-width: 860px;
+  padding: calc(var(--nav-h) + 48px) min(80px, 8vw) 40px min(80px, 8vw);
+  max-width: 1100px;
 }
 
 .pin-page-breadcrumb {
