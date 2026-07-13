@@ -119,7 +119,8 @@
     panel.classList.add('open');
     panel.setAttribute('aria-hidden', 'false');
 
-    // Always draw route for the clicked pin's film
+    // Clear any existing route then draw for this pin's film
+    clearRoute();
     drawRouteForTitle(pin.title);
 
     if (window.gtag) {
@@ -227,7 +228,9 @@
       var titleValue = chip.dataset.title;
       activeTitle = titleValue === 'all' ? '' : titleValue;
 
-      // Selecting a title clears the theatre filter
+      // Selecting a title clears the theatre filter and any URL search term
+      searchTerm = '';
+      searchInput.value = '';
       if (activeTitle) {
         activeTheatre = 'all';
         document.querySelectorAll('.chip:not(.chip-title)').forEach(function (c) {
@@ -261,13 +264,13 @@
       chip.classList.add('active');
       activeTheatre = chip.dataset.theatre;
 
-      // Selecting a theatre clears the title filter
-      if (activeTheatre !== 'all') {
-        activeTitle = '';
-        document.querySelectorAll('.chip-title').forEach(function (c) {
-          c.classList.toggle('active', c.dataset.title === 'all');
-        });
-      }
+      // Selecting a theatre clears the title filter and any URL search term
+      searchTerm = '';
+      searchInput.value = '';
+      activeTitle = '';
+      document.querySelectorAll('.chip-title').forEach(function (c) {
+        c.classList.toggle('active', c.dataset.title === 'all');
+      });
 
       if (window.gtag) {
         gtag('event', 'theatre_filter', { theatre: activeTheatre });
