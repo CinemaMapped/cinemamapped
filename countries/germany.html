@@ -1,0 +1,362 @@
+﻿---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WWII Film Locations in Germany | CinemaMapped</title>
+  <meta name="description" content="WWII film locations in Germany - 42 locations across 36 films tracked on CinemaMapped. Where are Band of Brothers, Saving Private Ryan and more actually set?">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' rx='60' fill='%230d0d0d'/%3E%3Ctext x='250' y='360' font-family='Arial Black,Arial,sans-serif' font-size='340' font-weight='900' text-anchor='middle' fill='%23c9a84c'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://cinemamapped.com/countries/germany">
+  <meta property="og:title" content="WWII Film Locations in Germany | CinemaMapped">
+  <meta property="og:description" content="WWII film locations in Germany - 42 locations across 36 films tracked on CinemaMapped. Where are Band of Brothers, Saving Private Ryan and more actually set?">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cinemamapped.com/countries/germany">
+  <meta property="og:image" content="https://cinemamapped.com/og-image.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Cinema<em>Mapped</em></a>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="/countries" class="btn" style="font-size:11px;padding:8px 16px;">All Countries</a>
+      <a href="/map" class="btn btn-filled">Explore the Map</a>
+    </div>
+  </nav>
+
+  <div class="pin-page-hero">
+    <div class="pin-page-breadcrumb"><a href="/">CinemaMapped</a> &rsaquo; <a href="/countries">All Countries</a> &rsaquo; Germany</div>
+    <div class="pin-page-badges"><span class="badge badge-theatre">Western Front</span></div>
+    <h1 class="pin-page-h1">WWII Film Locations in Germany</h1>
+    <p class="pin-page-title-line">42 locations &middot; 36 films</p>
+  </div>
+
+  <div id="country-map" class="pin-page-map" style="height:360px;"></div>
+
+  <div class="pin-page-body">
+    <div class="pin-page-section"><div class="pin-desc-label">Overview</div><p class="pin-page-text">CinemaMapped has mapped 42 real WWII film locations in Germany, drawn from 36 films. Each pin marks the actual historical place depicted in the film - not a filming location, but where the events happened.</p></div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/13-minutes" style="color:var(--accent);text-decoration:none;">13 Minutes</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/13-minutes-munich-germany">Munich, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/a-hidden-life" style="color:var(--accent);text-decoration:none;">A Hidden Life</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/a-hidden-life-brandenburg-an-der-havel-prison-germany">Brandenburg an der Havel Prison, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/a-woman-in-berlin" style="color:var(--accent);text-decoration:none;">A Woman in Berlin</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/a-woman-in-berlin-berlin-germany">Berlin, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/alone-in-berlin" style="color:var(--accent);text-decoration:none;">Alone in Berlin</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/alone-in-berlin-berlin-germany">Berlin, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/anne-frank-the-whole-story" style="color:var(--accent);text-decoration:none;">Anne Frank: The Whole Story</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/anne-frank-the-whole-story-bergenbelsen-germany">Bergen-Belsen, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/band-of-brothers" style="color:var(--accent);text-decoration:none;">Band of Brothers</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Series</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/band-of-brothers-berchtesgaden-eagles-nest">Berchtesgaden &amp; Eagle's Nest</a></li>
+        <li><a href="/locations/band-of-brothers-landsberg-concentration-camp-bavaria">Landsberg concentration camp, Bavaria</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/before-the-fall" style="color:var(--accent);text-decoration:none;">Before the Fall</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/before-the-fall-brandenburg-germany">Brandenburg, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/colditz" style="color:var(--accent);text-decoration:none;">Colditz</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Series</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/colditz-colditz-castle-germany">Colditz Castle, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/conspiracy" style="color:var(--accent);text-decoration:none;">Conspiracy</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/conspiracy-wannsee-villa-berlin">Wannsee Villa, Berlin</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/die-wannseekonferenz" style="color:var(--accent);text-decoration:none;">Die Wannseekonferenz</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/die-wannseekonferenz-wannsee-berlin-germany">Wannsee, Berlin, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/downfall" style="color:var(--accent);text-decoration:none;">Downfall</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/downfall-fuhrerbunker-berlin">Führerbunker, Berlin</a></li>
+        <li><a href="/locations/downfall-berlin-final-battle">Berlin — final battle</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/fury" style="color:var(--accent);text-decoration:none;">Fury</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/fury-central-germany-harz-region">Central Germany — Harz region</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/generation-war" style="color:var(--accent);text-decoration:none;">Generation War</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Series</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/generation-war-berlin-farewell-1941">Berlin — farewell, 1941</a></li>
+        <li><a href="/locations/generation-war-berlin-ruins-1945">Berlin — ruins, 1945</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/harts-war" style="color:var(--accent);text-decoration:none;">Hart's War</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/harts-war-stalag-vi-germany">Stalag VI, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/hitler-the-rise-of-evil" style="color:var(--accent);text-decoration:none;">Hitler: The Rise of Evil</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/hitler-the-rise-of-evil-munich-germany">Munich, Germany</a></li>
+        <li><a href="/locations/hitler-the-rise-of-evil-berlin-germany">Berlin, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/life-is-beautiful" style="color:var(--accent);text-decoration:none;">Life is Beautiful</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/life-is-beautiful-nazi-concentration-camp-buchenwald-area">Nazi concentration camp (Buchenwald area)</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/lore" style="color:var(--accent);text-decoration:none;">Lore</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/lore-hamburg-germany">Hamburg, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/masters-of-the-air" style="color:var(--accent);text-decoration:none;">Masters of the Air</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Series</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/masters-of-the-air-regensburg-and-schweinfurt-germany">Regensburg and Schweinfurt, Germany</a></li>
+        <li><a href="/locations/masters-of-the-air-munster-germany">Münster, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/memphis-belle" style="color:var(--accent);text-decoration:none;">Memphis Belle</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/memphis-belle-bremen-germany-bombing-target">Bremen, Germany (bombing target)</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/munich-the-edge-of-war" style="color:var(--accent);text-decoration:none;">Munich: The Edge of War</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/munich-the-edge-of-war-munich-germany">Munich, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/nuremberg" style="color:var(--accent);text-decoration:none;">Nuremberg</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/nuremberg-nuremberg-germany">Nuremberg, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/patton" style="color:var(--accent);text-decoration:none;">Patton</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/patton-rhine-crossing-at-oppenheim-germany">Rhine crossing at Oppenheim, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/race" style="color:var(--accent);text-decoration:none;">Race</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/race-berlin-olympic-stadium-germany">Berlin Olympic Stadium, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/sophie-scholl-the-final-days" style="color:var(--accent);text-decoration:none;">Sophie Scholl: The Final Days</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/sophie-scholl-the-final-days-ludwig-maximilian-university-munich">Ludwig Maximilian University, Munich</a></li>
+        <li><a href="/locations/sophie-scholl-the-final-days-stadelheim-prison-munich">Stadelheim Prison, Munich</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-book-thief" style="color:var(--accent);text-decoration:none;">The Book Thief</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-book-thief-molching-fictional-munich-area-bavaria">Molching (fictional) — Munich area, Bavaria</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-bridge-at-remagen" style="color:var(--accent);text-decoration:none;">The Bridge at Remagen</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-bridge-at-remagen-remagen-ludendorff-bridge">Remagen — Ludendorff Bridge</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-captain" style="color:var(--accent);text-decoration:none;">The Captain</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-captain-aschendorfermoor-germany">Aschendorfermoor, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-conference" style="color:var(--accent);text-decoration:none;">The Conference</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-conference-wannsee-berlin-germany">Wannsee, Berlin, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-counterfeiters" style="color:var(--accent);text-decoration:none;">The Counterfeiters</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-counterfeiters-sachsenhausen-concentration-camp-oranienburg">Sachsenhausen concentration camp, Oranienburg</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-good-german" style="color:var(--accent);text-decoration:none;">The Good German</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-good-german-berlin-germany">Berlin, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-monuments-men" style="color:var(--accent);text-decoration:none;">The Monuments Men</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-monuments-men-aachen-cathedral-germany">Aachen Cathedral, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-people-vs-fritz-bauer" style="color:var(--accent);text-decoration:none;">The People vs Fritz Bauer</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-people-vs-fritz-bauer-frankfurt-germany">Frankfurt, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-reader" style="color:var(--accent);text-decoration:none;">The Reader</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-reader-heidelberg-germany">Heidelberg, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/valkyrie" style="color:var(--accent);text-decoration:none;">Valkyrie</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/valkyrie-bendlerblock-berlin">Bendlerblock, Berlin</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/when-trumpets-fade" style="color:var(--accent);text-decoration:none;">When Trumpets Fade</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/when-trumpets-fade-hurtgen-forest-germany">Hürtgen Forest, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/where-eagles-dare" style="color:var(--accent);text-decoration:none;">Where Eagles Dare</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/where-eagles-dare-schloss-adler-bavarian-alps">Schloss Adler, Bavarian Alps</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-cta"><a href="/map" class="btn btn-filled">Explore all locations on the map &rarr;</a></div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer-brand">Cinema<em style="color:var(--accent)">Mapped</em></span>
+    <span class="footer-copy">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href="/privacy" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href="/terms" style="color:var(--text-muted);text-decoration:none;">Terms of Use</a></span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var m = L.map('country-map', { zoomControl:true, attributionControl:false, scrollWheelZoom:false });
+    m.fitBounds([[47.55, 6.0839], [53.5753, 13.405]], { padding: [40, 40] });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(m);
+    L.circleMarker([47.6214, 13.0408], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.0500, 10.8700], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([51.7667, 10.7833], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.5092, 13.3642], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([47.5500, 12.9500], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([51.0214, 11.2489], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([53.0793, 8.8017], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.5125, 13.3811], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.5200, 13.4050], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.0134, 12.1016], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.8483, 8.3594], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([51.9607, 7.6261], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.2739, 11.4334], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.4303, 13.1646], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.1508, 11.5801], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.1028, 11.6047], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.7667, 13.2625], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.4125, 12.5633], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([50.5728, 7.2294], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([50.7753, 6.0839], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.5200, 13.4050], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.5163, 13.3777], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.1351, 11.5820], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.5200, 13.4050], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.1351, 11.5820], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.5147, 13.2394], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.7617, 9.9083], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.4109, 13.1654], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.4490, 11.0713], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.4019, 8.6700], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.4125, 12.5603], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.5200, 13.4050], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.5200, 13.4050], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([53.5753, 10.0153], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.9681, 7.3592], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([51.1276, 12.8067], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.1337, 11.6076], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([50.1317, 8.9169], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([50.6789, 6.3721], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([50.1109, 8.6821], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.4109, 13.1654], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([52.5200, 13.4050], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+  </script>
+  <script src="/js/consent.js?v=3"></script>
+</body>
+</html>

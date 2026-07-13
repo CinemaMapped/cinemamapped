@@ -1,0 +1,150 @@
+﻿---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WWII Film Locations in Italy | CinemaMapped</title>
+  <meta name="description" content="WWII film locations in Italy - 11 locations across 11 films tracked on CinemaMapped. Where are Band of Brothers, Saving Private Ryan and more actually set?">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' rx='60' fill='%230d0d0d'/%3E%3Ctext x='250' y='360' font-family='Arial Black,Arial,sans-serif' font-size='340' font-weight='900' text-anchor='middle' fill='%23c9a84c'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://cinemamapped.com/countries/italy">
+  <meta property="og:title" content="WWII Film Locations in Italy | CinemaMapped">
+  <meta property="og:description" content="WWII film locations in Italy - 11 locations across 11 films tracked on CinemaMapped. Where are Band of Brothers, Saving Private Ryan and more actually set?">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cinemamapped.com/countries/italy">
+  <meta property="og:image" content="https://cinemamapped.com/og-image.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Cinema<em>Mapped</em></a>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="/countries" class="btn" style="font-size:11px;padding:8px 16px;">All Countries</a>
+      <a href="/map" class="btn btn-filled">Explore the Map</a>
+    </div>
+  </nav>
+
+  <div class="pin-page-hero">
+    <div class="pin-page-breadcrumb"><a href="/">CinemaMapped</a> &rsaquo; <a href="/countries">All Countries</a> &rsaquo; Italy</div>
+    <div class="pin-page-badges"><span class="badge badge-theatre">Mediterranean</span></div>
+    <h1 class="pin-page-h1">WWII Film Locations in Italy</h1>
+    <p class="pin-page-title-line">11 locations &middot; 11 films</p>
+  </div>
+
+  <div id="country-map" class="pin-page-map" style="height:360px;"></div>
+
+  <div class="pin-page-body">
+    <div class="pin-page-section"><div class="pin-desc-label">Overview</div><p class="pin-page-text">CinemaMapped has mapped 11 real WWII film locations in Italy, drawn from 11 films. Each pin marks the actual historical place depicted in the film - not a filming location, but where the events happened.</p></div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/catch22" style="color:var(--accent);text-decoration:none;">Catch-22</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Series</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/catch22-pianosa-island-tuscany">Pianosa island, Tuscany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/indigenes" style="color:var(--accent);text-decoration:none;">Indigènes</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/indigenes-monte-cassino-italy">Monte Cassino, Italy</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/life-is-beautiful" style="color:var(--accent);text-decoration:none;">Life is Beautiful</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/life-is-beautiful-arezzo-tuscany">Arezzo, Tuscany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/miracle-at-st-anna" style="color:var(--accent);text-decoration:none;">Miracle at St. Anna</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/miracle-at-st-anna-santanna-di-stazzema-italy">Sant'Anna di Stazzema, Italy</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/mussolini-and-i" style="color:var(--accent);text-decoration:none;">Mussolini and I</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/mussolini-and-i-rome-italy">Rome, Italy</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/patton" style="color:var(--accent);text-decoration:none;">Patton</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/patton-sicily">Sicily</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/red-tails" style="color:var(--accent);text-decoration:none;">Red Tails</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/red-tails-ramitelli-airfield-molise">Ramitelli airfield, Molise</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-english-patient" style="color:var(--accent);text-decoration:none;">The English Patient</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-english-patient-tuscany-villa-san-girolamo">Tuscany — Villa San Girolamo</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-man-who-will-come" style="color:var(--accent);text-decoration:none;">The Man Who Will Come</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-man-who-will-come-marzabotto-italy">Marzabotto, Italy</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-scarlet-and-the-black" style="color:var(--accent);text-decoration:none;">The Scarlet and the Black</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-scarlet-and-the-black-rome-italy">Rome, Italy</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-tuskegee-airmen" style="color:var(--accent);text-decoration:none;">The Tuskegee Airmen</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-tuskegee-airmen-ramitelli-italy">Ramitelli, Italy</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-cta"><a href="/map" class="btn btn-filled">Explore all locations on the map &rarr;</a></div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer-brand">Cinema<em style="color:var(--accent)">Mapped</em></span>
+    <span class="footer-copy">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href="/privacy" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href="/terms" style="color:var(--text-muted);text-decoration:none;">Terms of Use</a></span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var m = L.map('country-map', { zoomControl:true, attributionControl:false, scrollWheelZoom:false });
+    m.fitBounds([[37.5999, 10.09], [44.3447, 15.35]], { padding: [40, 40] });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(m);
+    L.circleMarker([43.4636, 11.8786], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([37.5999, 14.0153], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([42.5900, 10.0900], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([43.7731, 11.2453], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([41.9333, 15.3500], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([41.9250, 15.1967], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([41.4900, 13.8300], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([41.9028, 12.4964], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([41.9029, 12.4534], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([44.0167, 10.3500], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([44.3447, 11.2153], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+  </script>
+  <script src="/js/consent.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+﻿---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WWII Film Locations in France | CinemaMapped</title>
+  <meta name="description" content="WWII film locations in France - 34 locations across 24 films tracked on CinemaMapped. Where are Band of Brothers, Saving Private Ryan and more actually set?">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' rx='60' fill='%230d0d0d'/%3E%3Ctext x='250' y='360' font-family='Arial Black,Arial,sans-serif' font-size='340' font-weight='900' text-anchor='middle' fill='%23c9a84c'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://cinemamapped.com/countries/france">
+  <meta property="og:title" content="WWII Film Locations in France | CinemaMapped">
+  <meta property="og:description" content="WWII film locations in France - 34 locations across 24 films tracked on CinemaMapped. Where are Band of Brothers, Saving Private Ryan and more actually set?">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cinemamapped.com/countries/france">
+  <meta property="og:image" content="https://cinemamapped.com/og-image.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Cinema<em>Mapped</em></a>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="/countries" class="btn" style="font-size:11px;padding:8px 16px;">All Countries</a>
+      <a href="/map" class="btn btn-filled">Explore the Map</a>
+    </div>
+  </nav>
+
+  <div class="pin-page-hero">
+    <div class="pin-page-breadcrumb"><a href="/">CinemaMapped</a> &rsaquo; <a href="/countries">All Countries</a> &rsaquo; France</div>
+    <div class="pin-page-badges"><span class="badge badge-theatre">Western Front</span></div>
+    <h1 class="pin-page-h1">WWII Film Locations in France</h1>
+    <p class="pin-page-title-line">34 locations &middot; 24 films</p>
+  </div>
+
+  <div id="country-map" class="pin-page-map" style="height:360px;"></div>
+
+  <div class="pin-page-body">
+    <div class="pin-page-section"><div class="pin-desc-label">Overview</div><p class="pin-page-text">CinemaMapped has mapped 34 real WWII film locations in France, drawn from 24 films. Each pin marks the actual historical place depicted in the film - not a filming location, but where the events happened.</p></div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/a-french-village" style="color:var(--accent);text-decoration:none;">A French Village</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Series</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/a-french-village-vichy-france">Vichy, France</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/all-the-light-we-cannot-see" style="color:var(--accent);text-decoration:none;">All the Light We Cannot See</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Series</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/all-the-light-we-cannot-see-saintmalo-brittany">Saint-Malo, Brittany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/atonement" style="color:var(--accent);text-decoration:none;">Atonement</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/atonement-dunkirk-beaches">Dunkirk beaches</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/band-of-brothers" style="color:var(--accent);text-decoration:none;">Band of Brothers</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Series</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/band-of-brothers-brecourt-manor-normandy">Brécourt Manor, Normandy</a></li>
+        <li><a href="/locations/band-of-brothers-carentan-normandy">Carentan, Normandy</a></li>
+        <li><a href="/locations/band-of-brothers-haguenau-alsace">Haguenau, Alsace</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/das-boot" style="color:var(--accent);text-decoration:none;">Das Boot</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/das-boot-la-rochelle-uboat-pens">La Rochelle U-boat pens</a></li>
+        <li><a href="/locations/das-boot-la-rochelle-france">La Rochelle, France</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/dieppe" style="color:var(--accent);text-decoration:none;">Dieppe</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/dieppe-dieppe-france">Dieppe, France</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/diplomacy" style="color:var(--accent);text-decoration:none;">Diplomacy</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/diplomacy-paris-france">Paris, France</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/dunkirk" style="color:var(--accent);text-decoration:none;">Dunkirk</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/dunkirk-dunkirk-beaches">Dunkirk beaches</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/en-mai-fais-ce-quil-te-plait" style="color:var(--accent);text-decoration:none;">En mai, fais ce qu'il te plaît</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/en-mai-fais-ce-quil-te-plait-northern-france">Northern France</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/indigenes" style="color:var(--accent);text-decoration:none;">Indigènes</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/indigenes-provence-france">Provence, France</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/inglourious-basterds" style="color:var(--accent);text-decoration:none;">Inglourious Basterds</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/inglourious-basterds-nazioccupied-france">Nazi-occupied France</a></li>
+        <li><a href="/locations/inglourious-basterds-paris-cinema">Paris — cinema</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/jean-moulin" style="color:var(--accent);text-decoration:none;">Jean Moulin</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/jean-moulin-lyon-france">Lyon, France</a></li>
+        <li><a href="/locations/jean-moulin-chartres-france">Chartres, France</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/kellys-heroes" style="color:var(--accent);text-decoration:none;">Kelly's Heroes</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/kellys-heroes-southern-france-germanoccupied-town">Southern France / German-occupied town</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/my-way" style="color:var(--accent);text-decoration:none;">My Way</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/my-way-normandy-france">Normandy, France</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/nacht-und-nebel-night-and-fog" style="color:var(--accent);text-decoration:none;">Nacht und Nebel (Night and Fog)</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/nacht-und-nebel-night-and-fog-natzweilerstruthof-concentration-camp-alsace">Natzweiler-Struthof concentration camp, Alsace</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/overlord" style="color:var(--accent);text-decoration:none;">Overlord</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/overlord-normandy-france">Normandy, France</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/patton" style="color:var(--accent);text-decoration:none;">Patton</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/patton-avranches-normandy">Avranches, Normandy</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/resistance-2020" style="color:var(--accent);text-decoration:none;">Resistance (2020)</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/resistance-2020-limoges-occupied-france">Limoges / Occupied France</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/saving-private-ryan" style="color:var(--accent);text-decoration:none;">Saving Private Ryan</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/saving-private-ryan-omaha-beach-normandy">Omaha Beach, Normandy</a></li>
+        <li><a href="/locations/saving-private-ryan-ramelle-fictional-based-on-ramellesurmerderet-area-normandy">Ramelle (fictional, based on Ramelle-sur-Merderet area), Normandy</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/suite-francaise" style="color:var(--accent);text-decoration:none;">Suite Française</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/suite-francaise-burgundy-france">Burgundy, France</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-big-red-one" style="color:var(--accent);text-decoration:none;">The Big Red One</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-big-red-one-omaha-beach-normandy-france">Omaha Beach, Normandy, France</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-dirty-dozen" style="color:var(--accent);text-decoration:none;">The Dirty Dozen</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-dirty-dozen-brittany-german-hq-chateau">Brittany, German HQ chateau</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-longest-day" style="color:var(--accent);text-decoration:none;">The Longest Day</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-longest-day-omaha-beach-normandy">Omaha Beach, Normandy</a></li>
+        <li><a href="/locations/the-longest-day-pointe-du-hoc-normandy">Pointe du Hoc, Normandy</a></li>
+        <li><a href="/locations/the-longest-day-saintemereeglise-normandy">Sainte-Mère-Église, Normandy</a></li>
+        <li><a href="/locations/the-longest-day-utah-beach-normandy">Utah Beach, Normandy</a></li>
+        <li><a href="/locations/the-longest-day-pegasus-bridge-benouville-normandy">Pegasus Bridge, Bénouville, Normandy</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-monuments-men" style="color:var(--accent);text-decoration:none;">The Monuments Men</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-monuments-men-paris-jeu-de-paume">Paris — Jeu de Paume</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-cta"><a href="/map" class="btn btn-filled">Explore all locations on the map &rarr;</a></div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer-brand">Cinema<em style="color:var(--accent)">Mapped</em></span>
+    <span class="footer-copy">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href="/privacy" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href="/terms" style="color:var(--text-muted);text-decoration:none;">Terms of Use</a></span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var m = L.map('country-map', { zoomControl:true, attributionControl:false, scrollWheelZoom:false });
+    m.fitBounds([[43.3547, -2.932], [51.0333, 7.7833]], { padding: [40, 40] });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(m);
+    L.circleMarker([49.3667, -0.8667], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.3833, -1.2333], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.3697, -1.2903], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.3025, -1.2489], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.8167, 7.7833], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([51.0333, 2.3667], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.3667, -0.8667], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.3958, -0.9897], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.4100, -1.3167], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([46.1591, -1.1520], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.2020, -2.9320], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.5734, 7.7521], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([44.3011, 1.8437], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.8566, 2.3522], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([45.8336, 1.2611], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.4167, -1.1717], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.2439, 0.2733], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.6833, -1.3500], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.4572, 7.2561], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([51.0333, 2.3667], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.8638, 2.3283], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.6490, -2.0218], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([46.1591, -1.1520], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.8651, 2.3293], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([45.7640, 4.8357], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.4469, 1.4875], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([47.9400, 3.6200], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([46.1200, 3.4300], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.9263, 1.0770], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([43.3547, 6.6237], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.3667, -0.8667], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([50.2890, 2.7779], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.3667, -0.8667], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([49.3500, -0.9000], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+  </script>
+  <script src="/js/consent.js?v=3"></script>
+</body>
+</html>

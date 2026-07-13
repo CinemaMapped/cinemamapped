@@ -1,0 +1,158 @@
+﻿---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WWII Film Locations in Russia | CinemaMapped</title>
+  <meta name="description" content="WWII film locations in Russia - 12 locations across 12 films tracked on CinemaMapped. Where are Band of Brothers, Saving Private Ryan and more actually set?">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' rx='60' fill='%230d0d0d'/%3E%3Ctext x='250' y='360' font-family='Arial Black,Arial,sans-serif' font-size='340' font-weight='900' text-anchor='middle' fill='%23c9a84c'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://cinemamapped.com/countries/russia">
+  <meta property="og:title" content="WWII Film Locations in Russia | CinemaMapped">
+  <meta property="og:description" content="WWII film locations in Russia - 12 locations across 12 films tracked on CinemaMapped. Where are Band of Brothers, Saving Private Ryan and more actually set?">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cinemamapped.com/countries/russia">
+  <meta property="og:image" content="https://cinemamapped.com/og-image.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Cinema<em>Mapped</em></a>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="/countries" class="btn" style="font-size:11px;padding:8px 16px;">All Countries</a>
+      <a href="/map" class="btn btn-filled">Explore the Map</a>
+    </div>
+  </nav>
+
+  <div class="pin-page-hero">
+    <div class="pin-page-breadcrumb"><a href="/">CinemaMapped</a> &rsaquo; <a href="/countries">All Countries</a> &rsaquo; Russia</div>
+    <div class="pin-page-badges"><span class="badge badge-theatre">Eastern Front</span></div>
+    <h1 class="pin-page-h1">WWII Film Locations in Russia</h1>
+    <p class="pin-page-title-line">12 locations &middot; 12 films</p>
+  </div>
+
+  <div id="country-map" class="pin-page-map" style="height:360px;"></div>
+
+  <div class="pin-page-body">
+    <div class="pin-page-section"><div class="pin-desc-label">Overview</div><p class="pin-page-text">CinemaMapped has mapped 12 real WWII film locations in Russia, drawn from 12 films. Each pin marks the actual historical place depicted in the film - not a filming location, but where the events happened.</p></div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/cross-of-iron" style="color:var(--accent);text-decoration:none;">Cross of Iron</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/cross-of-iron-taman-peninsula-kuban-bridgehead">Taman Peninsula, Kuban bridgehead</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/enemy-at-the-gates" style="color:var(--accent);text-decoration:none;">Enemy at the Gates</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/enemy-at-the-gates-stalingrad-now-volgograd">Stalingrad (now Volgograd)</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/europa-europa" style="color:var(--accent);text-decoration:none;">Europa Europa</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/europa-europa-east-prussia-germany">East Prussia, Germany</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/katyn" style="color:var(--accent);text-decoration:none;">Katyn</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/katyn-katyn-forest-russia">Katyn Forest, Russia</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/leningrad" style="color:var(--accent);text-decoration:none;">Leningrad</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/leningrad-leningrad-st-petersburg-russia">Leningrad (St. Petersburg), Russia</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/panfilovs-28-men" style="color:var(--accent);text-decoration:none;">Panfilov's 28 Men</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/panfilovs-28-men-volokolamsk-russia">Volokolamsk, Russia</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/stalingrad" style="color:var(--accent);text-decoration:none;">Stalingrad</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/stalingrad-volgograd-stalingrad-russia">Volgograd (Stalingrad), Russia</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/stalingrad-1993" style="color:var(--accent);text-decoration:none;">Stalingrad (1993)</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/stalingrad-1993-stalingrad-now-volgograd">Stalingrad (now Volgograd)</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-last-frontier" style="color:var(--accent);text-decoration:none;">The Last Frontier</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-last-frontier-volokolamsk-region-russia">Volokolamsk region, Russia</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/the-way-back" style="color:var(--accent);text-decoration:none;">The Way Back</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/the-way-back-siberian-gulag-russia">Siberian gulag, Russia</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/they-fought-for-their-motherland" style="color:var(--accent);text-decoration:none;">They Fought for Their Motherland</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Film</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/they-fought-for-their-motherland-volgograd-stalingrad-russia">Volgograd (Stalingrad), Russia</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label"><a href="/films/we-were-the-lucky-ones" style="color:var(--accent);text-decoration:none;">We Were the Lucky Ones</a> <span class="badge badge-type" style="font-size:10px;vertical-align:middle;">Series</span></div>
+      <ul class="related-list">
+        <li><a href="/locations/we-were-the-lucky-ones-siberia-soviet-union">Siberia, Soviet Union</a></li>
+      </ul>
+    </div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-cta"><a href="/map" class="btn btn-filled">Explore all locations on the map &rarr;</a></div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer-brand">Cinema<em style="color:var(--accent)">Mapped</em></span>
+    <span class="footer-copy">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href="/privacy" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href="/terms" style="color:var(--text-muted);text-decoration:none;">Terms of Use</a></span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var m = L.map('country-map', { zoomControl:true, attributionControl:false, scrollWheelZoom:false });
+    m.fitBounds([[45.2167, 20.4522], [59.9311, 73.4]], { padding: [40, 40] });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(m);
+    L.circleMarker([48.7080, 44.5133], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.7080, 44.5133], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([45.2167, 36.7167], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([55.0000, 73.4000], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([54.7104, 20.4522], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([54.7654, 31.8072], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([59.9311, 30.3609], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([56.0388, 35.9638], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.7080, 44.5133], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([56.0000, 36.0000], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([57.1522, 60.0000], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([48.7080, 44.5133], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+  </script>
+  <script src="/js/consent.js?v=3"></script>
+</body>
+</html>

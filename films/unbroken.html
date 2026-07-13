@@ -1,0 +1,95 @@
+﻿---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unbroken Filming Locations - Where Was It Set? | CinemaMapped</title>
+  <meta name="description" content="Unbroken WWII film - 3 real historical locations tracked on CinemaMapped across Japan, Marshall Islands, Pacific Ocean.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' rx='60' fill='%230d0d0d'/%3E%3Ctext x='250' y='360' font-family='Arial Black,Arial,sans-serif' font-size='340' font-weight='900' text-anchor='middle' fill='%23c9a84c'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="canonical" href="https://cinemamapped.com/films/unbroken">
+  <meta property="og:title" content="Unbroken Filming Locations | CinemaMapped">
+  <meta property="og:description" content="Unbroken WWII film - 3 real historical locations tracked on CinemaMapped across Japan, Marshall Islands, Pacific Ocean.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://cinemamapped.com/films/unbroken">
+  <meta property="og:image" content="https://cinemamapped.com/og-image.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Unbroken filming locations",
+    "description": "Real WWII historical locations where Unbroken is set, tracked on CinemaMapped.",
+    "url": "https://cinemamapped.com/films/unbroken",
+    "numberOfItems": 3
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">Cinema<em>Mapped</em></a>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="/films" class="btn" style="font-size:11px;padding:8px 16px;">All Films</a>
+      <a href="/map" class="btn btn-filled">Explore the Map</a>
+    </div>
+  </nav>
+
+  <div class="pin-page-hero">
+    <div class="pin-page-breadcrumb"><a href="/">CinemaMapped</a> &rsaquo; <a href="/films">All Films</a> &rsaquo; Unbroken</div>
+    <div class="pin-page-badges"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Pacific</span><span class="pin-page-year">1943-1944</span></div>
+    <h1 class="pin-page-h1">Unbroken Filming Locations</h1>
+    <p class="pin-page-title-line">3 locations &middot; Japan, Marshall Islands, Pacific Ocean</p>
+  </div>
+
+  <div id="film-map" class="pin-page-map" style="height:360px;"></div>
+
+  <div class="pin-page-body">
+    <div class="pin-page-section"><div class="pin-desc-label">About</div><p class="pin-page-text">Unbroken is a WWII film set on the Pacific during 1943-1944. CinemaMapped has mapped 3 real historical locations where the story takes place, spanning Japan, Marshall Islands, Pacific Ocean. Each pin marks the actual place depicted - not where the film was shot, but where the historical events happened.</p></div>
+    <div class="pin-divider"></div>
+    <div class="pin-page-section">
+      <div class="pin-desc-label">Locations (3)</div>
+      <div class="location-cards-grid">
+    <div class="location-card">
+      <div class="location-card-name">Central Pacific — raft survival</div>
+      <p class="location-card-desc">Louis Zamperini and two crew members survive 47 days adrift on a rubber raft after their B-24 crashes in the Pacific.</p>
+      <a href="/locations/unbroken-central-pacific-raft-survival" class="location-card-link">View location &rarr;</a>
+    </div>
+    <div class="location-card">
+      <div class="location-card-name">Kwajalein Atoll, Marshall Islands</div>
+      <p class="location-card-desc">Zamperini is taken to Kwajalein — known among Allied prisoners as 'Execution Island' — before transfer to Japan.</p>
+      <a href="/locations/unbroken-kwajalein-atoll-marshall-islands" class="location-card-link">View location &rarr;</a>
+    </div>
+    <div class="location-card">
+      <div class="location-card-name">Naoetsu POW camp, Joetsu, Japan</div>
+      <p class="location-card-desc">Zamperini's final camp — where Sergeant Mutsuhiro 'The Bird' Watanabe subjects him to systematic torture.</p>
+      <a href="/locations/unbroken-naoetsu-pow-camp-joetsu-japan" class="location-card-link">View location &rarr;</a>
+    </div>
+      </div>
+    </div>
+    <div class="pin-page-cta"><a href="/map?film=Unbroken" class="btn btn-filled">Explore Unbroken on the map &rarr;</a></div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer-brand">Cinema<em style="color:var(--accent)">Mapped</em></span>
+    <span class="footer-copy">&copy; 2026 CinemaMapped &nbsp;&middot;&nbsp;<a href="/privacy" style="color:var(--text-muted);text-decoration:none;">Privacy Policy</a>&nbsp;&middot;&nbsp;<a href="/terms" style="color:var(--text-muted);text-decoration:none;">Terms of Use</a></span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var m = L.map('film-map', { zoomControl:true, attributionControl:false, scrollWheelZoom:false });
+    m.fitBounds([[7.1164, 138.2333], [37.1333, 171.1858]], { padding: [40, 40] });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(m);
+    L.circleMarker([7.1164, 171.1858], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([8.7167, 167.7333], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([37.1333, 138.2333], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+  </script>
+  <script src="/js/consent.js?v=3"></script>
+</body>
+</html>
