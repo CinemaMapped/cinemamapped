@@ -127,8 +127,9 @@ foreach ($title in $allTitles) {
     # Watch button
     $watchBlock = ''
     if ($streaming) {
-        $streamSafe = HtmlEncode $streaming
-        $watchBlock = "    <a class=`"pin-watch-btn`" href=`"$streamSafe`" target=`"_blank`" rel=`"noopener noreferrer sponsored`">Watch $titleHtml on Amazon &#x2197;</a>`n    <p class=`"pin-affiliate-note`">As an Amazon Associate I earn from qualifying purchases.</p>`n"
+        $streamSafe  = HtmlEncode $streaming
+        $titleJsonSafe = $title -replace "'", "\'" -replace '"', '\"'
+        $watchBlock = "    <a class=`"pin-watch-btn`" href=`"$streamSafe`" target=`"_blank`" rel=`"noopener noreferrer sponsored`" onclick=`"if(window.gtag)gtag('event','watch_click',{film_title:'$titleJsonSafe',source:'film_page'})`">Watch $titleHtml on Amazon &#x2197;</a>`n    <p class=`"pin-affiliate-note`">As an Amazon Associate I earn from qualifying purchases.</p>`n"
     }
 
     # Related films: other films sharing at least one country, sorted by pin count desc, max 6

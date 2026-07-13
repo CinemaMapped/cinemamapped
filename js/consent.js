@@ -2,7 +2,15 @@
   'use strict';
 
   var CONSENT_KEY = 'cm_analytics';
-  var GA_ID = 'G-5CRC6PPQLM';
+  var GA_ID       = 'G-5CRC6PPQLM';
+  var CLARITY_ID  = 'x821akrh0r';
+
+  // Load Clarity on all pages (legitimate interest — UX research, no ad use)
+  (function (c, l, a, r, i, t, y) {
+    c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+    t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+    y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+  })(window, document, 'clarity', 'script', CLARITY_ID);
 
   // Consent Mode v2 — set denied defaults immediately (required for EU/EEA)
   window.dataLayer = window.dataLayer || [];

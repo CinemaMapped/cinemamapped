@@ -110,7 +110,8 @@
         var plural = count !== 1 ? 's' : '';
 
         return (
-          '<a href="' + href + '" class="film-card" role="listitem">' +
+          '<a href="' + href + '" class="film-card" role="listitem"' +
+          ' onclick="if(window.gtag)gtag(\'event\',\'featured_film_click\',{film_title:\'' + escapeHtml(title.replace(/'/g, "\\'")) + '\'})">' +
             '<div class="film-card-badges">' +
               '<span class="badge badge-type">'    + escapeHtml(types[title])    + '</span>' +
               '<span class="badge badge-theatre">' + escapeHtml(theatres[title]) + '</span>' +
