@@ -688,6 +688,20 @@ a.hero-stat-link:hover { opacity: 0.75; }
   background: var(--accent-faint);
 }
 
+.chip[data-filter-theatre=”Western Front”]  { color: #c9a84c; border-color: rgba(201,168,76,0.25); }
+.chip[data-filter-theatre=”Eastern Front”]  { color: #c94c4c; border-color: rgba(201,76,76,0.25); }
+.chip[data-filter-theatre=”Pacific”]        { color: #4c9bc9; border-color: rgba(76,155,201,0.25); }
+.chip[data-filter-theatre=”North Africa”]   { color: #c98b4c; border-color: rgba(201,139,76,0.25); }
+.chip[data-filter-theatre=”Atlantic”]       { color: #4c6ec9; border-color: rgba(76,110,201,0.25); }
+.chip[data-filter-theatre=”Mediterranean”]  { color: #4cc9b0; border-color: rgba(76,201,176,0.25); }
+
+.chip.active[data-filter-theatre=”Western Front”]  { border-color: #c9a84c; background: rgba(201,168,76,0.12); }
+.chip.active[data-filter-theatre=”Eastern Front”]  { border-color: #c94c4c; background: rgba(201,76,76,0.12); }
+.chip.active[data-filter-theatre=”Pacific”]        { border-color: #4c9bc9; background: rgba(76,155,201,0.12); }
+.chip.active[data-filter-theatre=”North Africa”]   { border-color: #c98b4c; background: rgba(201,139,76,0.12); }
+.chip.active[data-filter-theatre=”Atlantic”]       { border-color: #4c6ec9; background: rgba(76,110,201,0.12); }
+.chip.active[data-filter-theatre=”Mediterranean”]  { border-color: #4cc9b0; background: rgba(76,201,176,0.12); }
+
 
 /* â”€â”€ NO RESULTS OVERLAY â”€â”€ */
 

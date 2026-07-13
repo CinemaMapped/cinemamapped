@@ -195,7 +195,7 @@ foreach ($title in $allTitles) {
     $html += "  <link rel=`"preconnect`" href=`"https://fonts.gstatic.com`" crossorigin>`n"
     $html += "  <link href=`"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap`" rel=`"stylesheet`">`n"
     $html += "  <link rel=`"stylesheet`" href=`"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css`">`n"
-    $html += "  <link rel=`"stylesheet`" href=`"/style.css?v=11`">`n"
+    $html += "  <link rel=`"stylesheet`" href=`"/style.css?v=12`">`n"
     $html += "</head>`n<body>`n`n"
 
     $html += "  <nav class=`"nav`">`n"
@@ -349,7 +349,7 @@ foreach ($country in $allCountries) {
     $html += "  <link rel=`"preconnect`" href=`"https://fonts.gstatic.com`" crossorigin>`n"
     $html += "  <link href=`"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap`" rel=`"stylesheet`">`n"
     $html += "  <link rel=`"stylesheet`" href=`"https://unpkg.com/leaflet@1.9.4/dist/leaflet.css`">`n"
-    $html += "  <link rel=`"stylesheet`" href=`"/style.css?v=11`">`n"
+    $html += "  <link rel=`"stylesheet`" href=`"/style.css?v=12`">`n"
     $html += "</head>`n<body>`n`n"
 
     $html += "  <nav class=`"nav`">`n"
@@ -443,7 +443,7 @@ $filmsIndex += "  <script type=`"application/ld+json`">`n  {`n    `"@context`": 
 $filmsIndex += "  <link rel=`"preconnect`" href=`"https://fonts.googleapis.com`">`n"
 $filmsIndex += "  <link rel=`"preconnect`" href=`"https://fonts.gstatic.com`" crossorigin>`n"
 $filmsIndex += "  <link href=`"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap`" rel=`"stylesheet`">`n"
-$filmsIndex += "  <link rel=`"stylesheet`" href=`"/style.css?v=11`">`n"
+$filmsIndex += "  <link rel=`"stylesheet`" href=`"/style.css?v=12`">`n"
 $filmsIndex += "</head>`n<body>`n`n"
 $filmsIndex += "  <nav class=`"nav`">`n"
 $filmsIndex += "    <a href=`"/`" class=`"nav-logo`">Cinema<em>Mapped</em></a>`n"
@@ -674,7 +674,7 @@ $countriesIndex += "  <script type=`"application/ld+json`">`n  {`n    `"@context
 $countriesIndex += "  <link rel=`"preconnect`" href=`"https://fonts.googleapis.com`">`n"
 $countriesIndex += "  <link rel=`"preconnect`" href=`"https://fonts.gstatic.com`" crossorigin>`n"
 $countriesIndex += "  <link href=`"https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap`" rel=`"stylesheet`">`n"
-$countriesIndex += "  <link rel=`"stylesheet`" href=`"/style.css?v=11`">`n"
+$countriesIndex += "  <link rel=`"stylesheet`" href=`"/style.css?v=12`">`n"
 $countriesIndex += "</head>`n<body>`n`n"
 $countriesIndex += "  <nav class=`"nav`">`n"
 $countriesIndex += "    <a href=`"/`" class=`"nav-logo`">Cinema<em>Mapped</em></a>`n"
@@ -788,4 +788,5 @@ $sitemap += "`n</urlset>`n"
 [System.IO.File]::WriteAllText("$base\sitemap.xml", $sitemap, [System.Text.Encoding]::UTF8)
 Write-Host "sitemap.xml updated - $($sitemapUrls.Count) URLs total"
 Write-Host "Done. Film pages: $filmCount_total | Country pages: $countryCount_total"
+
 
