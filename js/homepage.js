@@ -65,13 +65,13 @@
       var totalTheatres = Object.keys(theatreSet).length;
       var totalCountries = Object.keys(countrySet).length;
 
-      setText('hero-stat-pins',    totalPins);
-      setText('hero-stat-titles',  totalTitles);
-      setText('hero-stat-theatres', totalTheatres);
-      setText('stat-pins',         totalPins);
-      setText('stat-titles',       totalTitles);
-      setText('stat-theatres',     totalTheatres);
-      setText('stat-countries',    totalCountries + '+');
+      setText('hero-stat-pins',     totalPins);
+      setText('hero-stat-titles',   totalTitles);
+      setText('hero-stat-theatres', totalCountries);
+      setText('stat-pins',          totalPins);
+      setText('stat-titles',        totalTitles);
+      setText('stat-theatres',      totalTheatres);
+      setText('stat-countries',     totalCountries + '+');
       setText('cta-count',         totalPins);
 
       // ── Build featured film scroll ────────────────────────
