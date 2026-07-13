@@ -122,6 +122,8 @@ foreach ($pin in $data) {
     $html += "  <nav class=`"nav`">`n"
     $html += "    <a href=`"/`" class=`"nav-logo`">Cinema<em>Mapped</em></a>`n"
     $html += "    <div style=`"display:flex;gap:12px;align-items:center;`">`n"
+    $html += "      <a href=`"/films`" class=`"btn`" style=`"font-size:11px;padding:8px 16px;`">Films &amp; Series</a>`n"
+    $html += "      <a href=`"/countries`" class=`"btn`" style=`"font-size:11px;padding:8px 16px;`">Countries</a>`n"
     $html += "      <a href=`"/film-locations`" class=`"btn`" style=`"font-size:11px;padding:8px 16px;`">Guide</a>`n"
     $html += "      <a href=`"/map`" class=`"btn btn-filled`">Explore the Map</a>`n"
     $html += "    </div>`n  </nav>`n`n"
