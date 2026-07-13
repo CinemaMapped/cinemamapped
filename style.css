@@ -1,4 +1,4 @@
-*, *::before, *::after {
+﻿*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -38,7 +38,7 @@ a {
 }
 
 
-/* ── NAV ── */
+/* â”€â”€ NAV â”€â”€ */
 
 .nav {
   position: fixed;
@@ -66,7 +66,7 @@ a {
 }
 
 
-/* ── BUTTON ── */
+/* â”€â”€ BUTTON â”€â”€ */
 
 .btn {
   display: inline-flex;
@@ -106,7 +106,7 @@ a {
 }
 
 
-/* ── HERO ── */
+/* â”€â”€ HERO â”€â”€ */
 
 .hero {
   min-height: 100vh;
@@ -192,7 +192,7 @@ a {
 }
 
 
-/* ── SHARED SECTION ── */
+/* â”€â”€ SHARED SECTION â”€â”€ */
 
 .section {
   padding: 96px min(80px, 8vw);
@@ -223,7 +223,7 @@ a {
 }
 
 
-/* ── HOW IT WORKS ── */
+/* â”€â”€ HOW IT WORKS â”€â”€ */
 
 .hiw-grid {
   display: grid;
@@ -266,7 +266,7 @@ a {
 }
 
 
-/* ── DIFFERENTIATOR ── */
+/* â”€â”€ DIFFERENTIATOR â”€â”€ */
 
 .diff {
   background: var(--bg-2);
@@ -324,7 +324,7 @@ a {
 .diff-col.is-right .diff-col-loc { color: var(--accent); }
 
 
-/* ── FEATURED TITLES ── */
+/* â”€â”€ FEATURED TITLES â”€â”€ */
 
 .featured {
   overflow: hidden;
@@ -420,7 +420,7 @@ a {
 }
 
 
-/* ── STATS ── */
+/* â”€â”€ STATS â”€â”€ */
 
 .stats {
   background: var(--bg-2);
@@ -452,7 +452,7 @@ a {
 }
 
 
-/* ── FINAL CTA ── */
+/* â”€â”€ FINAL CTA â”€â”€ */
 
 .final-cta {
   text-align: center;
@@ -468,7 +468,7 @@ a {
 }
 
 
-/* ── FOOTER ── */
+/* â”€â”€ FOOTER â”€â”€ */
 
 .footer {
   padding: 44px min(80px, 8vw);
@@ -495,7 +495,7 @@ a {
 }
 
 
-/* ── FAQ ── */
+/* â”€â”€ FAQ â”€â”€ */
 
 .faq-list {
   display: flex;
@@ -530,7 +530,7 @@ a {
 }
 
 
-/* ── SEO TEXT BLOCK (map page) ── */
+/* â”€â”€ SEO TEXT BLOCK (map page) â”€â”€ */
 
 .seo-block {
   position: fixed;
@@ -541,7 +541,7 @@ a {
 }
 
 
-/* ── MAP NAV ── */
+/* â”€â”€ MAP NAV â”€â”€ */
 
 .map-nav {
   position: fixed;
@@ -683,7 +683,7 @@ a {
 }
 
 
-/* ── NO RESULTS OVERLAY ── */
+/* â”€â”€ NO RESULTS OVERLAY â”€â”€ */
 
 .no-results {
   position: absolute;
@@ -704,7 +704,7 @@ a {
 }
 
 
-/* ── PIN COUNT ── */
+/* â”€â”€ PIN COUNT â”€â”€ */
 
 .pin-count {
   font-size: 11px;
@@ -717,7 +717,7 @@ a {
 }
 
 
-/* ── MAP CONTAINER ── */
+/* â”€â”€ MAP CONTAINER â”€â”€ */
 
 #map {
   position: fixed;
@@ -726,7 +726,7 @@ a {
 }
 
 
-/* ── PIN DETAIL PANEL ── */
+/* â”€â”€ PIN DETAIL PANEL â”€â”€ */
 
 .pin-panel {
   position: fixed;
@@ -884,7 +884,7 @@ a {
 }
 
 
-/* ── PIN PAGES ── */
+/* â”€â”€ PIN PAGES â”€â”€ */
 
 .pin-page-hero {
   padding: calc(var(--nav-h) + 48px) min(80px, 8vw) 40px min(80px, 8vw);
@@ -973,7 +973,7 @@ a {
 }
 
 .related-list li::before {
-  content: '›';
+  content: 'â€º';
   color: var(--accent);
   margin-right: 8px;
 }
@@ -991,7 +991,7 @@ a {
 .pin-related { display: flex; flex-direction: column; gap: 4px; }
 
 
-/* ── COOKIE BANNER ── */
+/* â”€â”€ COOKIE BANNER â”€â”€ */
 
 #cookie-banner {
   position: fixed;
@@ -1074,7 +1074,7 @@ a {
 }
 
 
-/* ── PRIVACY PAGE ── */
+/* â”€â”€ PRIVACY PAGE â”€â”€ */
 
 .privacy-hero {
   padding: calc(var(--nav-h) + 64px) min(48px, 6vw) 48px;
@@ -1127,7 +1127,7 @@ a {
 }
 
 
-/* ── LEAFLET CUSTOM PINS ── */
+/* â”€â”€ LEAFLET CUSTOM PINS â”€â”€ */
 
 .gold-pin {
   background: none;
@@ -1172,7 +1172,7 @@ a {
 }
 
 
-/* ── LEAFLET OVERRIDES ── */
+/* â”€â”€ LEAFLET OVERRIDES â”€â”€ */
 
 .leaflet-container {
   background: #0d0d0d;
@@ -1214,7 +1214,7 @@ a {
 .leaflet-attribution-flag { display: none !important; }
 
 
-/* ── RESPONSIVE ── */
+/* â”€â”€ RESPONSIVE â”€â”€ */
 
 @media (max-width: 900px) {
   .diff-grid {
@@ -1274,7 +1274,7 @@ a {
   }
 }
 
-/* ── Location cards (film pages) ─────────────────────────────── */
+/* â”€â”€ Location cards (film pages) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .location-cards-grid {
   display: flex;
   flex-direction: column;
@@ -1308,7 +1308,7 @@ a {
 }
 .location-card-link:hover { text-decoration: underline; }
 
-/* ── Index pages (films / countries) ─────────────────────────── */
+/* â”€â”€ Index pages (films / countries) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .index-hero {
   padding: calc(var(--nav-h) + 60px) min(80px, 8vw) 40px;
   max-width: 1100px;
@@ -1360,3 +1360,4 @@ a {
   align-items: center;
 }
 .index-card-meta .badge { font-size: 10px; padding: 2px 6px; }
+
