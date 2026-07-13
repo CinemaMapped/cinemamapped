@@ -979,7 +979,7 @@ a.hero-stat-link:hover { opacity: 0.75; }
 }
 
 .related-list li::before {
-  content: 'â€º';
+  content: '\203A';
   color: var(--accent);
   margin-right: 8px;
 }
