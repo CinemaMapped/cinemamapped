@@ -1316,8 +1316,8 @@ a.hero-stat-link:hover { opacity: 0.75; }
 
 /* â”€â”€ Index pages (films / countries) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .index-hero {
-  padding: calc(var(--nav-h) + 60px) min(80px, 8vw) 40px;
-  max-width: 1100px;
+  padding: calc(var(--nav-h) + 60px) min(60px, 5vw) 40px;
+  max-width: 1320px;
 }
 .index-hero h1 {
   font-family: var(--font-d);
@@ -1331,21 +1331,81 @@ a.hero-stat-link:hover { opacity: 0.75; }
   font-size: 15px;
   margin: 0;
 }
+.index-search-wrap {
+  max-width: 1320px;
+  padding: 0 min(60px, 5vw) 16px;
+}
+.index-search-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 520px;
+}
+.index-search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+  font-size: 13px;
+}
+.index-search {
+  width: 100%;
+  padding: 9px 14px 9px 36px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  box-sizing: border-box;
+}
+.index-search:focus { border-color: rgba(201,168,76,0.5); background: rgba(255,255,255,0.06); }
+.index-search::placeholder { color: var(--text-muted); }
 .index-grid {
-  max-width: 1100px;
-  padding: 0 min(80px, 8vw) 80px;
+  max-width: 1320px;
+  padding: 0 min(60px, 5vw) 80px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 10px;
 }
 .index-filter-bar {
-  max-width: 1100px;
-  padding: 0 min(80px, 8vw) 20px;
+  max-width: 1320px;
+  padding: 0 min(60px, 5vw) 16px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
+  row-gap: 10px;
 }
+.index-filter-group { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.index-filter-group-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-right: 2px;
+}
+.index-sort {
+  padding: 5px 28px 5px 10px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text);
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url(“data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%238a8880'/%3E%3C/svg%3E”);
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+}
+.index-sort:focus { outline: none; border-color: rgba(201,168,76,0.5); }
 .index-filter-sep {
   width: 1px;
   height: 20px;
@@ -1411,10 +1471,11 @@ a.hero-stat-link:hover { opacity: 0.75; }
 .index-card[data-theatre="Atlantic"]      { border-left-color: #4c6ec9; border-left-width: 3px; }
 .index-card[data-theatre="Mediterranean"] { border-left-color: #4cc9b0; border-left-width: 3px; }
 .index-card-year { font-size: 11px; color: var(--text-muted); margin-left: 2px; }
+.index-card-year::before { content: "Set in\00a0"; }
 .index-hero-sub { color: var(--text); font-size: 15px; margin: 14px 0 0; line-height: 1.6; max-width: 600px; opacity: 0.7; }
 .index-card-flag { width: 20px; height: 15px; margin-right: 7px; vertical-align: -2px; border-radius: 1px; flex-shrink: 0; }
 .index-card-top-film { font-size: 11px; color: var(--text-muted); margin-top: 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.index-card-top-film::before { content: "Top: "; opacity: 0.65; }
+.index-card-top-film::before { content: "Most mapped:\00a0"; opacity: 0.65; }
 
 /* Location card history block */
 .location-card-history {
