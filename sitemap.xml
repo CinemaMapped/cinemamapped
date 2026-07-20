@@ -225,6 +225,7 @@
   <url><loc>https://cinemamapped.com/countries/japan</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/kiribati</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/libya</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/countries/luxembourg</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/marshall-islands</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/mongolia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/morocco</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -664,4 +665,64 @@
   <url><loc>https://cinemamapped.com/locations/panfilovs-28-men-dubosekovo-junction-moscow-region</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/locations/panfilovs-28-men-volokolamsk-moscow-region</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/locations/panfilovs-28-men-istra-moscow-region</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/conspiracy-wannsee-villa-berlin-2</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/conspiracy-reich-security-main-office-rsha-berlin</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/conspiracy-chelmno-extermination-camp-poland</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-grey-zone-crematorium-iv-auschwitzbirkenau</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-grey-zone-kanada-warehouses-birkenau</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-grey-zone-union-munitions-factory-auschwitz</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-boy-in-the-striped-pyjamas-auschwitzbirkenau-perimeter-poland</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-boy-in-the-striped-pyjamas-commandants-villa-oswiecim</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-boy-in-the-striped-pyjamas-berlin-prerelocation-home</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-tattooist-of-auschwitz-auschwitz-i-main-camp</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-tattooist-of-auschwitz-birkenau-womens-camp-biabib</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-tattooist-of-auschwitz-bratislava-slovakia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/merry-christmas-mr-lawrence-java-pow-camp-bandung</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/merry-christmas-mr-lawrence-batavia-jakarta-java</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/merry-christmas-mr-lawrence-ambon-island-maluku</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-railway-man-hellfire-pass-konyu-cutting-thailand</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-railway-man-kanchanaburi-thailand</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-railway-man-changi-prison-singapore</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/uss-indianapolis-men-of-courage-uss-indianapolis-sinking-site-philippine-sea</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/uss-indianapolis-men-of-courage-tinian-island-northern-marianas</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/uss-indianapolis-men-of-courage-leyte-gulf-philippines</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/saints-and-soldiers-baugnez-crossroads-malmedy-belgium</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/saints-and-soldiers-ardennes-forest-belgium</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/saints-and-soldiers-wereth-belgium</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/when-trumpets-fade-hurtgen-forest-germany-2</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/when-trumpets-fade-schmidt-germany</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/when-trumpets-fade-aachen-germany</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/a-midnight-clear-ardennes-belgiangerman-border</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/a-midnight-clear-saintvith-belgium</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/a-midnight-clear-luxembourg-border-area</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/kellys-heroes-clermontenargonne-france</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/kellys-heroes-alsace-region-france</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/kellys-heroes-burgundy-france-fictional-bank-town</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-dirty-dozen-devizes-england-fictional-training-base</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-dirty-dozen-brittany-coast-france</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-dirty-dozen-chateau-target-loire-valley-france</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/tobruk-tobruk-harbour-libya</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/tobruk-egyptian-desert-near-mersa-matruh</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/tobruk-libyan-desert-approach-route</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-desert-fox-el-alamein-egypt</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-desert-fox-la-rocheguyon-normandy-france</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-desert-fox-herrlingen-germany-rommels-death</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/dieppe-puys-blue-beach-dieppe</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/dieppe-pourville-green-beach-dieppe</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/dieppe-varengevillesurmer-orange-beach-france</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/hope-and-glory-lewisham-south-london</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/hope-and-glory-city-of-london-bombed-area</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/hope-and-glory-thames-at-shepperton-surrey</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/hiroshima-aioi-bridge-hiroshima-ground-zero</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/hiroshima-hiroshima-castle-reduced-to-ash</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/hiroshima-north-field-tinian-enola-gay-departure</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-shadow-in-my-eye-shellhus-building-copenhagen</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-shadow-in-my-eye-jeanne-darc-school-copenhagen-bombed-in-error</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-shadow-in-my-eye-raf-fersfield-england-mission-base</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/canopy-seletar-jungle-singapore</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/canopy-bukit-timah-singapore</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/canopy-kranji-war-memorial-singapore</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-children-of-huang-shi-nanjing-china</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-children-of-huang-shi-huang-shi-hubei-province-china</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-children-of-huang-shi-shandan-gansu-province-china-escape-destination</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
