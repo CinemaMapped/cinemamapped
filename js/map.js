@@ -44,38 +44,22 @@
   });
   map.addLayer(clusterGroup);
 
-  // â”€â”€ Theatre colors â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-  var THEATRE_COLORS = {
-    'Western Front':  '#c9a84c',
-    'Eastern Front':  '#c94c4c',
-    'Pacific':        '#4c9bc9',
-    'North Africa':   '#c98b4c',
-    'Atlantic':       '#4c6ec9',
-    'Mediterranean':  '#4cc9b0',
-  };
-
-  function theatreColor(theatre) {
-    return THEATRE_COLORS[theatre] || '#c9a84c';
-  }
-
   // â”€â”€ Pin icon â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-  function pinIcon(theatre) {
+  function goldIcon(theatre) {
     return L.divIcon({
       className:  'gold-pin',
-      html:       '<div class=”gold-pin-dot” data-theatre=”' + (theatre || '') + '”></div>',
+      html:       '<div class="gold-pin-dot" data-theatre="' + (theatre || '') + '"></div>',
       iconSize:   [12, 12],
       iconAnchor: [6, 6],
     });
   }
-
-  // â”€â”€ Slug helper (for film page links) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
   function toSlug(str) {
     return str.toLowerCase()
       .replace(/[^a-z0-9\s]/g, '')
       .replace(/\s+/g, '-')
       .replace(/-+/g, '-')
-      .replace(/^-|-$/, '');
+      .replace(/^-|-$/g, '');
   }
 
   // â”€â”€ Route lines â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -113,15 +97,9 @@
   var panelClose = document.getElementById('pin-close');
 
   function openPanel(pin) {
-    var tc = theatreColor(pin.theatre);
     document.getElementById('pin-badges').innerHTML =
       '<span class="badge badge-type">'    + escapeHtml(pin.type)    + '</span>' +
-      '<span class="badge badge-theatre" style="color:' + tc + ';border-color:' + tc + '55">' + escapeHtml(pin.theatre) + '</span>';
-
-    var filmLinkEl = document.getElementById('pin-film-link');
-    if (filmLinkEl) {
-      filmLinkEl.href = '/films/' + toSlug(pin.title);
-    }
+      '<span class="badge badge-theatre">' + escapeHtml(pin.theatre) + '</span>';
 
     document.getElementById('pin-title').textContent    = pin.title;
     document.getElementById('pin-location').textContent = pin.location;
@@ -144,6 +122,11 @@
       watchEl.style.display = '';
     } else {
       watchEl.style.display = 'none';
+    }
+
+    var filmLinkEl = document.getElementById('pin-film-link');
+    if (filmLinkEl) {
+      filmLinkEl.href = '/films/' + toSlug(pin.title);
     }
 
     panel.classList.add('open');
@@ -220,7 +203,7 @@
 
       visiblePins.push(pin);
 
-      var marker = L.marker([pin.lat, pin.lng], { icon: pinIcon(pin.theatre) });
+      var marker = L.marker([pin.lat, pin.lng], { icon: goldIcon(pin.theatre) });
 
       marker.on('click', (function (p) {
         return function (e) {
