@@ -220,6 +220,7 @@
   <url><loc>https://cinemamapped.com/countries/germany</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/greece</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/hungary</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/countries/india</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/indonesia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/international-waters</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/israel</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -227,6 +228,7 @@
   <url><loc>https://cinemamapped.com/countries/japan</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/kiribati</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/libya</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/countries/lithuania</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/luxembourg</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/marshall-islands</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/mongolia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -788,4 +790,64 @@
   <url><loc>https://cinemamapped.com/locations/paradise-road-muntok-bangka-island-indonesia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/locations/paradise-road-palembang-sumatra-indonesia-pow-camp</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/locations/paradise-road-singapore-ss-vyner-brooke-departure</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/13-minutes-kanigsbronn-germany-elsers-home</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/13-minutes-bargerbraukeller-munich-bomb-planted</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/13-minutes-dachau-concentration-camp-germany</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/a-french-village-besanaon-france-german-command</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/a-french-village-lyon-france-gestapo-under-barbie</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/a-french-village-demarcation-line-saane-valley-france</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/lore-bavaria-germany-starting-point</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/lore-freiburg-area-black-forest-germany</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/lore-hamburg-germany-destination</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/die-wannseekonferenz-reich-chancellery-berlin</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/die-wannseekonferenz-auschwitzbirkenau-already-operational</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/harts-war-stalag-luft-vi-heydekrug-siluta-lithuania</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/harts-war-bastogne-belgium-capture-scene</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/harts-war-nuremberg-germany-war-crimes-parallel</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-champion-of-auschwitz-auschwitz-i-boxing-ring-poland</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-champion-of-auschwitz-krakaw-poland-prewar</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-champion-of-auschwitz-neuengamme-concentration-camp-hamburg</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-man-with-the-iron-heart-holeaovice-prague-assassination-site</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-man-with-the-iron-heart-lidice-czech-republic-reprisal</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-man-with-the-iron-heart-ss-wewelsburg-castle-germany-heydrichs-career</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/overlord-aldershot-england-basic-training</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/overlord-southampton-docks-embarkation</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/overlord-collevillesurmer-normandy-dday</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-kings-speech-lionel-logue-consulting-rooms-harley-street-london</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-kings-speech-broadcasting-house-bbc-london</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-kings-speech-balmoral-castle-scotland</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-good-german-cecilienhof-palace-potsdam-conference-site</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-good-german-spandau-prison-berlin</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-exception-doorn-house-netherlands-kaiser-in-exile</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-exception-amsterdam-jewish-resistance-network</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-exception-hague-netherlands-ss-headquarters</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-resistance-banker-haarlem-netherlands-van-halls-operations-base</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-resistance-banker-amsterdam-municipal-bank-daring-heist</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-resistance-banker-haarlemmerliede-netherlands-execution-site</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/walking-with-the-enemy-arrow-cross-hq-budapest-hungary</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/walking-with-the-enemy-keleti-station-budapest-deportation-trains</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/walking-with-the-enemy-swiss-embassy-budapest-wallenberg-context</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/winter-in-wartime-apeldoorn-netherlands</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/winter-in-wartime-veluwe-forest-gelderland-netherlands</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/talvisota-karelia-finnishsoviet-border</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/talvisota-kollaa-river-defensive-line-finland</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/talvisota-helsinki-finland-mobilisation</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/emperor-yokohama-japan-macarthur-arrives</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/emperor-imperial-palace-tokyo</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/emperor-nikko-japan-hirohitos-mountain-retreat</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/enola-gay-the-men-the-mission-the-atomic-bomb-wendover-field-utah-usa</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/enola-gay-the-men-the-mission-the-atomic-bomb-los-alamos-new-mexico-usa</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/enola-gay-the-men-the-mission-the-atomic-bomb-hiroshima-japan-target</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/hiroshima-out-of-the-ashes-hiroshima-red-cross-hospital-japan</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/hiroshima-out-of-the-ashes-nagasaki-japan-second-bomb</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/hiroshima-out-of-the-ashes-urakami-cathedral-nagasaki</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-way-back-siberian-gulag-camp-starting-point</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-way-back-gobi-desert-mongolia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-way-back-himalayas-crossing-into-india</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/they-fought-for-their-motherland-don-river-bend-rostov-oblast-russia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/they-fought-for-their-motherland-volgograd-stalingrad-russia-2</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/they-fought-for-their-motherland-kuban-steppe-krasnodar-region-russia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/black-rain-itsukaichi-hiroshima-prefecture-japan</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/black-rain-hiroshima-city-centre-the-day-of-the-bomb</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/black-rain-rural-hiroshima-village-postwar-social-stigma</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
