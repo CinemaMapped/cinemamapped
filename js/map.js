@@ -45,10 +45,10 @@
   map.addLayer(clusterGroup);
 
   // â”€â”€ Pin icon â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-  function goldIcon(theatre) {
+  function goldIcon() {
     return L.divIcon({
       className:  'gold-pin',
-      html:       '<div class="gold-pin-dot" data-theatre="' + (theatre || '') + '"></div>',
+      html:       '<div class="gold-pin-dot"></div>',
       iconSize:   [12, 12],
       iconAnchor: [6, 6],
     });
@@ -203,7 +203,7 @@
 
       visiblePins.push(pin);
 
-      var marker = L.marker([pin.lat, pin.lng], { icon: goldIcon(pin.theatre) });
+      var marker = L.marker([pin.lat, pin.lng], { icon: goldIcon() });
 
       marker.on('click', (function (p) {
         return function (e) {
