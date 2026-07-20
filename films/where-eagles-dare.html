@@ -6,12 +6,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Where Was Where Eagles Dare Set? Real WWII Locations | CinemaMapped</title>
-  <meta name="description" content="Where Eagles Dare WWII film - 1 real historical location tracked on CinemaMapped across Germany.">
+  <meta name="description" content="Where Eagles Dare WWII film - 3 real historical locations tracked on CinemaMapped across Austria, Germany.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 500'%3E%3Crect width='500' height='500' rx='60' fill='%230d0d0d'/%3E%3Ctext x='250' y='360' font-family='Arial Black,Arial,sans-serif' font-size='340' font-weight='900' text-anchor='middle' fill='%23c9a84c'%3EC%3C/text%3E%3C/svg%3E">
   <link rel="icon" href="/favicon.ico">
   <link rel="canonical" href="https://cinemamapped.com/films/where-eagles-dare">
   <meta property="og:title" content="Where Was Where Eagles Dare Set? | CinemaMapped">
-  <meta property="og:description" content="Where Eagles Dare WWII film - 1 real historical location tracked on CinemaMapped across Germany.">
+  <meta property="og:description" content="Where Eagles Dare WWII film - 3 real historical locations tracked on CinemaMapped across Austria, Germany.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://cinemamapped.com/films/where-eagles-dare">
   <meta property="og:image" content="https://cinemamapped.com/og-image.svg">
@@ -22,7 +22,7 @@
     "name": "Where Eagles Dare - Real WWII Locations",
     "description": "Real WWII historical locations where Where Eagles Dare is set, tracked on CinemaMapped.",
     "url": "https://cinemamapped.com/films/where-eagles-dare",
-    "numberOfItems": 1
+    "numberOfItems": 3
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,22 +47,34 @@
     <div class="pin-page-breadcrumb"><a href="/">CinemaMapped</a> &rsaquo; <a href="/films">Films &amp; Series</a> &rsaquo; Where Eagles Dare</div>
     <div class="pin-page-badges"><span class="badge badge-type">Film</span><span class="badge badge-theatre">Western Front</span><span class="pin-page-year">1944</span></div>
     <h1 class="pin-page-h1">Where Eagles Dare &mdash; Where the Story Was Set</h1>
-    <p class="pin-page-title-line">1 real historical location &middot; Germany</p>
+    <p class="pin-page-title-line">3 real historical locations &middot; Austria, Germany</p>
   </div>
 
   <div id="film-map" class="pin-page-map" style="height:360px;"></div>
 
   <div class="pin-page-body">
-    <div class="pin-page-section"><div class="pin-desc-label">About</div><p class="pin-page-text">Richard Burton and Clint Eastwood in a 1968 action classic in which Allied commandos storm an impregnable Alpine castle to rescue an American general — only for nothing to be quite as it seems. Pure entertainment, spectacularly executed, and one of the great WWII adventure films.</p><p class="pin-page-text" style="margin-top:8px;color:var(--text-muted);font-size:14px;">CinemaMapped has mapped 1 real historical location where the story takes place, spanning Germany.</p></div>
+    <div class="pin-page-section"><div class="pin-desc-label">About</div><p class="pin-page-text">Richard Burton and Clint Eastwood in a 1968 action classic in which Allied commandos storm an impregnable Alpine castle to rescue an American general — only for nothing to be quite as it seems. Pure entertainment, spectacularly executed, and one of the great WWII adventure films.</p><p class="pin-page-text" style="margin-top:8px;color:var(--text-muted);font-size:14px;">CinemaMapped has mapped 3 real historical locations where the story takes place, spanning Austria, Germany.</p></div>
     <div class="pin-divider"></div>
     <div class="pin-page-section">
-      <div class="pin-desc-label">Locations (1)</div>
+      <div class="pin-desc-label">Locations (3)</div>
       <div class="location-cards-grid">
     <div class="location-card">
       <div class="location-card-name">Schloss Adler, Bavarian Alps</div>
       <p class="location-card-desc">Allied agents infiltrate a seemingly impregnable Alpine fortress castle to rescue an American general.</p>
       <p class="location-card-history">Hohenwerfen Castle in Austria served as the primary filming location. Alpine fortresses like this were used by the SS as headquarters, prison camps, and intelligence centres throughout the war. Many mountain redoubt m...</p>
       <a href="/locations/where-eagles-dare-schloss-adler-bavarian-alps" class="location-card-link">View location &rarr;</a>
+    </div>
+    <div class="location-card">
+      <div class="location-card-name">Hohenwerfen Castle, Austria</div>
+      <p class="location-card-desc">The actual castle used as the film's Schloss Adler â€” perched on its 623-metre rock above the Salzach valley.</p>
+      <p class="location-card-history">Hohenwerfen Castle was built in 1077 and served as an SS officer training school during World War II. The Eastwood-Burton film was shot here in 1968 with a specially constructed cable car for the production.</p>
+      <a href="/locations/where-eagles-dare-hohenwerfen-castle-austria" class="location-card-link">View location &rarr;</a>
+    </div>
+    <div class="location-card">
+      <div class="location-card-name">Innsbruck, Tyrol</div>
+      <p class="location-card-desc">Smith and Schaffer's escape route leads toward Innsbruck, where the German military presence offers both cover and danger.</p>
+      <p class="location-card-history">Innsbruck was the capital of the German Reichsgau Tirol-Vorarlberg and a major transit hub for German forces in the Alps. Its train station was a junction on escape routes toward Switzerland and the Italian front.</p>
+      <a href="/locations/where-eagles-dare-innsbruck-tyrol" class="location-card-link">View location &rarr;</a>
     </div>
       </div>
     </div>
@@ -106,9 +118,11 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
     var m = L.map('film-map', { zoomControl:true, attributionControl:false, scrollWheelZoom:false });
-    m.setView([47.5500, 12.9500], 8);
+    m.fitBounds([[47.2692, 11.4041], [47.55, 13.183]], { padding: [40, 40] });
     L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:19 }).addTo(m);
     L.circleMarker([47.5500, 12.9500], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([47.4840, 13.1830], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
+    L.circleMarker([47.2692, 11.4041], { radius:7, color:'#c9a84c', fillColor:'#c9a84c', fillOpacity:1, weight:2, interactive:false }).addTo(m);
   </script>
   <script src="/js/consent.js?v=3"></script>
 </body>

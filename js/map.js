@@ -416,7 +416,7 @@
   window.addEventListener('resize', syncMapTop);
 
   // â”€â”€ Load data â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-  fetch('data.json?v=5')
+  fetch('data.json?v=6')
     .then(function (r) { return r.json(); })
     .then(function (data) {
       allPins = data;
