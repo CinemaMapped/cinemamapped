@@ -229,6 +229,7 @@
   <url><loc>https://cinemamapped.com/countries/mongolia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/morocco</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/netherlands</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/countries/northern-mariana-islands</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/norway</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/pacific-ocean</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/palau</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -241,6 +242,7 @@
   <url><loc>https://cinemamapped.com/countries/slovakia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/solomon-islands</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/spain</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/countries/sweden</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/thailand</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/tunisia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/countries/ukraine</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -602,4 +604,64 @@
   <url><loc>https://cinemamapped.com/locations/tora-tora-tora-battleship-row-pearl-harbor</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/locations/tora-tora-tora-wheeler-army-airfield-oahu</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://cinemamapped.com/locations/tora-tora-tora-hickam-field-pearl-harbor</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/uprising-umschlagplatz-warsaw</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/uprising-mila-18-bunker-warsaw-ghetto</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/uprising-treblinka-extermination-camp</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/escape-from-sobibor-waodawa-eastern-poland</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/escape-from-sobibor-parczew-forest-lublin-region</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/escape-from-sobibor-chelm-eastern-poland</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/pearl-harbor-battleship-row-pearl-harbor</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/pearl-harbor-hickam-field-oahu</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/pearl-harbor-tokyo-japan</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-battle-of-britain-raf-biggin-hill-kent</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-battle-of-britain-pasdecalais-france</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-battle-of-britain-hawkinge-airfield-kent</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/el-alamein-the-line-of-fire-tobruk-libya</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/el-alamein-the-line-of-fire-el-alamein-egypt-2</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/el-alamein-the-line-of-fire-mersa-matruh-egypt</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/captain-corellis-mandolin-argostoli-cephalonia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/captain-corellis-mandolin-massacre-site-cephalonia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/captain-corellis-mandolin-sami-harbor-cephalonia</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-bridge-at-remagen-remagen-rhineland</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-bridge-at-remagen-erpel-east-bank-rhine</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-bridge-at-remagen-sinzig-rhineland</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/fat-man-and-little-boy-trinity-test-site-new-mexico</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/fat-man-and-little-boy-tinian-island-mariana-islands</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/fat-man-and-little-boy-hiroshima-japan</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-great-raid-cabu-bridge-luzon</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-great-raid-bataan-peninsula-luzon</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-great-raid-manila-luzon</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/windtalkers-saipan-landing-beaches</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/windtalkers-mount-tapochau-saipan</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/windtalkers-garapan-saipan</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-man-who-will-come-monte-sole-apennines</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-man-who-will-come-marzabotto-bologna</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-man-who-will-come-casaglia-church-monte-sole</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/miracle-at-st-anna-santanna-di-stazzema-tuscany</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/miracle-at-st-anna-pietrasanta-tuscany</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/miracle-at-st-anna-arno-river-pisa</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-eight-hundred-sihang-warehouse-shanghai</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-eight-hundred-suzhou-creek-shanghai</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-eight-hundred-baoshan-shanghai</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/city-of-life-and-death-nanjing-safety-zone</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/city-of-life-and-death-yangtze-river-bank-nanjing</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/city-of-life-and-death-purple-mountain-nanjing</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/max-manus-oslo-harbor-norway</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/max-manus-stockholm-sweden</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/max-manus-aker-wharf-oslo</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/diplomacy-hotel-meurice-paris</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/diplomacy-swedish-consulate-paris</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/diplomacy-place-de-la-concorde-paris</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/stalingrad-1993-pitomnik-airfield-stalingrad-pocket</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/stalingrad-1993-kessel-perimeter-kletskaya</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/stalingrad-1993-gumrak-airfield-stalingrad</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-brest-fortress-kholm-gate-brest-fortress</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-brest-fortress-north-gate-brest-fortress</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/the-brest-fortress-bug-river-brest</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/leningrad-road-of-life-lake-ladoga</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/leningrad-pulkovo-heights-leningrad</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/leningrad-schlasselburg-lake-ladoga</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/panfilovs-28-men-dubosekovo-junction-moscow-region</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/panfilovs-28-men-volokolamsk-moscow-region</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://cinemamapped.com/locations/panfilovs-28-men-istra-moscow-region</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
