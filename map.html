@@ -69,6 +69,12 @@
     .chip.active[data-theatre="Mediterranean"]  { border-color:#4cc9b0; background:rgba(76,201,176,.12); }
     .pin-film-link { display:inline-block; margin-top:12px; font-size:12px; color:var(--accent); text-decoration:none; opacity:0.85; }
     .pin-film-link:hover { opacity:1; }
+    .gold-pin-dot[data-theatre="Western Front"]  { background:#c9a84c; border-color:rgba(201,168,76,0.5); box-shadow:0 0 0 3px rgba(201,168,76,0.15),0 2px 8px rgba(0,0,0,0.6); }
+    .gold-pin-dot[data-theatre="Eastern Front"]  { background:#c94c4c; border-color:rgba(201,76,76,0.5);  box-shadow:0 0 0 3px rgba(201,76,76,0.15), 0 2px 8px rgba(0,0,0,0.6); }
+    .gold-pin-dot[data-theatre="Pacific"]        { background:#4c9bc9; border-color:rgba(76,155,201,0.5); box-shadow:0 0 0 3px rgba(76,155,201,0.15),0 2px 8px rgba(0,0,0,0.6); }
+    .gold-pin-dot[data-theatre="North Africa"]   { background:#c98b4c; border-color:rgba(201,139,76,0.5); box-shadow:0 0 0 3px rgba(201,139,76,0.15),0 2px 8px rgba(0,0,0,0.6); }
+    .gold-pin-dot[data-theatre="Atlantic"]       { background:#4c6ec9; border-color:rgba(76,110,201,0.5); box-shadow:0 0 0 3px rgba(76,110,201,0.15),0 2px 8px rgba(0,0,0,0.6); }
+    .gold-pin-dot[data-theatre="Mediterranean"]  { background:#4cc9b0; border-color:rgba(76,201,176,0.5); box-shadow:0 0 0 3px rgba(76,201,176,0.15),0 2px 8px rgba(0,0,0,0.6); }
   </style>
 </head>
 <body>
@@ -173,7 +179,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-  <script src="js/map.js?v=5"></script>
+  <script src="js/map.js?v=6"></script>
   <script src="js/consent.js?v=3"></script>
 </body>
 </html>

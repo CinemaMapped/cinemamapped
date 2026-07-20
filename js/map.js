@@ -60,10 +60,9 @@
 
   // â”€â”€ Pin icon â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   function pinIcon(theatre) {
-    var c = theatreColor(theatre);
     return L.divIcon({
       className:  'gold-pin',
-      html:       '<div class=”gold-pin-dot” style=”background:' + c + ';box-shadow:0 0 0 2px rgba(0,0,0,0.5),0 0 6px ' + c + '66”></div>',
+      html:       '<div class=”gold-pin-dot” data-theatre=”' + (theatre || '') + '”></div>',
       iconSize:   [12, 12],
       iconAnchor: [6, 6],
     });
