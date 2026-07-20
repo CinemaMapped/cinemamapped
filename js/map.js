@@ -10,6 +10,17 @@
   var routeLayer    = null;
   var searchTimer;
 
+  // â”€â”€ Theatre colours â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  var THEATRE_COLORS = {
+    'Western Front': '#c9a84c',
+    'Eastern Front': '#c94c4c',
+    'Pacific':       '#4c9bc9',
+    'North Africa':  '#c98b4c',
+    'Atlantic':      '#4c6ec9',
+    'Mediterranean': '#4cc9b0',
+  };
+  function theatreColor(t) { return THEATRE_COLORS[t] || '#8a8880'; }
+
   // â”€â”€ Map init â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   var map = L.map('map', {
     center:             [48, 12],
@@ -31,7 +42,7 @@
   // â”€â”€ Cluster group â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   clusterGroup = L.markerClusterGroup({
     showCoverageOnHover: false,
-    maxClusterRadius:    52,
+    maxClusterRadius:    window.innerWidth < 768 ? 70 : 52,
     chunkedLoading:      true,
     iconCreateFunction: function (cluster) {
       return L.divIcon({
@@ -97,9 +108,10 @@
   var panelClose = document.getElementById('pin-close');
 
   function openPanel(pin) {
+    var tc = theatreColor(pin.theatre);
     document.getElementById('pin-badges').innerHTML =
       '<span class="badge badge-type">'    + escapeHtml(pin.type)    + '</span>' +
-      '<span class="badge badge-theatre">' + escapeHtml(pin.theatre) + '</span>';
+      '<span class="badge badge-theatre" style="color:' + tc + ';border-color:' + tc + '4d">' + escapeHtml(pin.theatre) + '</span>';
 
     document.getElementById('pin-title').textContent    = pin.title;
     document.getElementById('pin-location').textContent = pin.location;
@@ -132,7 +144,10 @@
     panel.classList.add('open');
     panel.setAttribute('aria-hidden', 'false');
 
-    // Clear any existing route then draw for this pin's film
+    if (pin.id && window.history.replaceState) {
+      window.history.replaceState({}, '', '?pin=' + pin.id);
+    }
+
     clearRoute();
     drawRouteForTitle(pin.title);
 
@@ -149,7 +164,10 @@
   function closePanel() {
     panel.classList.remove('open');
     panel.setAttribute('aria-hidden', 'true');
-    // Only clear route if no title chip is locked
+    if (window.history.replaceState) {
+      var url = window.location.pathname + (window.location.search.replace(/[?&]pin=[^&]*/g, '').replace(/^&/, '?') || '');
+      window.history.replaceState({}, '', url);
+    }
     if (!activeTitle) {
       clearRoute();
     }
@@ -257,6 +275,7 @@
 
       closePanel();
       renderMarkers();
+      updateResetBtn();
 
       if (activeTitle) {
         var filmPins = allPins.filter(function (p) { return p.title === activeTitle; });
@@ -290,6 +309,17 @@
       }
       closePanel();
       renderMarkers();
+      updateResetBtn();
+
+      if (activeTheatre !== 'all') {
+        var theatrePins = allPins.filter(function (p) { return p.theatre === activeTheatre; });
+        if (theatrePins.length > 0) {
+          var bounds = L.latLngBounds(theatrePins.map(function (p) { return [p.lat, p.lng]; }));
+          map.fitBounds(bounds, { padding: [80, 80], maxZoom: 8 });
+        }
+      } else {
+        map.setView([48, 12], 5);
+      }
     });
   });
 
@@ -316,6 +346,7 @@
   function applyUrlParams() {
     var params    = new URLSearchParams(window.location.search);
     var filmParam = params.get('film');
+    var pinParam  = params.get('pin');
 
     if (filmParam) {
       searchInput.value = filmParam;
@@ -325,7 +356,14 @@
 
     renderMarkers();
 
-    if (filmParam) {
+    if (pinParam) {
+      var pinId     = parseInt(pinParam, 10);
+      var deepPin   = allPins.find(function (p) { return p.id === pinId; });
+      if (deepPin) {
+        map.setView([deepPin.lat, deepPin.lng], 10);
+        openPanel(deepPin);
+      }
+    } else if (filmParam) {
       var filmPins = allPins.filter(function (p) {
         return p.title.toLowerCase() === filmParam.toLowerCase();
       });
@@ -336,6 +374,34 @@
         map.fitBounds(bounds, { padding: [80, 80], maxZoom: 8 });
       }
     }
+  }
+
+  // â”€â”€ Reset button â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  var resetBtn = document.getElementById('map-reset');
+
+  function updateResetBtn() {
+    if (!resetBtn) return;
+    var isFiltered = activeTheatre !== 'all' || activeTitle || searchTerm;
+    resetBtn.style.display = isFiltered ? '' : 'none';
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', function () {
+      activeTheatre = 'all';
+      activeTitle   = '';
+      searchTerm    = '';
+      searchInput.value = '';
+      document.querySelectorAll('.chip-title').forEach(function (c) {
+        c.classList.toggle('active', c.dataset.title === 'all');
+      });
+      document.querySelectorAll('.chip:not(.chip-title)').forEach(function (c) {
+        c.classList.toggle('active', c.dataset.theatre === 'all');
+      });
+      closePanel();
+      renderMarkers();
+      updateResetBtn();
+      map.setView([48, 12], 5);
+    });
   }
 
   // â”€â”€ Mobile nav height sync â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€

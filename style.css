@@ -737,6 +737,31 @@ a.hero-stat-link:hover { opacity: 0.75; }
 }
 
 
+/* â”€â”€ RESET BUTTON â”€â”€ */
+
+.map-reset-btn {
+  flex-shrink: 0;
+  height: 30px;
+  padding: 0 12px;
+  background: transparent;
+  border: 1px solid rgba(201, 168, 76, 0.35);
+  border-radius: 3px;
+  font-family: var(--font-b);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.map-reset-btn:hover {
+  background: var(--accent-faint);
+  border-color: var(--accent);
+}
+
+
 /* â”€â”€ MAP CONTAINER â”€â”€ */
 
 #map {
@@ -1263,18 +1288,21 @@ a.hero-stat-link:hover { opacity: 0.75; }
   .hero-stats { gap: 32px; }
 
   .map-nav-top {
-    padding: 10px 16px;
-    gap: 10px;
+    padding: 8px 12px;
+    gap: 8px;
   }
-  .map-nav-top .nav-logo { flex-basis: 100%; }
+  .map-nav-top .nav-logo { flex-shrink: 0; }
   .map-search { max-width: 100%; }
+  .map-nav-top > div { display: none; }
+  .map-reset-btn { font-size: 10px; padding: 0 10px; }
   .map-nav-bottom {
-    padding: 0 16px 8px;
-    flex-wrap: wrap;
+    padding: 0 12px 8px;
+    flex-direction: column;
     gap: 6px;
+    align-items: stretch;
   }
-  .filter-chips--titles { max-width: 100%; }
-  .filter-chips--theatres { max-width: 100%; }
+  .filter-chips--titles  { max-width: 100%; flex: unset; }
+  .filter-chips--theatres { max-width: 100%; flex-shrink: unset; }
   .filter-sep { display: none; }
 
   .pin-panel {

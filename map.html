@@ -52,7 +52,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
-  <link rel="stylesheet" href="style.css?v=12">
+  <link rel="stylesheet" href="style.css?v=13">
   <style>
     html, body { height: 100%; overflow: hidden; }
     .chip[data-theatre="Western Front"]  { color:#c9a84c; border-color:rgba(201,168,76,.25); }
@@ -87,6 +87,7 @@
         spellcheck="false"
       >
       <span class="pin-count" id="pin-count" aria-live="polite"></span>
+      <button class="map-reset-btn" id="map-reset" style="display:none" aria-label="Clear filters">&#x2715; Reset</button>
       <div style="display:flex;gap:8px;align-items:center;flex-shrink:0;">
         <a href="/" class="map-nav-guide">Home</a>
         <a href="/films" class="map-nav-guide">Films</a>
@@ -173,7 +174,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-  <script src="js/map.js?v=8"></script>
+  <script src="js/map.js?v=9"></script>
   <script src="js/consent.js?v=3"></script>
 </body>
 </html>
