@@ -109,9 +109,11 @@
 
   function openPanel(pin) {
     var tc = theatreColor(pin.theatre);
+    var theatreBadge = pin.theatre
+      ? '<span class="badge badge-theatre" style="color:' + tc + ';border-color:' + tc + '4d">' + escapeHtml(pin.theatre) + '</span>'
+      : '';
     document.getElementById('pin-badges').innerHTML =
-      '<span class="badge badge-type">'    + escapeHtml(pin.type)    + '</span>' +
-      '<span class="badge badge-theatre" style="color:' + tc + ';border-color:' + tc + '4d">' + escapeHtml(pin.theatre) + '</span>';
+      '<span class="badge badge-type">' + escapeHtml(pin.type) + '</span>' + theatreBadge;
 
     document.getElementById('pin-title').textContent    = pin.title;
     document.getElementById('pin-location').textContent = pin.location;
