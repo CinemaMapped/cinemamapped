@@ -742,6 +742,7 @@ a.hero-stat-link:hover { opacity: 0.75; }
 .map-reset-btn {
   flex-shrink: 0;
   height: 30px;
+  margin-right: 10px;
   padding: 0 12px;
   background: transparent;
   border: 1px solid rgba(201, 168, 76, 0.35);
